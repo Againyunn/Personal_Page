@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .views import *
+from . import views
 
+app_name='backend'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-
-#reposeidon url과 연결
-    path('', include('backend.urls', namespace="backend")),
+    path("", views.front.as_view(), name="front")
 ]

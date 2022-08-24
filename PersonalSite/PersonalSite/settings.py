@@ -35,6 +35,9 @@ INSTALLED_APPS = [
     # 백엔드 App
     'backend',
 
+    # vue와 연결할 webpack loader
+    'webpack_loader',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,7 +61,7 @@ ROOT_URLCONF = 'PersonalSite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join( 'frontend', 'build')],
+        'DIRS': [os.path.join(BASE_DIR, 'public')], #변경
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-STATICFILES_DIRS = [os.path.join('frontend', 'build', 'static')]
+# STATICFILES_DIRS = [os.path.join('frontend', 'build', 'static')]
 
 WSGI_APPLICATION = 'PersonalSite.wsgi.application'
 
@@ -139,3 +142,12 @@ CORS_ORIGIN_WHITELIST = (
 #media 파일 저장 경로 설정
 MEDIA_URL = ''
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+# Vue 연동 Web-pack 설정
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': DEBUG,
+        'BUNDLE_DIR_NAME': '/bundles/',  # must end with slash
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
+    }
+}

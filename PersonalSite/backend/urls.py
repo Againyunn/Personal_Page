@@ -21,5 +21,7 @@ from . import views
 app_name='backend'
 
 urlpatterns = [
-    path("", views.front.as_view(), name="front")
+    # path("", views.front.as_view(), name="front"),
+    path("", views.front_base, name="front_base"),
+    path("http://127.0.0.1:8080/", views.front_base, name="front_base")
 ]

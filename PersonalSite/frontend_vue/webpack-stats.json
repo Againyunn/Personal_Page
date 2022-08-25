@@ -1,0 +1,52 @@
+{
+  "status": "done",
+  "assets": {
+    "js/index.js": {
+      "name": "js/index.js",
+      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\js\\index.js",
+      "publicPath": "http://127.0.0.1:8080/js/index.js"
+    },
+    "js/about.js": {
+      "name": "js/about.js",
+      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\js\\about.js",
+      "publicPath": "http://127.0.0.1:8080/js/about.js"
+    },
+    "static/favicon.ico": {
+      "name": "static/favicon.ico",
+      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\static\\favicon.ico",
+      "publicPath": "http://127.0.0.1:8080/static/favicon.ico"
+    },
+    "index.html": {
+      "name": "index.html",
+      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.html",
+      "publicPath": "http://127.0.0.1:8080/index.html"
+    },
+    "index.75af2363e7b097b5.hot-update.js": {
+      "name": "index.75af2363e7b097b5.hot-update.js",
+      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.75af2363e7b097b5.hot-update.js",
+      "publicPath": "http://127.0.0.1:8080/index.75af2363e7b097b5.hot-update.js"
+    },
+    "index.75af2363e7b097b5.hot-update.json": {
+      "name": "index.75af2363e7b097b5.hot-update.json",
+      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.75af2363e7b097b5.hot-update.json",
+      "publicPath": "http://127.0.0.1:8080/index.75af2363e7b097b5.hot-update.json"
+    },
+    "index.87205cbdf8291255.hot-update.js": {
+      "name": "index.87205cbdf8291255.hot-update.js",
+      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.87205cbdf8291255.hot-update.js",
+      "publicPath": "http://127.0.0.1:8080/index.87205cbdf8291255.hot-update.js"
+    },
+    "index.87205cbdf8291255.hot-update.json": {
+      "name": "index.87205cbdf8291255.hot-update.json",
+      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.87205cbdf8291255.hot-update.json",
+      "publicPath": "http://127.0.0.1:8080/index.87205cbdf8291255.hot-update.json"
+    }
+  },
+  "chunks": {
+    "index": [
+      "js/index.js",
+      "index.87205cbdf8291255.hot-update.js"
+    ]
+  },
+  "publicPath": "http://127.0.0.1:8080/"
+}

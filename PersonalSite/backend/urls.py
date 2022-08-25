@@ -17,11 +17,24 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import *
 from . import views
+from rest_framework import routers
 
 app_name='backend'
+
+router = routers.DefaultRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'real_users', views.Real_UserViewSet)
+# router.register(r'contents', views.snippet_list)
+
 
 urlpatterns = [
     # path("", views.front.as_view(), name="front"),
     path("", views.front_base, name="front_base"),
-    path("http://127.0.0.1:8080/", views.front_base, name="front_base")
+    path("http://127.0.0.1:8080/", views.front_base, name="front_base"),
+
+    path('api/', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+
+    path('contents/', views.snippet_list),
+    path('contents/<int:pk>/', views.snippet_detail),
 ]

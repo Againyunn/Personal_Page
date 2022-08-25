@@ -35,6 +35,12 @@ INSTALLED_APPS = [
     # 백엔드 App
     'backend',
 
+    # REST Framework
+    'rest_framework',
+
+    #CORS(Croww-Origin-Resource-Sharing : HTTP접근제어 규약)
+    'corsheaders',
+
     # vue와 연결할 webpack loader
     'webpack_loader',
 
@@ -47,6 +53,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',     #CORS 셋팅
+    'django.middleware.common.CommonMiddleware', #CORS 셋팅
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -151,4 +159,15 @@ WEBPACK_LOADER = {
         'BUNDLE_DIR_NAME': '/bundles/',  # must end with slash
         'STATS_FILE': os.path.join('frontend_vue', 'webpack-stats.json'),
     }
+}
+
+# REST Framework
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
 }

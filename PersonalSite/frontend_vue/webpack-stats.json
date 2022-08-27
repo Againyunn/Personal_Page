@@ -3,230 +3,74 @@
   "assets": {
     "js/index.js": {
       "name": "js/index.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\js\\index.js",
-      "publicPath": "http://127.0.0.1:8080/js/index.js"
+      "path": "C:\\dist\\js\\index.js",
+      "publicPath": "/js/index.js"
     },
     "js/about.js": {
       "name": "js/about.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\js\\about.js",
-      "publicPath": "http://127.0.0.1:8080/js/about.js"
+      "path": "C:\\dist\\js\\about.js",
+      "publicPath": "/js/about.js"
     },
     "static/favicon.ico": {
       "name": "static/favicon.ico",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\static\\favicon.ico",
-      "publicPath": "http://127.0.0.1:8080/static/favicon.ico"
+      "path": "C:\\dist\\static\\favicon.ico",
+      "publicPath": "/static/favicon.ico"
+    },
+    "static/reset.css": {
+      "name": "static/reset.css",
+      "path": "C:\\dist\\static\\reset.css",
+      "publicPath": "/static/reset.css"
+    },
+    "static/component/arrow-right.png": {
+      "name": "static/component/arrow-right.png",
+      "path": "C:\\dist\\static\\component\\arrow-right.png",
+      "publicPath": "/static/component/arrow-right.png"
+    },
+    "static/component/left.png": {
+      "name": "static/component/left.png",
+      "path": "C:\\dist\\static\\component\\left.png",
+      "publicPath": "/static/component/left.png"
+    },
+    "static/img/github.png": {
+      "name": "static/img/github.png",
+      "path": "C:\\dist\\static\\img\\github.png",
+      "publicPath": "/static/img/github.png"
+    },
+    "static/img/gmail.png": {
+      "name": "static/img/gmail.png",
+      "path": "C:\\dist\\static\\img\\gmail.png",
+      "publicPath": "/static/img/gmail.png"
+    },
+    "static/img/instagram.png": {
+      "name": "static/img/instagram.png",
+      "path": "C:\\dist\\static\\img\\instagram.png",
+      "publicPath": "/static/img/instagram.png"
+    },
+    "static/img/picture_profile.jpg": {
+      "name": "static/img/picture_profile.jpg",
+      "path": "C:\\dist\\static\\img\\picture_profile.jpg",
+      "publicPath": "/static/img/picture_profile.jpg"
+    },
+    "static/img/profile.jpg": {
+      "name": "static/img/profile.jpg",
+      "path": "C:\\dist\\static\\img\\profile.jpg",
+      "publicPath": "/static/img/profile.jpg"
+    },
+    "static/img/s_picture_profile.jpg": {
+      "name": "static/img/s_picture_profile.jpg",
+      "path": "C:\\dist\\static\\img\\s_picture_profile.jpg",
+      "publicPath": "/static/img/s_picture_profile.jpg"
     },
     "index.html": {
       "name": "index.html",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.html",
-      "publicPath": "http://127.0.0.1:8080/index.html"
-    },
-    "index.75af2363e7b097b5.hot-update.js": {
-      "name": "index.75af2363e7b097b5.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.75af2363e7b097b5.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.75af2363e7b097b5.hot-update.js"
-    },
-    "index.75af2363e7b097b5.hot-update.json": {
-      "name": "index.75af2363e7b097b5.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.75af2363e7b097b5.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.75af2363e7b097b5.hot-update.json"
-    },
-    "index.87205cbdf8291255.hot-update.js": {
-      "name": "index.87205cbdf8291255.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.87205cbdf8291255.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.87205cbdf8291255.hot-update.js"
-    },
-    "index.87205cbdf8291255.hot-update.json": {
-      "name": "index.87205cbdf8291255.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.87205cbdf8291255.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.87205cbdf8291255.hot-update.json"
-    },
-    "index.5a31090257fbbe88.hot-update.js": {
-      "name": "index.5a31090257fbbe88.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.5a31090257fbbe88.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.5a31090257fbbe88.hot-update.js"
-    },
-    "index.5a31090257fbbe88.hot-update.json": {
-      "name": "index.5a31090257fbbe88.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.5a31090257fbbe88.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.5a31090257fbbe88.hot-update.json"
-    },
-    "index.1b97a2028b58af78.hot-update.js": {
-      "name": "index.1b97a2028b58af78.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.1b97a2028b58af78.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.1b97a2028b58af78.hot-update.js"
-    },
-    "index.1b97a2028b58af78.hot-update.json": {
-      "name": "index.1b97a2028b58af78.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.1b97a2028b58af78.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.1b97a2028b58af78.hot-update.json"
-    },
-    "index.6f1122541f98d9cb.hot-update.js": {
-      "name": "index.6f1122541f98d9cb.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.6f1122541f98d9cb.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.6f1122541f98d9cb.hot-update.js"
-    },
-    "index.6f1122541f98d9cb.hot-update.json": {
-      "name": "index.6f1122541f98d9cb.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.6f1122541f98d9cb.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.6f1122541f98d9cb.hot-update.json"
-    },
-    "index.478533d2ac3f9d42.hot-update.js": {
-      "name": "index.478533d2ac3f9d42.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.478533d2ac3f9d42.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.478533d2ac3f9d42.hot-update.js"
-    },
-    "index.478533d2ac3f9d42.hot-update.json": {
-      "name": "index.478533d2ac3f9d42.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.478533d2ac3f9d42.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.478533d2ac3f9d42.hot-update.json"
-    },
-    "index.6b39de335cca7f18.hot-update.js": {
-      "name": "index.6b39de335cca7f18.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.6b39de335cca7f18.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.6b39de335cca7f18.hot-update.js"
-    },
-    "index.6b39de335cca7f18.hot-update.json": {
-      "name": "index.6b39de335cca7f18.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.6b39de335cca7f18.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.6b39de335cca7f18.hot-update.json"
-    },
-    "index.139501e0ebf7775c.hot-update.js": {
-      "name": "index.139501e0ebf7775c.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.139501e0ebf7775c.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.139501e0ebf7775c.hot-update.js"
-    },
-    "index.139501e0ebf7775c.hot-update.json": {
-      "name": "index.139501e0ebf7775c.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.139501e0ebf7775c.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.139501e0ebf7775c.hot-update.json"
-    },
-    "index.5556b8d27a518f4c.hot-update.js": {
-      "name": "index.5556b8d27a518f4c.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.5556b8d27a518f4c.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.5556b8d27a518f4c.hot-update.js"
-    },
-    "index.5556b8d27a518f4c.hot-update.json": {
-      "name": "index.5556b8d27a518f4c.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.5556b8d27a518f4c.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.5556b8d27a518f4c.hot-update.json"
-    },
-    "index.754d5259564258eb.hot-update.js": {
-      "name": "index.754d5259564258eb.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.754d5259564258eb.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.754d5259564258eb.hot-update.js"
-    },
-    "index.754d5259564258eb.hot-update.json": {
-      "name": "index.754d5259564258eb.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.754d5259564258eb.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.754d5259564258eb.hot-update.json"
-    },
-    "index.f62013ca0c6f984b.hot-update.js": {
-      "name": "index.f62013ca0c6f984b.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.f62013ca0c6f984b.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.f62013ca0c6f984b.hot-update.js"
-    },
-    "index.f62013ca0c6f984b.hot-update.json": {
-      "name": "index.f62013ca0c6f984b.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.f62013ca0c6f984b.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.f62013ca0c6f984b.hot-update.json"
-    },
-    "index.739fe59f9ad903b0.hot-update.js": {
-      "name": "index.739fe59f9ad903b0.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.739fe59f9ad903b0.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.739fe59f9ad903b0.hot-update.js"
-    },
-    "index.739fe59f9ad903b0.hot-update.json": {
-      "name": "index.739fe59f9ad903b0.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.739fe59f9ad903b0.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.739fe59f9ad903b0.hot-update.json"
-    },
-    "index.b68d3deb882f2496.hot-update.js": {
-      "name": "index.b68d3deb882f2496.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.b68d3deb882f2496.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.b68d3deb882f2496.hot-update.js"
-    },
-    "index.b68d3deb882f2496.hot-update.json": {
-      "name": "index.b68d3deb882f2496.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.b68d3deb882f2496.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.b68d3deb882f2496.hot-update.json"
-    },
-    "index.c998c5852cc3ab95.hot-update.js": {
-      "name": "index.c998c5852cc3ab95.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.c998c5852cc3ab95.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.c998c5852cc3ab95.hot-update.js"
-    },
-    "index.c998c5852cc3ab95.hot-update.json": {
-      "name": "index.c998c5852cc3ab95.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.c998c5852cc3ab95.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.c998c5852cc3ab95.hot-update.json"
-    },
-    "index.094a82e072161593.hot-update.js": {
-      "name": "index.094a82e072161593.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.094a82e072161593.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.094a82e072161593.hot-update.js"
-    },
-    "index.094a82e072161593.hot-update.json": {
-      "name": "index.094a82e072161593.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.094a82e072161593.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.094a82e072161593.hot-update.json"
-    },
-    "index.7533e2ff7de68cd0.hot-update.js": {
-      "name": "index.7533e2ff7de68cd0.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.7533e2ff7de68cd0.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.7533e2ff7de68cd0.hot-update.js"
-    },
-    "index.7533e2ff7de68cd0.hot-update.json": {
-      "name": "index.7533e2ff7de68cd0.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.7533e2ff7de68cd0.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.7533e2ff7de68cd0.hot-update.json"
-    },
-    "index.be9c21247b5f2f5a.hot-update.js": {
-      "name": "index.be9c21247b5f2f5a.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.be9c21247b5f2f5a.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.be9c21247b5f2f5a.hot-update.js"
-    },
-    "index.be9c21247b5f2f5a.hot-update.json": {
-      "name": "index.be9c21247b5f2f5a.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.be9c21247b5f2f5a.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.be9c21247b5f2f5a.hot-update.json"
-    },
-    "index.1365758444438fc8.hot-update.js": {
-      "name": "index.1365758444438fc8.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.1365758444438fc8.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.1365758444438fc8.hot-update.js"
-    },
-    "index.1365758444438fc8.hot-update.json": {
-      "name": "index.1365758444438fc8.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.1365758444438fc8.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.1365758444438fc8.hot-update.json"
-    },
-    "index.cef52f69d3605cae.hot-update.js": {
-      "name": "index.cef52f69d3605cae.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.cef52f69d3605cae.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.cef52f69d3605cae.hot-update.js"
-    },
-    "index.cef52f69d3605cae.hot-update.json": {
-      "name": "index.cef52f69d3605cae.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.cef52f69d3605cae.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.cef52f69d3605cae.hot-update.json"
-    },
-    "index.f65248dd7236c114.hot-update.js": {
-      "name": "index.f65248dd7236c114.hot-update.js",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.f65248dd7236c114.hot-update.js",
-      "publicPath": "http://127.0.0.1:8080/index.f65248dd7236c114.hot-update.js"
-    },
-    "index.f65248dd7236c114.hot-update.json": {
-      "name": "index.f65248dd7236c114.hot-update.json",
-      "path": "C:\\github\\Project\\Personal_Page\\PersonalSite\\frontend_vue\\dist\\index.f65248dd7236c114.hot-update.json",
-      "publicPath": "http://127.0.0.1:8080/index.f65248dd7236c114.hot-update.json"
+      "path": "C:\\dist\\index.html",
+      "publicPath": "/index.html"
     }
   },
   "chunks": {
     "index": [
-      "js/index.js",
-      "index.f65248dd7236c114.hot-update.js"
+      "js/index.js"
     ]
   },
-  "publicPath": "http://127.0.0.1:8080/"
+  "publicPath": "/"
 }

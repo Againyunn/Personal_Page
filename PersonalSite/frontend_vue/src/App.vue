@@ -1,10 +1,24 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="app">
+    <HeaderLayer/>
+    <transition name="fade">
+      <router-view/>
+    </transition>
+  </div>
 </template>
+
+<script>
+import HeaderLayer from './components/HeaderLayer.vue';
+
+export default {
+  components:{
+    HeaderLayer,
+},
+  setup() {
+    
+  },
+}
+</script>
 
 <style>
 #app {

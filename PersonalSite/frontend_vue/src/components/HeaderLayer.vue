@@ -2,7 +2,7 @@
     <div class="header-wrap">
         <!-- 헤더 -->
         <header class="header-basic" v-if="headerChanged === false"> 
-            <div class="main-logo" @click="moveToMain">
+            <div class="main-logo" @click="moveToMain()">
                 <span class="big-font">Againyunn</span>
                 <span class="small-font">FrontEnd Dev</span>
             </div>

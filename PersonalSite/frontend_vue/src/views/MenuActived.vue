@@ -6,10 +6,10 @@
         <div class="menu-index">
             <span class="menu-content" >이력</span>
         </div>
-        <div class="menu-index">
+        <div class="menu-index" @click="moveToPage('/Portfolio')">
             <span class="menu-content" >포트폴리오</span>
         </div>
-        <div class="menu-index">
+        <div class="menu-index" @click="moveToPage('/InterestVision')">
             <span class="menu-content" >관심사.비전</span>
         </div>
     </div>

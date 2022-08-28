@@ -17,6 +17,7 @@ export default{
     //html과 JS코드에서 사용할 데이터 변수 선언
     data(){ 
         return{
+            slideChanged: false
         };
     },
     //컴포지션 API
@@ -38,7 +39,7 @@ export default{
     //컴포넌트 내에서 사용할 메소드 정의
     methods: {
         isSlideClicked(){
-            setInterval(()=>{this.$router.push('/profile')}, 500);
+            setTimeout(()=>{this.$router.push('/profile')}, 500);
         }
     }
 }

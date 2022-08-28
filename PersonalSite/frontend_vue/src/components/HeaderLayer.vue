@@ -82,6 +82,7 @@ export default{
 }
 </script>
 <style scoped>
+
     /*기본 헤더 스타일*/
     .header-basic{
         display: flex;
@@ -193,4 +194,8 @@ export default{
         transition: all 0.2s ease-in;
     }
 
+    /*토글 버튼 hover효과*/
+    .toggleButton:hover{
+        box-shadow: 0px 0px 15px 3px #78c4fa;
+    }
 </style>

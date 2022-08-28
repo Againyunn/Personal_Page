@@ -79,6 +79,7 @@ export default{
         flex-wrap: nowrap;
         justify-content: center;
         margin-top: 50px;
+        margin-bottom: 50px;
     }
     .maincontent-wrap > #picture-profile{
         margin-right: 10px;
@@ -108,7 +109,7 @@ export default{
         border-radius: 100%;
     }
 
-    /*효과*/
+    /*icon-hover 효과*/
     .maincontent-wrap > .slogun-wrap > .icon-wrap > img:hover{
         box-shadow: 0px 0px 15px 3px #78c4fa;
     }

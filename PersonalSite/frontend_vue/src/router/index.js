@@ -7,22 +7,19 @@ const routes = [
   {
     path: '/',
     name: 'MainPage',
-    component: MainPage
+    component: MainPage,
+    meta: {
+      page: 1
+    }
   },  
   {
     path: '/MenuActived',
     name: 'MenuActived',
-    component: MenuActived
+    component: MenuActived,
+    meta: {
+      page: 2
+    }
   },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  },
-
 ]
 
 const router = createRouter({

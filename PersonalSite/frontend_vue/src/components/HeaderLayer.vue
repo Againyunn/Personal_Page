@@ -121,9 +121,11 @@ export default{
     }
     .main-logo > .big-font{
         font-size: 32px;
+        font-weight: bold;
     }
     .main-logo > .small-font{
         font-size: 25px;
+        font-weight: bold;
     }
 
     /*메뉴 토글 활성화 헤더 스타일*/

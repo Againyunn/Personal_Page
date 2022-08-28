@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import MainPage from '../views/MainPage.vue'
 import MenuActived from '../views/MenuActived.vue'
+import ProfilePage from '../views/ProfilePage.vue'
 
 const routes = [
   {
@@ -20,6 +21,15 @@ const routes = [
       page: 2
     }
   },
+  {
+    path: '/Profile',
+    name: 'ProfilePage',
+    component: ProfilePage,
+    meta: {
+      page: 3
+    }
+  }
+
 ]
 
 const router = createRouter({

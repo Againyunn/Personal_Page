@@ -2,11 +2,10 @@
     <div class="header-wrap">
         <!-- 헤더 -->
         <header class="header-basic" v-if="headerChanged === false"> 
-            <div class="main-logo" @click="moveToMain()">
+            <div class="main-logo" @click="moveToMain">
                 <span class="big-font">Againyunn</span>
                 <span class="small-font">FrontEnd Dev</span>
             </div>
-
         </header>
 
         <header class="header-changed" v-else> 
@@ -17,7 +16,7 @@
         </header>
         <!-- 메뉴 토글 -->
         <div id="menu-toggle">
-            <input type="checkbox" id="toggle" @click="clickedMenu()" hidden> 
+            <input type="checkbox" id="toggle" :checked="headerChanged==false?false:true" @click="clickedMenu" hidden> 
             <span class="menu-font">{{menuFont}}</span>
 
             <label for="toggle" class="toggleSwitch">
@@ -26,6 +25,7 @@
         </div>
     </div>
 </template>
+
 <script>
 export default{
     //컴포넌트 이름
@@ -50,26 +50,41 @@ export default{
                 this.menuFont = "닫기";
                 this.headerChanged = true;
 
+                this.menuToggleStatus = true;
+                // this.menuChecked.checked = false;
+
                 //메뉴 창으로 이동
                 this.$router.push('/MenuActived')
-                document.body.style.backgroundColor = '#2B90D9';
             }
             else{
-                this.menuFont = "메뉴";
                 this.headerChanged = false;
+                this.menuFont = "메뉴";
+
+                this.menuToggleStatus = false;
+                // this.menuChecked.checked = true;
 
                 //과거 페이지로 복귀
                 history.go(-1)
-                document.body.style.backgroundColor = '#FFF';
             }
-            
         },
         moveToMain(){
             //메인 페이지로 이동
             this.$router.push('/')
+        },
+        resetMenuToggle(action){
+            if(action === true){
+                // let checkbox = document.getElementById('toggle');
+                // console.log("header:",checkbox);
+                // checkbox.checked = action;
+                // this.menuChecked.checked = true;
+                this.headerChanged = false;
+                this.menuFont = "메뉴";
+            }
         }
+
     },
     computed: {
+        
         ShowMenuModal(){
             if(this.menuFont === "닫기"){
                 return true
@@ -77,7 +92,10 @@ export default{
             else{
                 return false
             }
-        }
+        },
+    },
+    watch: {
+        
     }
 }
 </script>

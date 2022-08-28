@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <HeaderLayer/>
+    <HeaderLayer @send-message="sendMessage" ref="HeaderLayer"/>
     <transition :name="transitionName">
       <router-view/>
     </transition>
@@ -17,17 +17,24 @@ export default {
   },
   data() {
     return {
-      transitionName: ""
+      transitionName: "",
     };
   },
   watch: {
+    // 라우터 작동(페이지 이동 시)
     $route(to, from) {
       if(to.meta.page == null || from.meta.page == null){
         this.transitionName = "fade";
       }else{
         this.transitionName = to.meta.page > from.meta.page ? "next" : "prev";
       }
-      console.log(this.transitionName);
+
+      let menuToggleStatus = localStorage.getItem('menuToggle');
+      console.log("menuToggle setting:",menuToggleStatus)
+      if(menuToggleStatus == 'true'){
+        window.localStorage.setItem('menuToggle', false);        
+        this.$refs.HeaderLayer.resetMenuToggle(true);
+      }
     }
   }
 }

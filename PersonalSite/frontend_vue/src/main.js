@@ -10,7 +10,7 @@ const app = createApp(App)
 app.use(VueSweetalert2)
 app.use(router).mount('#app')
 
-
+app.config.globalProperties.menuToggleStatus = false;
 
 
 

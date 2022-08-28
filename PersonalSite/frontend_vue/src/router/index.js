@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import MainPage from '../views/MainPage.vue'
 import MenuActived from '../views/MenuActived.vue'
 import ProfilePage from '../views/ProfilePage.vue'
+import PortfolioPage from '../views/PortfolioPage.vue'
+import InterestVisionPage from '../views/InterestVisionPage.vue'
 
 const routes = [
   {
@@ -12,7 +14,7 @@ const routes = [
     meta: {
       page: 1
     }
-  },  
+  },
   {
     path: '/MenuActived',
     name: 'MenuActived',
@@ -28,8 +30,23 @@ const routes = [
     meta: {
       page: 3
     }
+  },
+  {
+    path: '/Portfolio',
+    name: 'PortfolioPage',
+    component: PortfolioPage,
+    meta:{
+      page: 4
+    }
+  },
+  {
+    path: '/InterestVision',
+    name: 'InterestVisionPage',
+    component: InterestVisionPage,
+    meta:{
+      page: 5
+    }
   }
-
 ]
 
 const router = createRouter({

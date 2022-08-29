@@ -39,7 +39,7 @@ export default{
     //컴포넌트 내에서 사용할 메소드 정의
     methods: {
         isSlideClicked(){
-            setTimeout(()=>{this.$router.push('/profile')}, 500);
+            setTimeout(()=>{this.$router.push('/profile')}, 300);
         }
     }
 }

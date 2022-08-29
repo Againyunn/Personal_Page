@@ -118,6 +118,7 @@ export default{
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: center;
+        cursor: pointer;
     }
     .main-logo > .big-font{
         font-size: 32px;

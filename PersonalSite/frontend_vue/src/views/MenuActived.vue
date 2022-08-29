@@ -3,9 +3,6 @@
         <div class="menu-index" @click="moveToPage('/Profile')">
             <span class="menu-content" >개인 프로필</span>
         </div>
-        <div class="menu-index">
-            <span class="menu-content" >이력</span>
-        </div>
         <div class="menu-index" @click="moveToPage('/Portfolio')">
             <span class="menu-content" >포트폴리오</span>
         </div>

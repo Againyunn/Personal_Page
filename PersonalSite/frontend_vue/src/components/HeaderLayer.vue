@@ -159,7 +159,7 @@ export default{
 
     /*메뉴 토글*/
     #menu-toggle{
-        position: fixed;
+        position: absolute;
         z-index: 1;
         top: 1em;
         right: 1em;
@@ -191,10 +191,10 @@ export default{
     .menu-font{
         color: #2B90D9;
         font-size: 15px;
-        position: fixed;
+        position: absolute;
         z-index: 2;
-        top: 4em;
-        right: 6.5em;
+        top: 3em;
+        right: 5.5em;
     }
 
     /* 체크박스가 체크되면 변경 이벤트 */

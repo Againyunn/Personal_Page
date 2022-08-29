@@ -102,6 +102,7 @@ export default{
         flex-direction: row;
         flex-wrap: nowrap;
         margin-top: 20px;
+        cursor: pointer;
     }
     .maincontent-wrap > .slogun-wrap > .icon-wrap > img{
         width: 50px;

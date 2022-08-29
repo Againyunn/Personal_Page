@@ -56,7 +56,7 @@ export default{
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
-        
+        cursor: pointer;
     }
     .slide-word{
         display: inline-block;

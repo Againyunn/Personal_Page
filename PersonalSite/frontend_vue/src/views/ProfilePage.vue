@@ -191,8 +191,8 @@ export default{
         justify-content: center;
         padding-top: 80px;
         height: calc(100vh - 90px); 
-        margin-left: 5vw;
-        margin-right: 5vw;
+        margin-left: calc(5vw + 50px);
+        margin-right: calc(5vw + 50px);
     }
     .profile-wrap > .profile-img{
         width: 300px;

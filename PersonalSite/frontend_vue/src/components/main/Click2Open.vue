@@ -1,6 +1,6 @@
 <template>
     <div class="slide-wrap">
-        <div class="slide-word-wrap" @click="isSlideClicked">
+        <div class="slide-word-wrap blink-effect" @click="isSlideClicked">
             <img src="../../../public/static/component/triangle.png" alt="삼각형" class="slide-triangle"/>
             <span class="slide-word">&nbsp;Click to Open!</span>    
         </div>
@@ -95,4 +95,16 @@ export default{
         transform: translateX(1000px);
     }
 
+    /*반짝반짝 효과*/
+    @keyframes blink-effect-set{
+        50%{
+            opacity: 0.4;
+        }
+    }
+    .blink-effect{
+        animation: blink-effect-set 1.5s step-end infinite;
+    }
+    .blink-effect:hover{
+        animation: none;
+    }
 </style>

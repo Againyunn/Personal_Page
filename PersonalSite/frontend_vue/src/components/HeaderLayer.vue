@@ -150,10 +150,12 @@ export default{
     }
     .main-logo-changed > .big-font{
         font-size: 32px;
+        font-weight: bold;
         color: #FFF;
     }
     .main-logo-changed > .small-font{
         font-size: 25px;
+        font-weight: bold;
         color: #FFF;
     }
 
@@ -186,11 +188,13 @@ export default{
         transform: translateY(-50%);
         border-radius: 50%;
         background: #2B90D9;
+        box-shadow: 0px 0px 5px 1.5px #0070B0 inset;
     }
 
     .menu-font{
         color: #2B90D9;
         font-size: 15px;
+        font-weight: bold;
         position: absolute;
         z-index: 2;
         top: 3em;
@@ -205,6 +209,7 @@ export default{
     #toggle:checked ~ .toggleSwitch .toggleButton {
         left: calc(100% - 2.8rem);
         background: #fff;
+        box-shadow: 0px 0px 4px 2px #D9E1E8 inset;
     }
 
     #toggle:checked ~ .menu-font {

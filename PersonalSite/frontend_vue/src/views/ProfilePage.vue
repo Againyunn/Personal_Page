@@ -124,7 +124,8 @@
             </div>
         </div>
 
-        <a href="#show-more" class="slide-to-see-down" v-show="isSeeMore == false" @click="seeMoreContoler" >
+        <!-- 프로필 콘텐츠 더 보기 + 반짝반짝 효과 -->
+        <a href="#show-more" class="slide-to-see-down blink-effect" v-show="isSeeMore == false" @click="seeMoreContoler" >
             <img src="../../public/static/component/triangleDown.png" alt="삼각형(하)">
             <span>click to see more</span>
         </a>
@@ -196,7 +197,7 @@ export default{
     }
     .profile-wrap > .profile-img{
         width: 300px;
-        height: 400px;
+        height: 380px;
     }
     .profile-wrap > .profile-content-wrap{
         display: flex;
@@ -324,5 +325,18 @@ export default{
 
     a{
         text-decoration: none;
+    }
+
+    /*반짝반짝 효과*/
+    @keyframes blink-effect-set{
+        50%{
+            opacity: 0.4;
+        }
+    }
+    .blink-effect{
+        animation: blink-effect-set 1.5s step-end infinite;
+    }
+    .blink-effect:hover{
+        animation: none;
     }
 </style>

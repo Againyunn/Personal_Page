@@ -107,7 +107,7 @@ export default{
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
-
+        width: 100vw;
         height: 90px;
         border-bottom: 2px solid #2B90D9;
     }
@@ -225,8 +225,17 @@ export default{
         box-shadow: 0px 0px 15px 3px #78c4fa;
     }
 
+    /*태블릿 헤더 스타일*/
+    @media (max-width: 960px) {
+        /*메뉴 토글*/
+        #menu-toggle{
+            top: 1em;
+            right: 3em;
+        }
+    }
+
+    /*모바일1 헤더 스타일*/
     @media (max-width: 600px) {
-        /*모바일1 헤더 스타일*/
         .header-basic{
             height: 70px;
         }
@@ -274,7 +283,6 @@ export default{
 
         .menu-font{
             font-size: 12px;
-            z-index: 2;
             top: 2.7em;
             right: 5em;
         }
@@ -285,6 +293,79 @@ export default{
         }
     }
 
+    /*모바일2 헤더 스타일*/
+    @media (max-width: 480px) {
+        /*메뉴 토글*/
+        #menu-toggle{
+            top: 1.8em;
+            right: 0.01em;
+        }
+        .toggleSwitch {
+            margin: 1rem;
+        }
+        .menu-font{
+            top: 2em;
+            right: 4.5em;
+        }
+    }
 
+    /*모바일3 헤더 스타일*/
+    @media (max-width: 300px) {
+        .header-basic{
+            height: 60px;
+        }
+        .main-logo{
+            margin-left: 6px;
+        }
+        .main-logo > .big-font{
+            font-size: 19px;
+        }
+        .main-logo > .small-font{
+            font-size: 15px;
+        }
+        
+        /*메뉴 토글 활성화 헤더 스타일*/
+        .header-changed{
+            height: 60px;
+        }
+        .main-logo-changed{
+            margin-left: 6px;
+        }
+        .main-logo-changed > .big-font{
+            font-size: 20px;
+        }
+        .main-logo-changed > .small-font{
+            font-size: 15px;
+        }
+        
+        /*메뉴 토글*/
+        #menu-toggle{
+            top: 3.5em;
+            right: 0.5em;
+        }
+
+        .toggleSwitch {
+            width: 5rem;
+            margin: 0.5rem;
+            height: 1.8rem;
+        }
+
+        .toggleSwitch .toggleButton {
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+
+        .menu-font{
+            font-size: 10px;
+            z-index: 2;
+            top: 1.5em;
+            right: 3.8em;
+        }
+
+        /* 체크박스가 체크되면 변경 이벤트 */
+        #toggle:checked ~ .toggleSwitch .toggleButton {
+            left: calc(100% - 1.8em);
+        }
+    }
 
 </style>

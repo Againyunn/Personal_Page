@@ -107,4 +107,19 @@ export default{
     .blink-effect:hover{
         animation: none;
     }
+
+    /*모바일3 헤더 스타일*/
+    @media (max-width: 300px) {
+        .slide-wrap{
+            height: 20px;
+        }
+        .slide-word{
+            font-size: 15px;
+        }
+        .slide-triangle{
+            margin-top: 4px;
+            width: 12px;
+            height: 12px;
+        }
+    }
 </style>

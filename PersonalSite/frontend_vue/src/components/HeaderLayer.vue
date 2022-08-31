@@ -224,4 +224,67 @@ export default{
     .toggleButton:hover{
         box-shadow: 0px 0px 15px 3px #78c4fa;
     }
+
+    @media (max-width: 600px) {
+        /*모바일1 헤더 스타일*/
+        .header-basic{
+            height: 70px;
+        }
+        .main-logo{
+            margin-left: 8px;
+        }
+        .main-logo > .big-font{
+            font-size: 26px;
+        }
+        .main-logo > .small-font{
+            font-size: 20px;
+        }
+        
+        /*메뉴 토글 활성화 헤더 스타일*/
+        .header-changed{
+            height: 70px;
+        }
+
+        .main-logo-changed{
+            margin-left: 8px;
+        }
+        .main-logo-changed > .big-font{
+            font-size: 26px;
+        }
+        .main-logo-changed > .small-font{
+            font-size: 20px;
+        }
+        
+        /*메뉴 토글*/
+        #menu-toggle{
+            top: 1.2em;
+            right: 1em;
+        }
+
+        .toggleSwitch {
+            width: 6rem;
+            margin: 1.5rem;
+            height: 2.2rem;
+        }
+
+        .toggleSwitch .toggleButton {
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+
+        .menu-font{
+            font-size: 12px;
+            z-index: 2;
+            top: 2.7em;
+            right: 5em;
+        }
+
+        /* 체크박스가 체크되면 변경 이벤트 */
+        #toggle:checked ~ .toggleSwitch .toggleButton {
+            left: calc(100% - 2em);
+        }
+    }
+
+
+
 </style>

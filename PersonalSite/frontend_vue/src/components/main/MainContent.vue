@@ -114,4 +114,72 @@ export default{
     .maincontent-wrap > .slogun-wrap > .icon-wrap > img:hover{
         box-shadow: 0px 0px 15px 3px #78c4fa;
     }
+
+    /*태블릿 메인콘텐츠 스타일*/
+    @media (max-width: 960px) {
+        .maincontent-wrap{
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-left: 2vw;
+            margin-right: 2vw;
+        }
+        .maincontent-wrap > #picture-profile{
+            margin-right: 20px;
+            width: 300px;
+        }
+        .maincontent-wrap > .slogun-wrap > .slogun-word{
+            font-size: 26px;
+        }
+        .maincontent-wrap > .slogun-wrap > .icon-wrap > img{
+            width: 50px;
+            border-radius: 100%;
+        }
+    }
+
+    /*모바일1 & 모바일2 메인콘텐츠 스타일*/
+    @media (max-width: 600px) {
+        .maincontent-wrap{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .maincontent-wrap > #picture-profile{
+            margin-right: 0px;
+            width: 250px;
+        }
+        .maincontent-wrap > .slogun-wrap{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: nowrap;
+            width: auto;
+            text-align: left;
+            margin-top: 20px;
+        }
+        .maincontent-wrap > .slogun-wrap > .slogun-word{
+            font-size: 20px;
+        }
+        .maincontent-wrap > .slogun-wrap > .icon-wrap{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin-top: 20px;
+            justify-content: space-evenly;
+        }
+    }
+
+    /*모바일3 헤더 스타일*/
+    @media (max-width: 300px) {
+        .maincontent-wrap > .slogun-wrap > .slogun-word{
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .maincontent-wrap > .slogun-wrap > .icon-wrap > img{
+            width: 40px;
+            border-radius: 100%;
+        }
+    }
+
 </style>

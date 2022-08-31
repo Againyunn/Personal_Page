@@ -2,7 +2,7 @@
 venv/
 frontend_vue/node_modules/
 /dist
-frontend_vue/src/
+#frontend_vue/src/
 
 # local env files
 .env.local

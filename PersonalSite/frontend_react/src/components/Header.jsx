@@ -20,10 +20,13 @@ function Header(props) {
       setMenuFont("닫기");
       setHeaderChange(true);
 
-      navigate("/MenuActived");
+      navigate("/MenuActivated");
     } else {
       setMenuFont("메뉴");
       setHeaderChange(false);
+
+      //과거 페이지로 복귀
+      window.history.go(-1);
     }
   };
 

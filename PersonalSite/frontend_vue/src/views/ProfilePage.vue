@@ -339,4 +339,8 @@ export default{
     .blink-effect:hover{
         animation: none;
     }
+
+    @media (max-width: 960px) {
+        
+    }
 </style>

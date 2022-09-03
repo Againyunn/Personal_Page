@@ -58,7 +58,7 @@ export default{
             navigator.clipboard.writeText(content)
             .then(() =>{
                 this.$swal.fire({
-                    title: '이메일이 복사되었습니다.',
+                    text: '이메일이 복사되었습니다.',
                     showCancelButton: false,
                     confirmButtonText: `확인`,
                     confirmButtonColor: '#2B90D9',
@@ -106,7 +106,7 @@ export default{
     }
     .maincontent-wrap > .slogun-wrap > .icon-wrap > img{
         width: 50px;
-        margin-right: 30px;
+        margin-right: 50px;
         border-radius: 100%;
     }
 
@@ -130,9 +130,11 @@ export default{
         .maincontent-wrap > .slogun-wrap > .slogun-word{
             font-size: 26px;
         }
-        .maincontent-wrap > .slogun-wrap > .icon-wrap > img{
-            width: 50px;
-            border-radius: 100%;
+        .maincontent-wrap > .slogun-wrap > .icon-wrap{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin-top: 30px;
         }
     }
 
@@ -166,7 +168,19 @@ export default{
             flex-direction: row;
             flex-wrap: nowrap;
             margin-top: 20px;
+            margin-bottom: 30px;
             justify-content: space-evenly;
+        }
+        .maincontent-wrap > .slogun-wrap > .icon-wrap > img{
+            width: 50px;
+            border-radius: 100%;
+            margin-right: 0px;
+        }
+    }
+    /*모바일3 헤더 스타일*/
+    @media (max-width: 480px) {
+        .maincontent-wrap > .slogun-wrap > .icon-wrap{
+            margin-bottom: 20px;
         }
     }
 

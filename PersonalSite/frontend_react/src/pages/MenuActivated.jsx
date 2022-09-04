@@ -5,9 +5,17 @@ import { useNavigate } from "react-router-dom";
 // css
 import "../css/MenuActivated.css";
 
-function MenuActivated(props) {
-  const navigate = useNavigate();
+// redux
+import { connect } from "react-redux";
+import * as action from "../redux/action";
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    menuToggle: (activate) => dispatch(action.menuToggle({ activate })),
+  };
+};
+
+function MenuActivated({ menuToggle }) {
   useEffect(() => {
     // mount 시 작업
     document.body.style.backgroundColor = "#2B90D9";
@@ -17,24 +25,26 @@ function MenuActivated(props) {
       document.body.style.backgroundColor = "#FFF";
     };
   }, []);
+  const navigate = useNavigate();
 
-  const moveToPage = (target) => {
+  async function moveToPage(target) {
+    menuToggle(false);
     navigate(target);
-  };
+  }
 
   return (
-    <div class="menu-wrap">
-      <div class="menu-index" onClick={moveToPage("/Profile")}>
-        <span class="menu-content">개인 프로필</span>
+    <div className="menu-wrap">
+      <div className="menu-index" onClick={() => moveToPage("/Profile")}>
+        <span className="menu-content">개인 프로필</span>
       </div>
-      <div class="menu-index" onCclick={moveToPage("/Portfolio")}>
-        <span class="menu-content">포트폴리오</span>
+      <div className="menu-index" onClick={() => moveToPage("/Portfolio")}>
+        <span className="menu-content">포트폴리오</span>
       </div>
-      <div class="menu-index" onCclick={moveToPage("/InterestVision")}>
-        <span class="menu-content">관심사.비전</span>
+      <div className="menu-index" onClick={() => moveToPage("/InterestVision")}>
+        <span className="menu-content">관심사.비전</span>
       </div>
     </div>
   );
 }
 
-export default MenuActivated;
+export default connect(null, mapDispatchToProps)(MenuActivated);

@@ -5,18 +5,41 @@ import { useNavigate } from "react-router-dom";
 // css
 import "../css/Header.css";
 
-function Header(props) {
+// redux
+import { connect } from "react-redux";
+import * as action from "../redux/action";
+import { useEffect } from "react";
+
+const mapStateToProps = (state) => {
+  return {
+    activate: state.activate,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    menuToggle: (activate) => dispatch(action.menuToggle({ activate })),
+  };
+};
+
+function Header({ activate, menuToggle }) {
   const [headerChange, setHeaderChange] = useState(false);
   const [menuFont, setMenuFont] = useState("메뉴");
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log("change1:", activate);
+    clickedMenu();
+    console.log("change2:", activate);
+  }, [activate]);
 
   const moveToMain = () => {
     navigate("/");
   };
 
   const clickedMenu = () => {
-    if (menuFont === "메뉴") {
+    if (activate === true) {
       setMenuFont("닫기");
       setHeaderChange(true);
 
@@ -24,9 +47,20 @@ function Header(props) {
     } else {
       setMenuFont("메뉴");
       setHeaderChange(false);
+    }
+  };
 
-      //과거 페이지로 복귀
-      window.history.go(-1);
+  const changeMenuToggle = (type = false) => {
+    if (activate) {
+      menuToggle(false);
+      console.log("clicked,", activate);
+      if (type === true) {
+        //과거 페이지로 복귀
+        window.history.go(-1);
+      }
+    } else {
+      menuToggle(true);
+      console.log("clicked,", activate);
     }
   };
 
@@ -41,7 +75,7 @@ function Header(props) {
           </div>
         </header>
       ) : (
-        <header className="header-changed" onClick={moveToMain}>
+        <header className="header-changed">
           <div className="main-logo-changed">
             <span className="big-font">Againyunn</span>
             <span className="small-font">FrontEnd Dev</span>
@@ -55,7 +89,7 @@ function Header(props) {
           type="checkbox"
           id="toggle"
           checked={headerChange}
-          onChange={clickedMenu}
+          onChange={() => changeMenuToggle(true)}
           hidden
         />
         <span className="menu-font">{menuFont}</span>
@@ -68,4 +102,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

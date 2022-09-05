@@ -1,56 +1,86 @@
+@charset "UTF-8";
 /*기본 헤더 스타일*/
 .header-basic {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100vw;
   height: 90px;
   border-bottom: 2px solid #2b90d9;
 }
-
-.main-logo {
+.header-basic .main-logo {
   margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
 }
-.main-logo > .big-font {
+.header-basic .main-logo .big-font {
   font-size: 32px;
   font-weight: bold;
 }
-.main-logo > .small-font {
+.header-basic .main-logo .small-font {
   font-size: 25px;
   font-weight: bold;
 }
 
 /*메뉴 토글 활성화 헤더 스타일*/
 .header-changed {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background: #2b90d9;
   border-bottom: 2px solid #fff;
-
   height: 90px;
 }
-
-.main-logo-changed {
+.header-changed .main-logo-changed {
   margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.main-logo-changed > .big-font {
+.header-changed .main-logo-changed .big-font {
   font-size: 32px;
   font-weight: bold;
   color: #fff;
 }
-.main-logo-changed > .small-font {
+.header-changed .main-logo-changed .small-font {
   font-size: 25px;
   font-weight: bold;
   color: #fff;
@@ -62,9 +92,10 @@
   z-index: 1;
   top: 0.5em;
   right: 0.5em;
+  /* 체크박스가 체크되면 변경 이벤트 */
+  /*토글 버튼 hover효과*/
 }
-
-.toggleSwitch {
+#menu-toggle .toggleSwitch {
   width: 8rem;
   margin: 1rem;
   height: 3rem;
@@ -72,23 +103,24 @@
   position: relative;
   border-radius: 2rem;
   background-color: #fff;
-  box-shadow: 0 0 1rem 3px rgba(0 0 0 / 15%);
+  -webkit-box-shadow: 0 0 1rem 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 1rem 3px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
-
-.toggleSwitch .toggleButton {
+#menu-toggle .toggleSwitch .toggleButton {
   width: 2.6rem;
   height: 2.6rem;
   position: absolute;
   top: 50%;
   left: 0.2rem;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   border-radius: 50%;
   background: #2b90d9;
-  box-shadow: 0px 0px 5px 1.5px #0070b0 inset;
+  -webkit-box-shadow: 0px 0px 5px 1.5px #0070b0 inset;
+          box-shadow: 0px 0px 5px 1.5px #0070b0 inset;
 }
-
-.menu-font {
+#menu-toggle .menu-font {
   color: #2b90d9;
   font-size: 15px;
   font-weight: bold;
@@ -97,31 +129,27 @@
   top: 2em;
   right: 4.5em;
 }
-
-/* 체크박스가 체크되면 변경 이벤트 */
-#toggle:checked ~ .toggleSwitch {
+#menu-toggle #toggle:checked ~ .toggleSwitch {
   background: #f03d3d;
 }
-
-#toggle:checked ~ .toggleSwitch .toggleButton {
+#menu-toggle #toggle:checked ~ .toggleSwitch .toggleButton {
   left: calc(100% - 2.8rem);
   background: #fff;
-  box-shadow: 0px 0px 4px 2px #d9e1e8 inset;
+  -webkit-box-shadow: 0px 0px 4px 2px #d9e1e8 inset;
+          box-shadow: 0px 0px 4px 2px #d9e1e8 inset;
 }
-
-#toggle:checked ~ .menu-font {
+#menu-toggle #toggle:checked ~ .menu-font {
   color: #fff;
 }
-
-.toggleSwitch,
-.toggleButton,
-.menu-font {
+#menu-toggle .toggleSwitch,
+#menu-toggle .toggleButton,
+#menu-toggle .menu-font {
+  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-
-/*토글 버튼 hover효과*/
-.toggleButton:hover {
-  box-shadow: 0px 0px 15px 3px #78c4fa;
+#menu-toggle .toggleButton:hover {
+  -webkit-box-shadow: 0px 0px 15px 3px #78c4fa;
+          box-shadow: 0px 0px 15px 3px #78c4fa;
 }
 
 /*태블릿 헤더 스타일*/
@@ -132,66 +160,57 @@
     right: 1em;
   }
 }
-
 /*모바일1 헤더 스타일*/
 @media (max-width: 600px) {
   .header-basic {
     height: 70px;
   }
-  .main-logo {
+  .header-basic .main-logo {
     margin-left: 8px;
   }
-  .main-logo > .big-font {
+  .header-basic .main-logo .big-font {
     font-size: 26px;
   }
-  .main-logo > .small-font {
+  .header-basic .main-logo .small-font {
     font-size: 20px;
   }
-
   /*메뉴 토글 활성화 헤더 스타일*/
   .header-changed {
     height: 70px;
   }
-
-  .main-logo-changed {
+  .header-changed .main-logo-changed {
     margin-left: 8px;
   }
-  .main-logo-changed > .big-font {
+  .header-changed .main-logo-changed .big-font {
     font-size: 26px;
   }
-  .main-logo-changed > .small-font {
+  .header-changed .main-logo-changed .small-font {
     font-size: 20px;
   }
-
   /*메뉴 토글*/
   #menu-toggle {
     top: 0.5em;
     right: 0.5em;
+    /* 체크박스가 체크되면 변경 이벤트 */
   }
-
-  .toggleSwitch {
+  #menu-toggle .toggleSwitch {
     width: 6rem;
     margin: 1rem;
     height: 2.2rem;
   }
-
-  .toggleSwitch .toggleButton {
+  #menu-toggle .toggleSwitch .toggleButton {
     width: 1.8rem;
     height: 1.8rem;
   }
-
-  .menu-font {
+  #menu-toggle .menu-font {
     font-size: 12px;
     top: 2em;
     right: 4.3em;
   }
-
-  /* 체크박스가 체크되면 변경 이벤트 */
-  #toggle:checked ~ .toggleSwitch .toggleButton {
+  #menu-toggle #toggle:checked ~ .toggleSwitch .toggleButton {
     left: calc(100% - 2em);
   }
 }
-
 /*모바일2 헤더 스타일*/
 @media (max-width: 480px) {
   /*메뉴 토글*/
@@ -199,70 +218,63 @@
     top: 0.7em;
     right: 0.01em;
   }
-  .toggleSwitch {
+  #menu-toggle .toggleSwitch {
     margin: 0.5rem;
   }
-  .menu-font {
+  #menu-toggle .menu-font {
     top: 1.5em;
     right: 3.8em;
   }
 }
-
 /*모바일3 헤더 스타일*/
 @media (max-width: 300px) {
   .header-basic {
     height: 60px;
   }
-  .main-logo {
+  .header-basic .main-logo {
     margin-left: 6px;
   }
-  .main-logo > .big-font {
+  .header-basic .main-logo .big-font {
     font-size: 19px;
   }
-  .main-logo > .small-font {
+  .header-basic .main-logo .small-font {
     font-size: 15px;
   }
-
   /*메뉴 토글 활성화 헤더 스타일*/
   .header-changed {
     height: 60px;
   }
-  .main-logo-changed {
+  .header-changed .main-logo-changed {
     margin-left: 6px;
   }
-  .main-logo-changed > .big-font {
+  .header-changed .main-logo-changed .big-font {
     font-size: 20px;
   }
-  .main-logo-changed > .small-font {
+  .header-changed .main-logo-changed .small-font {
     font-size: 15px;
   }
-
   /*메뉴 토글*/
   #menu-toggle {
     top: 0.5em;
     right: 0.5em;
+    /* 체크박스가 체크되면 변경 이벤트 */
   }
-
-  .toggleSwitch {
+  #menu-toggle .toggleSwitch {
     width: 5rem;
     margin: 0.5rem;
     height: 1.8rem;
   }
-
-  .toggleSwitch .toggleButton {
+  #menu-toggle .toggleSwitch .toggleButton {
     width: 1.6rem;
     height: 1.6rem;
   }
-
-  .menu-font {
+  #menu-toggle .menu-font {
     font-size: 10px;
     z-index: 2;
     top: 1.5em;
     right: 3.8em;
   }
-
-  /* 체크박스가 체크되면 변경 이벤트 */
-  #toggle:checked ~ .toggleSwitch .toggleButton {
+  #menu-toggle #toggle:checked ~ .toggleSwitch .toggleButton {
     left: calc(100% - 1.8em);
   }
 }

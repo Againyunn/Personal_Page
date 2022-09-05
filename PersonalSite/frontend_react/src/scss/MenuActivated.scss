@@ -1,0 +1,25 @@
+.menu-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  justify-content: center;
+  text-align: left;
+
+  .menu-index {
+    margin-left: 50px;
+    margin-top: 2em;
+
+    .menu-content {
+      font-size: 30px;
+      color: #fff;
+      font-weight: bold;
+      opacity: 1;
+      animation: fadeInText 0.2s 0.1s ease-out forwards;
+
+      &:hover {
+        border-bottom: 2px solid #fff;
+      }
+    }
+  }
+}

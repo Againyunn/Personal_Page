@@ -1,13 +1,30 @@
-import "../styles/globals.css";
-import "../styles.css";
-import Layout from "../components/layout";
+// import "../styles/globals.css";
+import { wrapper } from "@/store";
+
+// css reset
+import "@/styles/common/reset.css";
+
+// header
+import Header from "@/components/header/Header";
+
+// multiple layout set
+const headers = {
+  H1: Header,
+};
 
 function MyApp({ Component, pageProps }) {
+  // header
+  let HeaderLayout = headers[Component.header] || (() => <></>);
+  console.log("HeaderLayout", HeaderLayout);
+  console.log("Component.layout", Component.layout);
+
   return (
-    <Layout>
+    <div>
+      {/* {!HeaderLayout ? <></> : <HeaderLayout />} */}
+      <HeaderLayout />
       <Component {...pageProps} />
-    </Layout>
+    </div>
   );
 }
 
-export default MyApp;
+export default wrapper.withRedux(MyApp);

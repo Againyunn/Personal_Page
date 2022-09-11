@@ -1,0 +1,37 @@
+.menuWrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: left;
+  .menuIndex {
+    margin-left: 50px;
+    margin-top: 2em;
+
+    .menuContent {
+      font-size: 30px;
+      color: #fff;
+      font-weight: bold;
+      opacity: 1;
+      animation: fadeInText 0.2s 0.1s ease-out forwards;
+
+      &:hover {
+        border-bottom: 2px solid #fff;
+      }
+    }
+  }
+}
+
+/* 모바일2 메뉴 스타일 */
+@media (max-width: 480px) {
+  .menuContent {
+    font-size: 20px;
+  }
+}
+
+/*모바일3 메뉴 스타일*/
+@media (max-width: 300px) {
+  .menuContent {
+    font-size: 15px;
+  }
+}

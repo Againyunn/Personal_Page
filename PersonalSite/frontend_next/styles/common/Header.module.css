@@ -1,0 +1,280 @@
+@charset "UTF-8";
+/*기본 헤더 스타일*/
+.headerBasic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100vw;
+  height: 90px;
+  border-bottom: 2px solid #2b90d9;
+}
+.headerBasic .mainLogo {
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.headerBasic .mainLogo .bigFont {
+  font-size: 32px;
+  font-weight: bold;
+}
+.headerBasic .mainLogo .smallFont {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/*메뉴 토글 활성화 헤더 스타일*/
+.headerChanged {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #2b90d9;
+  border-bottom: 2px solid #fff;
+  height: 90px;
+}
+.headerChanged .mainLogoChanged {
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.headerChanged .mainLogoChanged .bigFont {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+}
+.headerChanged .mainLogoChanged .smallFont {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/*메뉴 토글*/
+#menuToggle {
+  position: absolute;
+  z-index: 1;
+  top: 0.5em;
+  right: 0.5em;
+  /* 체크박스가 체크되면 변경 이벤트 */
+  /*토글 버튼 hover효과*/
+}
+#menuToggle .toggleSwitch {
+  width: 8rem;
+  margin: 1rem;
+  height: 3rem;
+  display: block;
+  position: relative;
+  border-radius: 2rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 1rem 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 1rem 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+#menuToggle .toggleSwitch .toggleButton {
+  width: 2.6rem;
+  height: 2.6rem;
+  position: absolute;
+  top: 50%;
+  left: 0.2rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #2b90d9;
+  -webkit-box-shadow: 0px 0px 5px 1.5px #0070b0 inset;
+  box-shadow: 0px 0px 5px 1.5px #0070b0 inset;
+}
+#menuToggle .menuFont {
+  color: #2b90d9;
+  font-size: 15px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 2;
+  top: 2em;
+  right: 4.5em;
+}
+#menuToggle #toggle:checked ~ .toggleSwitch {
+  background: #f03d3d;
+}
+#menuToggle #toggle:checked ~ .toggleSwitch .toggleButton {
+  left: calc(100% - 2.8rem);
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 4px 2px #d9e1e8 inset;
+  box-shadow: 0px 0px 4px 2px #d9e1e8 inset;
+}
+#menuToggle #toggle:checked ~ .menuFont {
+  color: #fff;
+}
+#menuToggle .toggleSwitch,
+#menuToggle .toggleButton,
+#menuToggle .menuFont {
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+#menuToggle .toggleButton:hover {
+  -webkit-box-shadow: 0px 0px 15px 3px #78c4fa;
+  box-shadow: 0px 0px 15px 3px #78c4fa;
+}
+
+/*태블릿 헤더 스타일*/
+@media (max-width: 960px) {
+  /*메뉴 토글*/
+  #menuToggle {
+    top: 0.5em;
+    right: 1em;
+  }
+}
+/*모바일1 헤더 스타일*/
+@media (max-width: 600px) {
+  .headerBasic {
+    height: 70px;
+  }
+  .headerBasic .mainLogo {
+    margin-left: 8px;
+  }
+  .headerBasic .mainLogo .bigFont {
+    font-size: 26px;
+  }
+  .headerBasic .mainLogo .smallFont {
+    font-size: 20px;
+  }
+  /*메뉴 토글 활성화 헤더 스타일*/
+  .headerChanged {
+    height: 70px;
+  }
+  .headerChanged .mainLogoChanged {
+    margin-left: 8px;
+  }
+  .headerChanged .mainLogoChanged .bigFont {
+    font-size: 26px;
+  }
+  .headerChanged .mainLogoChanged .smallFont {
+    font-size: 20px;
+  }
+  /*메뉴 토글*/
+  #menuToggle {
+    top: 0.5em;
+    right: 0.5em;
+    /* 체크박스가 체크되면 변경 이벤트 */
+  }
+  #menuToggle .toggleSwitch {
+    width: 6rem;
+    margin: 1rem;
+    height: 2.2rem;
+  }
+  #menuToggle .toggleSwitch .toggleButton {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  #menuToggle .menuFont {
+    font-size: 12px;
+    top: 1.5em;
+    right: 3.8em;
+  }
+  #menuToggle #toggle:checked ~ .toggleSwitch .toggleButton {
+    left: calc(100% - 2em);
+  }
+}
+/*모바일2 헤더 스타일*/
+@media (max-width: 480px) {
+  /*메뉴 토글*/
+  #menuToggle {
+    top: 0.7em;
+    right: 0.01em;
+  }
+  #menuToggle .toggleSwitch {
+    margin: 0.5rem;
+  }
+  #menuToggle .menu-font {
+    top: 1.5em;
+    right: 3.8em;
+  }
+}
+/*모바일3 헤더 스타일*/
+@media (max-width: 300px) {
+  .headerBasic {
+    height: 60px;
+  }
+  .headerBasic .mainLogo {
+    margin-left: 6px;
+  }
+  .headerBasic .mainLogo .bigFont {
+    font-size: 19px;
+  }
+  .headerBasic .mainLogo .smallFont {
+    font-size: 15px;
+  }
+  /*메뉴 토글 활성화 헤더 스타일*/
+  .headerChanged {
+    height: 60px;
+  }
+  .headerChanged .mainLogoChanged {
+    margin-left: 6px;
+  }
+  .headerChanged .mainLogoChanged .bigFont {
+    font-size: 20px;
+  }
+  .headerChanged .mainLogoChanged .smallFont {
+    font-size: 15px;
+  }
+  /*메뉴 토글*/
+  #menuToggle {
+    top: 0.5em;
+    right: 0.5em;
+    /* 체크박스가 체크되면 변경 이벤트 */
+  }
+  #menuToggle .toggleSwitch {
+    width: 5rem;
+    margin: 0.5rem;
+    height: 1.8rem;
+  }
+  #menuToggle .toggleSwitch .toggleButton {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  #menuToggle .menuFont {
+    font-size: 10px;
+    z-index: 2;
+    top: 1.5em;
+    right: 3.8em;
+  }
+  #menuToggle #toggle:checked ~ .toggleSwitch .toggleButton {
+    left: calc(100% - 1.8em);
+  }
+}

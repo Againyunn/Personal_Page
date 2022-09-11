@@ -6,11 +6,10 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 80px;
+  align-items: center;
   height: calc(100vh - 90px);
   margin-left: calc(5vw + 50px);
   margin-right: calc(5vw + 50px);
-  height: 100vh;
 
   .profileImage {
     width: 300px;
@@ -169,6 +168,72 @@
     animation: none;
   }
 }
+// PC ver: 960 ~ 1200px
+@media (max-width: 1200px) {
+  .profileTitleHead {
+    font-size: 25px !important;
+  }
 
+  .profileTitleContent {
+    font-size: 18px !important;
+  }
+  .profilePartHead {
+    font-size: 20px !important;
+    font-weight: bold !important;
+  }
+
+  .profilePartSubHead {
+    font-size: 15px !important;
+  }
+
+  .profilePartContent {
+    font-size: 12px !important;
+  }
+}
+// Tablet ver: 720 ~ 960px
 @media (max-width: 960px) {
+  .profileImage {
+    width: 250px !important;
+    height: 310px !important;
+  }
+  .profileWrap {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    padding-top: 0px !important;
+  }
+  .profileContentTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding-top: 20px;
+    margin-left: 10px;
+  }
+  .profileContentWrap {
+    flex-direction: row !important;
+    justify-content: center !important;
+    width: 100%;
+  }
+  .profileContentPart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: left;
+    padding-top: 20px;
+    padding-left: 10vw;
+    width: 100%;
+  }
+  .profilePartHead {
+    font-size: 22px !important;
+    font-weight: bold !important;
+  }
+
+  .profilePartSubHead {
+    font-size: 18px !important;
+  }
+
+  .profilePartContent {
+    font-size: 15px !important;
+  }
 }

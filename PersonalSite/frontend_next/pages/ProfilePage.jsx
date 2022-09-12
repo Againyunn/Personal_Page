@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 // 화면 크기별 컴포넌트
 import ProfileComponentMax from "@/components/profile/ProfileComponentMax";
 import ProfileComponentMid from "@/components/profile/ProfileComponentMid";
+import ProfileComponentSmall from "@/components/profile/ProfileComponentSmall";
 
 function ProfilePage(props) {
   const [displaySize, setDisplaySize] = useState(false);
@@ -39,6 +40,8 @@ function ProfilePage(props) {
       return <ProfileComponentMax />;
     } else if (720 <= displaySize && displaySize < 960) {
       return <ProfileComponentMid />;
+    } else if (480 <= displaySize && displaySize < 720) {
+      return <ProfileComponentSmall />;
     }
   };
 

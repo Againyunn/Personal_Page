@@ -5,7 +5,7 @@ import { Image } from "react-bootstrap";
 // css
 import ProfilePageStyle from "@/styles/profile/ProfilePage.module.css";
 
-function ProfileComponentMid(props) {
+function ProfileComponentSmall(props) {
   const [isSeeMore, setIsSeeMore] = useState(false);
 
   const router = useRouter();
@@ -53,7 +53,7 @@ function ProfileComponentMid(props) {
         </div>
 
         <div className={ProfilePageStyle.profileContentPart}>
-          <span className={ProfilePageStyle.profilePartHead}>🏆Awards</span>
+          <span className={ProfilePageStyle.profilePartHead}>Awards</span>
           <br />
           <span className={ProfilePageStyle.profilePartContent}>
             2022 SW공동해커톤 우수상(SW중심대학협회장상)수상
@@ -68,7 +68,7 @@ function ProfileComponentMid(props) {
           <br />
 
           <span className={ProfilePageStyle.profilePartHead}>
-            🖥Work Experience
+            Work Experience
           </span>
           <br />
           <span className={ProfilePageStyle.profilePartContent}>
@@ -88,16 +88,14 @@ function ProfileComponentMid(props) {
         <div
           className={`${ProfilePageStyle.profileWrap} ${ProfilePageStyle.contentDown}`}
         >
-          <div
-            className={`${ProfilePageStyle.profileContentWrapBottom} ${ProfilePageStyle.marginUp}`}
-          >
+          <div className={ProfilePageStyle.profileContentWrap}>
             <div className={ProfilePageStyle.profileContentPart} id="showMore">
               <span className={ProfilePageStyle.profilePartHead}>Skills</span>
               <br />
               <span className={ProfilePageStyle.profilePartSubHead}>
                 Part1. Use & Studying
               </span>
-              <ul className={ProfilePageStyle.insideMarker}>
+              <ul>
                 <li>
                   <span className={ProfilePageStyle.profilePartContent}>
                     🛠Web/App Development
@@ -214,12 +212,12 @@ function ProfileComponentMid(props) {
                   </div>
                 </li>
               </ul>
-
               <br />
               <span className={ProfilePageStyle.profilePartSubHead}>
                 Part2. Tech
               </span>
-              <ul className={ProfilePageStyle.insideMarker}>
+              <br />
+              <ul>
                 <li>
                   <span className={ProfilePageStyle.profilePartContent}>
                     🔍Intersted Tech
@@ -253,8 +251,8 @@ function ProfileComponentMid(props) {
             </div>
           </div>
           <div
-            className={`${ProfilePageStyle.profileContentWrapBottom}
-            `}
+            className={`${ProfilePageStyle.profileContentWrap}
+            ${ProfilePageStyle.marginRightStyle}`}
           >
             <div className={ProfilePageStyle.profileContentPart}>
               <span className={ProfilePageStyle.profilePartHead}>
@@ -265,8 +263,8 @@ function ProfileComponentMid(props) {
               <span className={ProfilePageStyle.profilePartSubHead}>
                 2022 HUFS SW Volunteer
               </span>
-
-              <ul className={ProfilePageStyle.insideMarker}>
+              <br />
+              <ul>
                 <li>
                   <span className={ProfilePageStyle.profilePartContent}>
                     Maker in HUFS 웹 개발 멘토
@@ -283,8 +281,8 @@ function ProfileComponentMid(props) {
               <span className={ProfilePageStyle.profilePartSubHead}>
                 COMENTO 직무부트캠프
               </span>
-
-              <ul className={ProfilePageStyle.insideMarker}>
+              <br />
+              <ul>
                 <li>
                   <span className={ProfilePageStyle.profilePartContent}>
                     스타트업에서 프론트엔드 개발자로 일하기
@@ -301,8 +299,8 @@ function ProfileComponentMid(props) {
               <span className={ProfilePageStyle.profilePartSubHead}>
                 2021 HUFS Gnuvil 프로그래밍 중앙 동아리 부원
               </span>
-
-              <ul className={ProfilePageStyle.insideMarker}>
+              <br />
+              <ul>
                 <li>
                   <span className={ProfilePageStyle.profilePartContent}>
                     알고리즘, 인공지능 스터디
@@ -353,4 +351,4 @@ function ProfileComponentMid(props) {
   );
 }
 
-export default ProfileComponentMid;
+export default ProfileComponentSmall;

@@ -59,6 +59,10 @@
   }
 }
 
+.insideMarker {
+  list-style-position: inside;
+}
+
 .marginRightStyle {
   margin-left: 30px;
 }
@@ -107,6 +111,10 @@
   &:hover {
     text-shadow: 0px 0px 3px #d9d9d9;
   }
+}
+
+.marginUp {
+  margin-top: -100px;
 }
 
 /*click 이후 scroll 안내 div*/
@@ -198,9 +206,10 @@
   }
   .profileWrap {
     flex-direction: column !important;
-    flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
     align-items: center !important;
     padding-top: 0px !important;
+    width: calc(100vw - 10vw - 100px) !important;
   }
   .profileContentTitle {
     display: flex;
@@ -213,16 +222,23 @@
   .profileContentWrap {
     flex-direction: row !important;
     justify-content: center !important;
-    width: 100%;
+    align-items: left;
+    width: calc(100vw - 10vw - 100px) !important;
   }
+
+  .profileContentWrapBottom {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
   .profileContentPart {
     display: flex;
     flex-direction: column;
-    justify-content: center !important;
-    align-items: left;
+    justify-content: left !important;
+    align-items: left !important;
     padding-top: 20px;
-    padding-left: 10vw;
-    width: 100%;
   }
   .profilePartHead {
     font-size: 22px !important;
@@ -235,5 +251,52 @@
 
   .profilePartContent {
     font-size: 15px !important;
+  }
+
+  .iconWrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100% !important;
+
+    .iconImg {
+      margin-right: 3px;
+    }
+  }
+}
+
+// Tablet ver: 480 ~ 720px   *******수정 필요!
+@media (max-width: 720px) {
+  .profileImage {
+    width: 180px !important;
+    height: 230px !important;
+  }
+  .profileContentWrap {
+    margin-left: 0px !important;
+  }
+
+  .profileContentPart {
+    padding-left: 0px !important;
+  }
+
+  .profileTitleHead {
+    font-size: 22px !important;
+  }
+
+  .profileTitleContent {
+    font-size: 15px !important;
+  }
+
+  .profilePartHead {
+    font-size: 18px !important;
+    font-weight: bold !important;
+  }
+
+  .profilePartSubHead {
+    font-size: 15px !important;
+  }
+
+  .profilePartContent {
+    font-size: 12px !important;
   }
 }

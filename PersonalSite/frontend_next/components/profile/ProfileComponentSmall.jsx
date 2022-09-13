@@ -53,7 +53,7 @@ function ProfileComponentSmall(props) {
         </div>
 
         <div className={ProfilePageStyle.profileContentPart}>
-          <span className={ProfilePageStyle.profilePartHead}>Awards</span>
+          <span className={ProfilePageStyle.profilePartHead}>🏆Awards</span>
           <br />
           <span className={ProfilePageStyle.profilePartContent}>
             2022 SW공동해커톤 우수상(SW중심대학협회장상)수상
@@ -68,7 +68,7 @@ function ProfileComponentSmall(props) {
           <br />
 
           <span className={ProfilePageStyle.profilePartHead}>
-            Work Experience
+            🖥Work Experience
           </span>
           <br />
           <span className={ProfilePageStyle.profilePartContent}>
@@ -88,14 +88,16 @@ function ProfileComponentSmall(props) {
         <div
           className={`${ProfilePageStyle.profileWrap} ${ProfilePageStyle.contentDown}`}
         >
-          <div className={ProfilePageStyle.profileContentWrap}>
+          <div className={`${ProfilePageStyle.profileContentWrapBottom}`}>
             <div className={ProfilePageStyle.profileContentPart} id="showMore">
               <span className={ProfilePageStyle.profilePartHead}>Skills</span>
-              <br />
+
               <span className={ProfilePageStyle.profilePartSubHead}>
                 Part1. Use & Studying
               </span>
-              <ul>
+              <ul
+                className={`${ProfilePageStyle.insideMarker} ${ProfilePageStyle.noMarker}`}
+              >
                 <li>
                   <span className={ProfilePageStyle.profilePartContent}>
                     🛠Web/App Development
@@ -212,12 +214,14 @@ function ProfileComponentSmall(props) {
                   </div>
                 </li>
               </ul>
+
               <br />
               <span className={ProfilePageStyle.profilePartSubHead}>
                 Part2. Tech
               </span>
-              <br />
-              <ul>
+              <ul
+                className={`${ProfilePageStyle.insideMarker} ${ProfilePageStyle.noMarker}`}
+              >
                 <li>
                   <span className={ProfilePageStyle.profilePartContent}>
                     🔍Intersted Tech
@@ -250,9 +254,10 @@ function ProfileComponentSmall(props) {
               </ul>
             </div>
           </div>
+
           <div
-            className={`${ProfilePageStyle.profileContentWrap}
-            ${ProfilePageStyle.marginRightStyle}`}
+            className={`${ProfilePageStyle.profileContentWrapBottom}
+            `}
           >
             <div className={ProfilePageStyle.profileContentPart}>
               <span className={ProfilePageStyle.profilePartHead}>
@@ -263,8 +268,8 @@ function ProfileComponentSmall(props) {
               <span className={ProfilePageStyle.profilePartSubHead}>
                 2022 HUFS SW Volunteer
               </span>
-              <br />
-              <ul>
+
+              <ul className={ProfilePageStyle.insideMarker}>
                 <li>
                   <span className={ProfilePageStyle.profilePartContent}>
                     Maker in HUFS 웹 개발 멘토
@@ -281,8 +286,8 @@ function ProfileComponentSmall(props) {
               <span className={ProfilePageStyle.profilePartSubHead}>
                 COMENTO 직무부트캠프
               </span>
-              <br />
-              <ul>
+
+              <ul className={ProfilePageStyle.insideMarker}>
                 <li>
                   <span className={ProfilePageStyle.profilePartContent}>
                     스타트업에서 프론트엔드 개발자로 일하기
@@ -299,8 +304,8 @@ function ProfileComponentSmall(props) {
               <span className={ProfilePageStyle.profilePartSubHead}>
                 2021 HUFS Gnuvil 프로그래밍 중앙 동아리 부원
               </span>
-              <br />
-              <ul>
+
+              <ul className={ProfilePageStyle.insideMarker}>
                 <li>
                   <span className={ProfilePageStyle.profilePartContent}>
                     알고리즘, 인공지능 스터디

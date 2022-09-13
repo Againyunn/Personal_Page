@@ -63,6 +63,10 @@
   list-style-position: inside;
 }
 
+.noMarker {
+  list-style: none;
+}
+
 .marginRightStyle {
   margin-left: 30px;
 }
@@ -113,8 +117,13 @@
   }
 }
 
+// 아래쪽 페이지 서식
 .marginUp {
   margin-top: -100px;
+}
+
+.contentDown {
+  height: 100vh;
 }
 
 /*click 이후 scroll 안내 div*/
@@ -288,15 +297,20 @@
   }
 
   .profilePartHead {
-    font-size: 18px !important;
+    font-size: 15px !important;
     font-weight: bold !important;
   }
 
   .profilePartSubHead {
-    font-size: 15px !important;
+    font-size: 13px !important;
   }
 
   .profilePartContent {
     font-size: 12px !important;
+  }
+
+  .iconImg {
+    margin-right: 3px;
+    height: 20px;
   }
 }

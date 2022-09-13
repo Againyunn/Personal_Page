@@ -1,0 +1,382 @@
+@charset "UTF-8";
+.profileContainer {
+  position: relative;
+}
+
+.profileWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: calc(100vh - 90px);
+  margin-left: calc(5vw + 50px);
+  margin-right: calc(5vw + 50px);
+}
+.profileWrap .profileImage {
+  width: 300px;
+  height: 380px;
+}
+.profileWrap .profileContentWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  text-align: left;
+}
+.profileWrap .profileContentWrap .profileContentTitle {
+  margin-bottom: 30px;
+}
+.profileWrap .profileContentWrap .profileContentTitle .profileTitleHead {
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+.profileWrap .profileContentWrap .profileContentTitle .profileTitleContent {
+  font-size: 20px;
+  font-weight: normal;
+}
+.profileWrap .profileContentWrap .profileContentPart {
+  margin-bottom: 20px;
+}
+.profileWrap .profileContentWrap .profileContentPart .profilePartHead {
+  font-size: 25px;
+  font-weight: bold;
+}
+.profileWrap .profileContentWrap .profileContentPart .profilePartSubHead {
+  font-size: 18px;
+  font-weight: bold;
+}
+.profileWrap .profileContentWrap .profileContentPart .profilePartContent {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.insideMarker {
+  list-style-position: inside;
+}
+
+.noMarker {
+  list-style: none;
+}
+
+.marginRightStyle {
+  margin-left: 30px;
+}
+
+.partition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.iconWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: calc((100vw - (10vw + 100px)) / 2 - 30px);
+}
+.iconWrap .iconImg {
+  margin-right: 3px;
+}
+
+/*페이지 아래 전환*/
+.slideToSeeDown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  bottom: 30px;
+  left: calc(50vw - 7.5px - 6em);
+  cursor: pointer;
+}
+.slideToSeeDown .triangleImg {
+  margin-top: 3px;
+  width: 15px;
+  height: 15px;
+}
+.slideToSeeDown span {
+  color: #d9d9d9;
+  font-size: 15px;
+}
+.slideToSeeDown:hover {
+  text-shadow: 0px 0px 3px #d9d9d9;
+}
+
+.marginUp {
+  margin-top: -100px;
+}
+
+.contentDown {
+  height: 100vh;
+}
+
+/*click 이후 scroll 안내 div*/
+.scrollToSeeDown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: calc(50vw - 7.5px - 6em);
+}
+.scrollToSeeDown span {
+  color: #d9d9d9;
+  font-size: 15px;
+}
+
+/*위/아래 변경 시 효과 설정*/
+.contentUp {
+  -webkit-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
+}
+
+#slideToSeeDownCheckbox:checked .contentUp {
+  opacity: 0;
+}
+
+/*화살표*/
+.arrowLeft {
+  position: fixed;
+  top: calc(50vh - 25px + 45px);
+  left: 2vw;
+  width: 50px;
+  border-radius: 100px;
+}
+.arrowLeft:hover {
+  -webkit-box-shadow: 0px 0px 15px 3px #78c4fa;
+          box-shadow: 0px 0px 15px 3px #78c4fa;
+}
+
+.arrowRight {
+  position: fixed;
+  top: calc(50vh - 25px + 45px);
+  right: 2vw;
+  width: 50px;
+  border-radius: 100px;
+}
+.arrowRight:hover {
+  -webkit-box-shadow: 0px 0px 15px 3px #78c4fa;
+          box-shadow: 0px 0px 15px 3px #78c4fa;
+}
+
+/*반짝반짝 효과*/
+@-webkit-keyframes blinkEffectSet {
+  50% {
+    opacity: 0.4;
+  }
+}
+@keyframes blinkEffectSet {
+  50% {
+    opacity: 0.4;
+  }
+}
+.blinkEffect {
+  -webkit-animation: blinkEffectSet 1.5s step-end infinite;
+          animation: blinkEffectSet 1.5s step-end infinite;
+}
+.blinkEffect:hover {
+  -webkit-animation: none;
+          animation: none;
+}
+
+@media (max-width: 1200px) {
+  .profileTitleHead {
+    font-size: 25px !important;
+  }
+  .profileTitleContent {
+    font-size: 18px !important;
+  }
+  .profilePartHead {
+    font-size: 20px !important;
+    font-weight: bold !important;
+  }
+  .profilePartSubHead {
+    font-size: 15px !important;
+  }
+  .profilePartContent {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 960px) {
+  .profileImage {
+    width: 250px !important;
+    height: 310px !important;
+  }
+  .profileWrap {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -ms-flex-wrap: nowrap !important;
+        flex-wrap: nowrap !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    padding-top: 0px !important;
+    width: calc(90vw - 100px) !important;
+  }
+  .profileContentTitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    padding-top: 20px;
+    margin-left: 10px;
+  }
+  .profileContentWrap {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    width: calc(90vw - 100px) !important;
+  }
+  .profileContentWrapBottom {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    width: 100% !important;
+  }
+  .profileContentPart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: left !important;
+        -ms-flex-pack: left !important;
+            justify-content: left !important;
+    -webkit-box-align: left !important;
+        -ms-flex-align: left !important;
+            align-items: left !important;
+    padding-top: 20px;
+  }
+  .profilePartHead {
+    font-size: 22px !important;
+    font-weight: bold !important;
+  }
+  .profilePartSubHead {
+    font-size: 18px !important;
+  }
+  .profilePartContent {
+    font-size: 15px !important;
+  }
+  .iconWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 100% !important;
+  }
+  .iconWrap .iconImg {
+    margin-right: 3px;
+  }
+}
+@media (max-width: 720px) {
+  .profileImage {
+    width: 180px !important;
+    height: 230px !important;
+  }
+  .profileContentWrap {
+    margin-left: 0px !important;
+  }
+  .profileContentPart {
+    padding-left: 0px !important;
+  }
+  .profileTitleHead {
+    font-size: 22px !important;
+  }
+  .profileTitleContent {
+    font-size: 15px !important;
+  }
+  .profilePartHead {
+    font-size: 15px !important;
+    font-weight: bold !important;
+  }
+  .profilePartSubHead {
+    font-size: 13px !important;
+  }
+  .profilePartContent {
+    font-size: 12px !important;
+  }
+  .iconImg {
+    margin-right: 3px;
+    height: 20px;
+  }
+}

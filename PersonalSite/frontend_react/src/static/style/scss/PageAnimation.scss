@@ -1,0 +1,97 @@
+// default 페이지 이동 이펙트
+.slide-left-focus-out {
+  position: absolute;
+  animation: left-slide-out 1.5s ease-in-out;
+}
+
+.slide-left-focus-in {
+  position: absolute;
+  animation: left-slide-in 1s ease-in-out;
+}
+
+.slide-down-focus-in {
+  position: absolute;
+  animation: down-slide-in 0.4s ease-in-out;
+}
+
+.slide-up-focus-out {
+  position: absolute;
+  animation: up-slide-out 0.3s ease-in-out;
+}
+
+.fade-in {
+  animation: fade-in 1s ease-in-out;
+}
+
+.fade-out {
+  animation: fade-out 0.5s;
+}
+
+// 왼쪽으로 slide 사라짐
+@keyframes left-slide-out {
+  0% {
+    left: 0px;
+    opacity: 1;
+  }
+  100% {
+    left: 100vw;
+    opacity: 0;
+  }
+}
+
+// 왼쪽으로 slide 생성
+@keyframes left-slide-in {
+  0% {
+    width: 100vw;
+    right: 100vw;
+    opacity: 0;
+  }
+  100% {
+    right: 0px;
+    opacity: 1;
+  }
+}
+
+// 페이지 fade in
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    width: 100vw;
+    background: var(--primary-color);
+  }
+  100% {
+    width: 100vw;
+    background: #fff;
+  }
+}
+
+// 아래로 slide in
+@keyframes down-slide-in {
+  0% {
+    opacity: 0;
+    bottom: calc(100vh - 90px);
+  }
+  100% {
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+
+@keyframes up-slide-out {
+  0% {
+    opacity: 0.7;
+    bottom: 0;
+  }
+  100% {
+    opacity: 0;
+    bottom: 100vh;
+  }
+}

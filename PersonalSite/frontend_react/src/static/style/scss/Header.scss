@@ -6,7 +6,7 @@
   justify-content: space-between;
   width: 100vw;
   height: 90px;
-  border-bottom: 2px solid #2b90d9;
+  border-bottom: 2px solid var(--primary-color); // #2b90d9;
 
   .main-logo {
     margin-left: 10px;
@@ -34,7 +34,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  background: #2b90d9;
+  background: var(--primary-color);
   border-bottom: 2px solid #fff;
 
   height: 90px;
@@ -87,12 +87,12 @@
     left: 0.2rem;
     transform: translateY(-50%);
     border-radius: 50%;
-    background: #2b90d9;
-    box-shadow: 0px 0px 5px 1.5px #0070b0 inset;
+    background: var(--primary-color);
+    box-shadow: 0px 0px 5px 1.5px var(--primary-color) inset;
   }
 
   .menu-font {
-    color: #2b90d9;
+    color: var(--primary-color);
     font-size: 15px;
     font-weight: bold;
     position: absolute;
@@ -103,7 +103,7 @@
 
   /* 체크박스가 체크되면 변경 이벤트 */
   #toggle:checked ~ .toggleSwitch {
-    background: #f03d3d;
+    background: var(--third-color);
   }
 
   #toggle:checked ~ .toggleSwitch .toggleButton {
@@ -124,7 +124,7 @@
 
   /*토글 버튼 hover효과*/
   .toggleButton:hover {
-    box-shadow: 0px 0px 15px 3px #78c4fa;
+    box-shadow: 0px 0px 15px 3px var(--primary-light-color);
   }
 }
 

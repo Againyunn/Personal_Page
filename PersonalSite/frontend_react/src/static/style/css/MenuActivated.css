@@ -1,0 +1,23 @@
+.menu-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  text-align: left;
+  background-color: var(--primary-color);
+  height: calc(100vh - 90px);
+  width: 100vw;
+}
+.menu-wrap .menu-index {
+  margin-left: 50px;
+  margin-top: 2em;
+}
+.menu-wrap .menu-index .menu-content {
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+  opacity: 1;
+  animation: fadeInText 0.2s 0.1s ease-out forwards;
+}
+.menu-wrap .menu-index .menu-content:hover {
+  border-bottom: 2px solid #fff;
+}

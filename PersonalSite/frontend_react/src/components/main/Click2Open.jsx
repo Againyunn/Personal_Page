@@ -2,15 +2,16 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 // css
-import "../../css/MainPage.css";
+import "static/style/css/MainPage.css";
 
 function Click2Open(props) {
   const navigate = useNavigate();
 
   const isSlideClicked = () => {
+    props.isClicked(true);
     setTimeout(() => {
       navigate("/profile");
-    }, 300);
+    }, 700);
   };
 
   return (

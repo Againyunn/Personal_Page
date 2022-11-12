@@ -1,5 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+//css
+import "static/style/app.scss";
+
 import Header from "./components/Header";
 import MainPage from "./pages/MainPage";
 import MenuActivated from "./pages/MenuActivated";

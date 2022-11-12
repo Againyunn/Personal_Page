@@ -1,8 +1,9 @@
 /* Header.jsx css */
 .slide-wrap {
-  width: 100%;
+  width: 100vw;
   height: 25px;
-  background: #2b90d9;
+  background: var(--primary-color);
+
   transition: background-color 0.5s ease-in;
 }
 .slide-word-wrap {
@@ -29,10 +30,10 @@
 }
 
 .slide-wrap:hover {
-  background: #f03d3d;
+  background: var(--third-color);
 }
 .slide-wrap:active {
-  background: #f03d3d;
+  background: var(--third-color);
 }
 
 .slide-wrap:hover .slide-word {
@@ -80,6 +81,7 @@
 
 /* MainContent.jsx css */
 .maincontent-wrap {
+  width: 100vw;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -117,7 +119,7 @@
 
         /*icon-hover 효과*/
         &:hover {
-          box-shadow: 0px 0px 15px 3px #78c4fa;
+          box-shadow: 0px 0px 15px 3px var(--primary-light-color);
         }
       }
     }

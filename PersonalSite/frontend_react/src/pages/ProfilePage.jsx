@@ -1,12 +1,17 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useRef } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 // css
-import "../css/ProfilePage.css";
+import "static/style/css/PageAnimation.css";
+import "static/style/css/ProfilePage.css";
 
 function ProfilePage(props) {
   const [isSeeMore, setIsSeeMore] = useState(false);
+
+  const pageFrame = useRef();
+
+  useEffect(() => {}, []);
 
   const navigate = useNavigate();
 
@@ -19,7 +24,7 @@ function ProfilePage(props) {
   };
 
   return (
-    <>
+    <div ref={pageFrame} className="slide-left-focus-in">
       <div className="profile-container">
         <div className="profile-wrap content-up">
           <img
@@ -300,7 +305,7 @@ function ProfilePage(props) {
           onClick={() => moveToPage("/Profile")}
         />
       </div>
-    </>
+    </div>
   );
 }
 

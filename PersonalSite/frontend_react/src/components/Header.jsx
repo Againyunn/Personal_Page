@@ -1,14 +1,12 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 // css
-import "../css/Header.css";
+import "static/style/css/Header.css";
 
 // redux
 import { connect } from "react-redux";
-import * as action from "../redux/action";
-import { useEffect } from "react";
+import * as action from "redux/action";
 
 const mapStateToProps = (state) => {
   return {
@@ -55,8 +53,12 @@ function Header({ activate, menuToggle }) {
       menuToggle(false);
       console.log("clicked,", activate);
       if (type === true) {
+        setHeaderChange(false);
         //과거 페이지로 복귀
-        window.history.go(-1);
+        // window.history.go(-1);
+        setTimeout(() => {
+          navigate(-1);
+        }, 300);
       }
     } else {
       menuToggle(true);
@@ -68,7 +70,7 @@ function Header({ activate, menuToggle }) {
     <div className="header-wrap">
       {/* 헤더 */}
       {!headerChange ? (
-        <header className="header-basic">
+        <header className="header-basic fade-out">
           <div className="main-logo" onClick={moveToMain}>
             <span className="big-font">Againyunn</span>
             <span className="small-font">FrontEnd Dev</span>
@@ -77,8 +79,8 @@ function Header({ activate, menuToggle }) {
       ) : (
         <header className="header-changed">
           <div className="main-logo-changed">
-            <span className="big-font">Againyunn</span>
-            <span className="small-font">FrontEnd Dev</span>
+            <span className="big-font fade-in">Againyunn</span>
+            <span className="small-font fade-in">FrontEnd Dev</span>
           </div>
         </header>
       )}

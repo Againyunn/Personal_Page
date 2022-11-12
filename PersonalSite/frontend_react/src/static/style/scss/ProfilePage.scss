@@ -172,5 +172,112 @@ a {
   animation: none;
 }
 
+@media (max-width: 1200px) {
+  .profile-title-head {
+    font-size: 25px !important;
+  }
+  .profile-title-content {
+    font-size: 18px !important;
+  }
+  .profile-part-head {
+    font-size: 20px !important;
+    font-weight: bold !important;
+  }
+  .profile-part-sub-head {
+    font-size: 15px !important;
+  }
+  .profile-part-content {
+    font-size: 12px !important;
+  }
+}
 @media (max-width: 960px) {
+  .profile-img {
+    width: 250px !important;
+    height: 310px !important;
+  }
+  .profile-wrap {
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    padding-top: 0px !important;
+    width: calc(90vw - 100px) !important;
+  }
+  .profile-content-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding-top: 20px;
+    margin-left: 10px;
+  }
+  .profile-content-wrap {
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: left;
+    width: calc(90vw - 100px) !important;
+  }
+  .profile-content-wrap-bottom {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  .profile-content-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: left !important;
+    align-items: left !important;
+    padding-top: 20px;
+  }
+  .profile-part-head {
+    font-size: 22px !important;
+    font-weight: bold !important;
+  }
+  .profile-part-sub-head {
+    font-size: 18px !important;
+  }
+  .profile-part-content {
+    font-size: 15px !important;
+  }
+  .icon-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100% !important;
+  }
+  .icon-wrap .icon-img {
+    margin-right: 3px;
+  }
+}
+@media (max-width: 720px) {
+  .profile-img {
+    width: 180px !important;
+    height: 230px !important;
+  }
+  .profile-content-wrap {
+    margin-left: 0px !important;
+  }
+  .profile-content-part {
+    padding-left: 0px !important;
+  }
+  .profile-title-head {
+    font-size: 22px !important;
+  }
+  .profile-title-content {
+    font-size: 15px !important;
+  }
+  .profile-part-head {
+    font-size: 15px !important;
+    font-weight: bold !important;
+  }
+  .profile-part-sub-head {
+    font-size: 13px !important;
+  }
+  .profile-part-content {
+    font-size: 12px !important;
+  }
+  .icon-img {
+    margin-right: 3px;
+    height: 20px;
+  }
 }

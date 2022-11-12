@@ -4,24 +4,6 @@
 }
 
 .profileWrap {
-<<<<<<< Updated upstream
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: calc(100vh - 90px);
-  margin-left: calc(5vw + 50px);
-  margin-right: calc(5vw + 50px);
-=======
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -29,33 +11,16 @@
   height: calc(100vh - 90px);
   margin-left: calc(5vw + 50px);
   margin-right: calc(5vw + 50px);
-  animation: change 0.5s ease;
->>>>>>> Stashed changes
 }
 .profileWrap .profileImage {
   width: 300px;
   height: 380px;
 }
 .profileWrap .profileContentWrap {
-<<<<<<< Updated upstream
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-=======
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: left;
->>>>>>> Stashed changes
   text-align: left;
 }
 .profileWrap .profileContentWrap .profileContentTitle {
@@ -86,7 +51,6 @@
   font-weight: normal;
 }
 
-<<<<<<< Updated upstream
 .insideMarker {
   list-style-position: inside;
 }
@@ -95,57 +59,11 @@
   list-style: none;
 }
 
-=======
-@keyframes change {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-@keyframes brighten {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
->>>>>>> Stashed changes
 .marginRightStyle {
   margin-left: 30px;
 }
 
 .partition {
-<<<<<<< Updated upstream
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.iconWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-=======
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -156,7 +74,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
->>>>>>> Stashed changes
   max-width: calc((100vw - (10vw + 100px)) / 2 - 30px);
 }
 .iconWrap .iconImg {
@@ -165,25 +82,10 @@
 
 /*페이지 아래 전환*/
 .slideToSeeDown {
-<<<<<<< Updated upstream
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-=======
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
->>>>>>> Stashed changes
   position: fixed;
   bottom: 30px;
   left: calc(50vw - 7.5px - 6em);
@@ -202,7 +104,6 @@
   text-shadow: 0px 0px 3px #d9d9d9;
 }
 
-<<<<<<< Updated upstream
 .marginUp {
   margin-top: -100px;
 }
@@ -213,26 +114,10 @@
 
 /*click 이후 scroll 안내 div*/
 .scrollToSeeDown {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-=======
-/*click 이후 scroll 안내 div*/
-.scrollToSeeDown {
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
->>>>>>> Stashed changes
   left: calc(50vw - 7.5px - 6em);
 }
 .scrollToSeeDown span {
@@ -242,10 +127,6 @@
 
 /*위/아래 변경 시 효과 설정*/
 .contentUp {
-<<<<<<< Updated upstream
-  -webkit-transition: opacity 0.5s ease-in;
-=======
->>>>>>> Stashed changes
   transition: opacity 0.5s ease-in;
 }
 
@@ -260,17 +141,9 @@
   left: 2vw;
   width: 50px;
   border-radius: 100px;
-<<<<<<< Updated upstream
-}
-.arrowLeft:hover {
-  -webkit-box-shadow: 0px 0px 15px 3px #78c4fa;
-          box-shadow: 0px 0px 15px 3px #78c4fa;
-=======
-  animation: brighten 1s ease;
 }
 .arrowLeft:hover {
   box-shadow: 0px 0px 15px 3px #78c4fa;
->>>>>>> Stashed changes
 }
 
 .arrowRight {
@@ -279,47 +152,22 @@
   right: 2vw;
   width: 50px;
   border-radius: 100px;
-<<<<<<< Updated upstream
-}
-.arrowRight:hover {
-  -webkit-box-shadow: 0px 0px 15px 3px #78c4fa;
-          box-shadow: 0px 0px 15px 3px #78c4fa;
-}
-
-/*반짝반짝 효과*/
-@-webkit-keyframes blinkEffectSet {
-  50% {
-    opacity: 0.4;
-  }
-}
-=======
-  animation: brighten 2.5s ease;
 }
 .arrowRight:hover {
   box-shadow: 0px 0px 15px 3px #78c4fa;
 }
 
 /*반짝반짝 효과*/
->>>>>>> Stashed changes
 @keyframes blinkEffectSet {
   50% {
     opacity: 0.4;
   }
 }
 .blinkEffect {
-<<<<<<< Updated upstream
-  -webkit-animation: blinkEffectSet 1.5s step-end infinite;
-          animation: blinkEffectSet 1.5s step-end infinite;
-}
-.blinkEffect:hover {
-  -webkit-animation: none;
-          animation: none;
-=======
   animation: blinkEffectSet 1.5s step-end infinite;
 }
 .blinkEffect:hover {
   animation: none;
->>>>>>> Stashed changes
 }
 
 @media (max-width: 1200px) {
@@ -346,104 +194,38 @@
     height: 310px !important;
   }
   .profileWrap {
-<<<<<<< Updated upstream
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    -ms-flex-wrap: nowrap !important;
-        flex-wrap: nowrap !important;
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
-    padding-top: 0px !important;
-    width: calc(90vw - 100px) !important;
-  }
-  .profileContentTitle {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
-=======
     flex-direction: column !important;
-    flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
     align-items: center !important;
     padding-top: 0px !important;
+    width: calc(90vw - 100px) !important;
   }
   .profileContentTitle {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
->>>>>>> Stashed changes
     padding-top: 20px;
     margin-left: 10px;
   }
   .profileContentWrap {
-<<<<<<< Updated upstream
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important;
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: left;
     width: calc(90vw - 100px) !important;
   }
   .profileContentWrapBottom {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    -webkit-box-pack: center !important;
-        -ms-flex-pack: center !important;
-            justify-content: center !important;
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
-    width: 100% !important;
-  }
-  .profileContentPart {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: left !important;
-        -ms-flex-pack: left !important;
-            justify-content: left !important;
-    -webkit-box-align: left !important;
-        -ms-flex-align: left !important;
-            align-items: left !important;
-    padding-top: 20px;
-=======
-    flex-direction: row !important;
+    flex-direction: column !important;
     justify-content: center !important;
-    width: 100%;
+    align-items: center !important;
+    width: 100% !important;
   }
   .profileContentPart {
     display: flex;
     flex-direction: column;
-    justify-content: center !important;
-    align-items: left;
+    justify-content: left !important;
+    align-items: left !important;
     padding-top: 20px;
-    padding-left: 10vw;
-    width: 100%;
->>>>>>> Stashed changes
   }
   .profilePartHead {
     font-size: 22px !important;
@@ -455,17 +237,10 @@
   .profilePartContent {
     font-size: 15px !important;
   }
-<<<<<<< Updated upstream
   .iconWrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     max-width: 100% !important;
   }
   .iconWrap .iconImg {
@@ -503,6 +278,4 @@
     margin-right: 3px;
     height: 20px;
   }
-=======
->>>>>>> Stashed changes
 }

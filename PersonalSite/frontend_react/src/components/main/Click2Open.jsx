@@ -11,7 +11,7 @@ function Click2Open(props) {
     props.isClicked(true);
     setTimeout(() => {
       navigate("/profile");
-    }, 700);
+    }, 500);
   };
 
   return (
@@ -22,7 +22,7 @@ function Click2Open(props) {
           alt="삼각형"
           className="slide-triangle"
         />
-        <span className="slide-word">&nbsp;Click to Open!</span>
+        <span className="slide-word">&nbsp;Click to see more!</span>
       </div>
     </div>
   );

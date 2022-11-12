@@ -1,11 +1,16 @@
 .slide-left-focus-out {
   position: absolute;
-  animation: left-slide-out 1.5s ease-in-out;
+  animation: left-slide-out 0.7s ease-in-out;
 }
 
 .slide-left-focus-in {
   position: absolute;
-  animation: left-slide-in 1s ease-in-out;
+  animation: left-slide-in 0.7s ease-in-out;
+}
+
+.slide-right-focus-out {
+  position: absolute;
+  animation: right-slide-out 0.7s ease-in-out;
 }
 
 .slide-down-focus-in {
@@ -19,11 +24,15 @@
 }
 
 .fade-in {
-  animation: fade-in 1s ease-in-out;
+  animation: fade-in 0.5s ease-in-out;
 }
 
 .fade-out {
-  animation: fade-out 0.5s;
+  animation: fade-out 0.5s ease-in-out;
+}
+
+.un-visible {
+  visibility: hidden;
 }
 
 @keyframes left-slide-out {
@@ -45,6 +54,17 @@
   100% {
     right: 0px;
     opacity: 1;
+  }
+}
+@keyframes right-slide-out {
+  0% {
+    width: 100vw;
+    right: 0px;
+    opacity: 1;
+  }
+  100% {
+    right: 100vw;
+    opacity: 0;
   }
 }
 @keyframes fade-in {

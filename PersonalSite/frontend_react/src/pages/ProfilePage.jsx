@@ -2,6 +2,9 @@ import React, { useState, useRef } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+// image
+import profileImg from "static/img/profile.jpg";
+
 // css
 import "static/style/css/PageAnimation.css";
 import "static/style/css/ProfilePage.css";
@@ -20,18 +23,18 @@ function ProfilePage(props) {
   };
 
   const moveToPage = (target = "/") => {
-    navigate(target);
+    pageFrame.current.classList.remove("slide-left-focus-in");
+    pageFrame.current.classList.add("slide-right-focus-out");
+    setTimeout(() => {
+      navigate(target);
+    }, 700);
   };
 
   return (
     <div ref={pageFrame} className="slide-left-focus-in">
       <div className="profile-container">
         <div className="profile-wrap content-up">
-          <img
-            src={require("../static/img/profile.jpg")}
-            alt=""
-            className="profile-img"
-          />
+          <img src={profileImg} alt="profile-img" className="profile-img" />
           <div className="profile-content-wrap margin-right-style">
             <div className="profile-content-title">
               <span className="profile-title-head">정재윤(Jaeyun Jung)</span>

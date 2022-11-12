@@ -1,36 +1,20 @@
 @charset "UTF-8";
 /*기본 헤더 스타일*/
 .header-basic {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   width: 100vw;
   height: 90px;
-  border-bottom: 2px solid #2b90d9;
+  border-bottom: 2px solid var(--primary-color);
 }
 .header-basic .main-logo {
   margin-left: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
   cursor: pointer;
 }
 .header-basic .main-logo .big-font {
@@ -44,36 +28,20 @@
 
 /*메뉴 토글 활성화 헤더 스타일*/
 .header-changed {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background: #2b90d9;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  background: var(--primary-color);
   border-bottom: 2px solid #fff;
   height: 90px;
 }
 .header-changed .main-logo-changed {
   margin-left: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 .header-changed .main-logo-changed .big-font {
   font-size: 32px;
@@ -103,8 +71,7 @@
   position: relative;
   border-radius: 2rem;
   background-color: #fff;
-  -webkit-box-shadow: 0 0 1rem 3px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0 1rem 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 1rem 3px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
 #menu-toggle .toggleSwitch .toggleButton {
@@ -113,15 +80,13 @@
   position: absolute;
   top: 50%;
   left: 0.2rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   border-radius: 50%;
-  background: #2b90d9;
-  -webkit-box-shadow: 0px 0px 5px 1.5px #0070b0 inset;
-          box-shadow: 0px 0px 5px 1.5px #0070b0 inset;
+  background: var(--primary-color);
+  box-shadow: 0px 0px 5px 1.5px var(--primary-color) inset;
 }
 #menu-toggle .menu-font {
-  color: #2b90d9;
+  color: var(--primary-color);
   font-size: 15px;
   font-weight: bold;
   position: absolute;
@@ -130,13 +95,12 @@
   right: 4.5em;
 }
 #menu-toggle #toggle:checked ~ .toggleSwitch {
-  background: #f03d3d;
+  background: var(--third-color);
 }
 #menu-toggle #toggle:checked ~ .toggleSwitch .toggleButton {
   left: calc(100% - 2.8rem);
   background: #fff;
-  -webkit-box-shadow: 0px 0px 4px 2px #d9e1e8 inset;
-          box-shadow: 0px 0px 4px 2px #d9e1e8 inset;
+  box-shadow: 0px 0px 4px 2px #d9e1e8 inset;
 }
 #menu-toggle #toggle:checked ~ .menu-font {
   color: #fff;
@@ -144,12 +108,11 @@
 #menu-toggle .toggleSwitch,
 #menu-toggle .toggleButton,
 #menu-toggle .menu-font {
-  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 #menu-toggle .toggleButton:hover {
-  -webkit-box-shadow: 0px 0px 15px 3px #78c4fa;
-          box-shadow: 0px 0px 15px 3px #78c4fa;
+  box-shadow: 0px 0px 15px 3px var(--primary-light-color);
+  cursor: pointer;
 }
 
 /*태블릿 헤더 스타일*/

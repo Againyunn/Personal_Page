@@ -125,6 +125,7 @@
   /*토글 버튼 hover효과*/
   .toggleButton:hover {
     box-shadow: 0px 0px 15px 3px var(--primary-light-color);
+    cursor: pointer;
   }
 }
 
@@ -278,7 +279,7 @@
 
     /* 체크박스가 체크되면 변경 이벤트 */
     #toggle:checked ~ .toggleSwitch .toggleButton {
-      left: 100% - 1.8em;
+      left: calc(100% - 1.8em);
     }
   }
 }

@@ -2,6 +2,9 @@ import React, { useState, useRef } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+// layout
+import Footer from "layout/footer/Footer";
+
 // image
 import profileImg from "static/img/profile.jpg";
 
@@ -64,7 +67,7 @@ function ProfilePage(props) {
               <span className="profile-part-head">Work Experience</span>
               <br />
               <span className="profile-part-content">
-                긱스로프트 Web/App 개발 인턴(22.09.01 ~ 현재)
+                긱스로프트 Frontend 개발 인턴(22.09.01 ~ 현재)
               </span>
               <br />
               <span className="profile-part-content">
@@ -108,6 +111,10 @@ function ProfilePage(props) {
                         alt=""
                       />
                       <img
+                        src="https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=Sass&logoColor=white"
+                        alt=""
+                      />
+                      <img
                         src={
                           "https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=React&logoColor=black"
                         }
@@ -115,7 +122,7 @@ function ProfilePage(props) {
                       />
                       <img
                         src={
-                          "https://img.shields.io/badge/vue-4FC08D?style=for-the-badge&logo=Vue.js&logoColor=white"
+                          "https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white"
                         }
                         alt=""
                       />
@@ -208,6 +215,10 @@ function ProfilePage(props) {
                         alt=""
                       />
                       <img
+                        src="https://img.shields.io/badge/metaverse-D9272E?style=for-the-badge&logo=MEGA&logoColor=white"
+                        alt=""
+                      />
+                      <img
                         src={
                           "https://img.shields.io/badge/crypto-F7931A?style=for-the-badge&logo=Bitcoin&logoColor=white"
                         }
@@ -283,29 +294,33 @@ function ProfilePage(props) {
         )}
 
         {/* 프로필 콘텐츠 더 보기 + 반짝반짝 효과 */}
-        <a
-          href="#show-more"
-          className="slide-to-see-down blink-effect"
-          onClick={() => clickToSeeMore()}
-        >
-          <img
-            src={require("../static/component/triangleDown.png")}
-            alt="삼각형(하)"
-          />
-          <span>click to see more</span>
-        </a>
+        {!isSeeMore ? (
+          <a
+            href="#show-more"
+            className="slide-to-see-down blink-effect"
+            onClick={() => clickToSeeMore()}
+          >
+            <img
+              src={require("../static/component/triangleDown.png")}
+              alt="삼각형(하)"
+            />
+            <span>click to see more</span>
+          </a>
+        ) : (
+          <Footer />
+        )}
 
         <img
           className="arrow-left"
           src={require("../static/component/arrow-left.png")}
           alt="화살표(왼)"
-          onClick={() => moveToPage()}
+          onClick={() => moveToPage("/")}
         />
         <img
           className="arrow-right"
           src={require("../static/component/arrow-right.png")}
           alt="화살표(오)"
-          onClick={() => moveToPage("/Profile")}
+          onClick={() => moveToPage("/blog")}
         />
       </div>
     </div>

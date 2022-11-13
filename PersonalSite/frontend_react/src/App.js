@@ -1,25 +1,12 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import MainRoute from "./routes/MainRoute";
 
 //css
 import "static/style/app.scss";
 
-import Header from "./components/Header";
-import MainPage from "./pages/MainPage";
-import MenuActivated from "./pages/MenuActivated";
-import ProfilePage from "./pages/ProfilePage";
-
 function App() {
-  return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" exact={true} element={<MainPage />} />
-        <Route path="MenuActivated/" element={<MenuActivated />} />
-        <Route path="Profile/" element={<ProfilePage />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  return <MainRoute />;
 }
 
 export default App;

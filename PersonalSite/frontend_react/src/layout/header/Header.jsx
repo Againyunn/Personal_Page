@@ -41,7 +41,7 @@ function Header({ activate, menuToggle }) {
       setMenuFont("닫기");
       setHeaderChange(true);
 
-      navigate("/MenuActivated");
+      navigate("/menu-activated");
     } else {
       setMenuFont("메뉴");
       setHeaderChange(false);

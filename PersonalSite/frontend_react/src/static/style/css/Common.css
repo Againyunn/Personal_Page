@@ -1,0 +1,24 @@
+.confirm-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 0px;
+}
+.confirm-button:hover {
+  box-shadow: var(--confirm-button-box-shadow-effect);
+}
+
+.cancel-button {
+  background-color: var(--third-color);
+  color: #fff;
+  border: 0px;
+}
+.cancel-button:hover {
+  background-color: var(--third-color);
+  border: 0px;
+  box-shadow: var(--cancel-button-box-shadow-effect);
+}
+.cancel-button:focus {
+  background-color: var(--third-color);
+  border: 0px;
+  box-shadow: var(--cancel-button-box-shadow-effect);
+}

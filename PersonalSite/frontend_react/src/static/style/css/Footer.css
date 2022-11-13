@@ -1,0 +1,36 @@
+.footer-wrap {
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+  height: 50px;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-wrap .footer-container {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-wrap .footer-container .footer-block {
+  display: flex;
+  align-items: center;
+}
+.footer-wrap .footer-container .title {
+  color: #fff;
+  font-size: 17px;
+  font-bold: 600;
+}
+.footer-wrap .footer-container .author {
+  color: #fff;
+  font-size: 16px;
+}
+.footer-wrap .footer-container .email {
+  color: #fff;
+  font-size: 16px;
+}
+.footer-wrap .footer-container .email:hover {
+  cursor: pointer;
+}

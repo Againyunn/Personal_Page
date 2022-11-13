@@ -24,6 +24,11 @@
   animation: up-slide-out 0.3s ease-in-out;
 }
 
+.slide-up-focus-in {
+  position: absolute;
+  animation: up-slide-in 0.3s ease-in-out;
+}
+
 .fade-in {
   animation: fade-in 0.5s ease-in-out;
 }
@@ -114,5 +119,16 @@
   100% {
     opacity: 0;
     bottom: 100vh;
+  }
+}
+
+@keyframes up-slide-in {
+  0% {
+    opacity: 0;
+    transform: translate(0, 50px);
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
   }
 }

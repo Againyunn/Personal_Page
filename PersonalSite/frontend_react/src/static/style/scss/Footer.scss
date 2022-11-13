@@ -1,0 +1,40 @@
+.footer-wrap {
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+  height: 50px;
+  background-color: var(--primary-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .footer-container {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .footer-block {
+      display: flex;
+      align-items: center;
+    }
+
+    .title {
+      color: #fff;
+      font-size: 17px;
+      font-bold: 600;
+    }
+    .author {
+      color: #fff;
+      font-size: 16px;
+    }
+    .email {
+      color: #fff;
+      font-size: 16px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

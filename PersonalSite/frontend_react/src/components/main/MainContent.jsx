@@ -1,8 +1,8 @@
 import React from "react";
-import Swal from "sweetalert2";
 
 // css
 import "static/style/css/MainPage.css";
+import Swal from "sweetalert2";
 
 function MainContent(props) {
   const clickGithub = () => {

@@ -57,21 +57,28 @@ function MenuActivated({ activate, menuToggle }) {
       <div
         ref={(el) => (pageFrame.current[1] = el)}
         className="menu-index"
-        onClick={() => moveToPage("/Profile")}
+        onClick={() => moveToPage("/profile")}
       >
         <span className="menu-content">개인 프로필</span>
       </div>
       <div
         ref={(el) => (pageFrame.current[1] = el)}
         className="menu-index"
-        onClick={() => moveToPage("/Portfolio")}
+        onClick={() => moveToPage("/portfolio")}
       >
         <span className="menu-content">포트폴리오</span>
       </div>
       <div
         ref={(el) => (pageFrame.current[1] = el)}
         className="menu-index"
-        onClick={() => moveToPage("/InterestVision")}
+        onClick={() => moveToPage("/blog")}
+      >
+        <span className="menu-content">기록.공부</span>
+      </div>
+      <div
+        ref={(el) => (pageFrame.current[1] = el)}
+        className="menu-index"
+        onClick={() => moveToPage("/interest-vision")}
       >
         <span className="menu-content">관심사.비전</span>
       </div>

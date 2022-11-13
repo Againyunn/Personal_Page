@@ -1,0 +1,15 @@
+.error-wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error-wrap .error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.error-wrap .error-container .warning-color {
+  color: var(--third-color);
+}

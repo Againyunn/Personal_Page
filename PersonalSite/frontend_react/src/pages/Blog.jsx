@@ -1,60 +1,78 @@
-import React from "react";
-import SidebarBlog from "components/sidebar/SidebarBlog";
+import React, { useState, useEffect, useRef } from "react";
 
-// blog data
-import { javascriptStudyContent } from "assets/blogData/study/javascript";
+// component
+import SidebarBlog from "components/sidebar/SidebarBlog";
+import JSStudy from "assets/blogStructure/JSStudy";
 
 // css
 import "static/style/css/ContentPage.css";
-import "static/style/css/Sidebar.css";
-import { CodeBlock, dracula } from "react-code-blocks";
+import "static/style/css/Hamburger.css";
 
 function Blog(props) {
-  const JSStudy = () => {
-    return javascriptStudyContent.map((el, idx) => {
-      console.log("el:", el);
-      return (
-        <div className="content-container">
-          <div className="content-block">
-            <span className="h1">{el.header.h1}</span>
-            <span className="h2">{el.header.h2}</span>
-            <span className="h3">
-              {idx + 1}. {el.header.h3}
-            </span>
-            <br />
-            {/* 본문 text */}
-            {el.text.map((el, idx) => {
-              // text 형태
-              if (el.type === "text") {
-                return (
-                  <span className={`text ${el.color} ${el.bold}`}>
-                    {el.content}
-                  </span>
-                );
-              }
+  const [sidebarController, setSidebarController] = useState(false);
 
-              // code 형태
-              else if (el.type === "code") {
-                return (
-                  <CodeBlock
-                    text={el.content}
-                    language={"javascript"}
-                    showLineNumbers={true}
-                    // theme={dracula}
-                  />
-                );
-              }
-            })}
-          </div>
-        </div>
-      );
-    });
-  };
+  const sideRef = useRef();
+
+  useEffect(() => {
+    if (sidebarController) {
+      const handleClickOutside = (e) => {
+        console.log(e.target);
+        // console.log(sideRef.current[0]);
+        if (e.target.className !== "sidebar-wrap") {
+          setSidebarController(!sidebarController);
+        }
+      };
+
+      document.addEventListener("mousedown", (e) => handleClickOutside(e));
+      return () => {
+        document.removeEventListener("mousedown", (e) => handleClickOutside(e));
+      };
+    }
+  }, [sideRef]);
 
   return (
     <div className="content-wrap">
-      <SidebarBlog />
-      <JSStudy />
+      {/* <button
+        className={!sidebarController ? "" : "in-active"}
+        onClick={() => setSidebarController(!sidebarController)}
+      >
+        Blog Menu
+      </button> */}
+
+      {/* 반응형 햄버거 버튼 및 사이드 바 노출 기능 */}
+      <div
+        className={`notice-word blink-effect ${
+          !sidebarController ? "" : "in-active"
+        }`}
+      >
+        menu
+      </div>
+      <div
+        className="burger-menu"
+        onClick={() => setSidebarController(!sidebarController)}
+      >
+        <div
+          className={
+            !sidebarController ? "burger-bar unclicked" : "burger-bar clicked"
+          }
+        ></div>
+        <div
+          className={
+            !sidebarController ? "burger-bar unclicked" : "burger-bar clicked"
+          }
+        ></div>
+        <div
+          className={
+            !sidebarController ? "burger-bar unclicked" : "burger-bar clicked"
+          }
+        ></div>
+      </div>
+
+      <SidebarBlog
+        isActive={sidebarController}
+        // ref={(e) => (sideRef.current[0] = e.target.className)}
+      />
+      <JSStudy isFull={!sidebarController} />
     </div>
   );
 }

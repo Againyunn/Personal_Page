@@ -7,6 +7,7 @@ import { javascriptStudyContent } from "assets/blogData/study/javascript";
 // css
 import "static/style/css/ContentPage.css";
 import "static/style/css/Sidebar.css";
+import { CodeBlock, dracula } from "react-code-blocks";
 
 function Blog(props) {
   const JSStudy = () => {
@@ -35,9 +36,12 @@ function Blog(props) {
               // code 형태
               else if (el.type === "code") {
                 return (
-                  <pre className="code-wrap">
-                    <code class="code-content">{el.content}</code>
-                  </pre>
+                  <CodeBlock
+                    text={el.content}
+                    language={"javascript"}
+                    showLineNumbers={true}
+                    // theme={dracula}
+                  />
                 );
               }
             })}

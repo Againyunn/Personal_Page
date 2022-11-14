@@ -1,0 +1,80 @@
+.notice-word {
+  position: fixed;
+  bottom: 95px;
+  right: 25px;
+  //   animation: menuNotice 3s ease-in-out forwards;
+  font-size: 15px;
+}
+
+.burger-menu {
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  min-height: 3em;
+  width: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.burger-bar {
+  width: 3em;
+  height: 0.2em;
+  background-color: var(--secondary-color); //#b82e5a;
+  border-radius: 0.5em;
+  margin: 0.2em 0 0.2em 0;
+}
+
+.side-bar-height {
+  max-height: 100vh;
+}
+
+/* ----- animations--------- */
+/* clicked */
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.5em, 0.4em);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0.1);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-0.5em, 0.4em);
+  transition: ease-out 0.5s;
+}
+
+/* unclicked */
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+/* 메뉴 버튼임을 안내하는 notice */
+@keyframes menuNotice {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/*반짝반짝 효과*/
+@keyframes blink-effect-set {
+  50% {
+    opacity: 0.1;
+  }
+}
+.blink-effect {
+  animation: blink-effect-set 2s step-end infinite;
+}
+.blink-effect:hover {
+  animation: none;
+}

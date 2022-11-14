@@ -59,17 +59,24 @@
 }
 
 /*반짝반짝 효과*/
+@-webkit-keyframes blink-effect-set {
+  50% {
+    opacity: 0.4;
+  }
+}
 @keyframes blink-effect-set {
   50% {
     opacity: 0.4;
   }
 }
 .blink-effect {
-  animation: blink-effect-set 1.5s step-end infinite;
+  -webkit-animation: blink-effect-set 1.5s step-end infinite;
+          animation: blink-effect-set 1.5s step-end infinite;
 }
 
 .blink-effect:hover {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
 }
 
 /*모바일3 헤더 스타일*/
@@ -208,4 +215,4 @@
     border-radius: 100%;
   }
 }
-/* /MainContent.jsx css */
+/* /MainContent.jsx css *//*# sourceMappingURL=MainPage.css.map */

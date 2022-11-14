@@ -20,6 +20,10 @@
   border-bottom: 1px solid var(--secondary-color);
 }
 
+.is-full {
+  padding: 0 0 0 0px;
+}
+
 .h1 {
   font-size: 24px;
   font-weight: 700;
@@ -66,4 +70,4 @@
 
 .red {
   color: var(--text-color-red);
-}
+}/*# sourceMappingURL=ContentPage.css.map */

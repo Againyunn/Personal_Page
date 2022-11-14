@@ -162,17 +162,24 @@ a {
 }
 
 /*반짝반짝 효과*/
+@-webkit-keyframes blink-effect-set {
+  50% {
+    opacity: 0.4;
+  }
+}
 @keyframes blink-effect-set {
   50% {
     opacity: 0.4;
   }
 }
 .blink-effect {
-  animation: blink-effect-set 1.5s step-end infinite;
+  -webkit-animation: blink-effect-set 1.5s step-end infinite;
+          animation: blink-effect-set 1.5s step-end infinite;
 }
 
 .blink-effect:hover {
-  animation: none;
+  -webkit-animation: none;
+          animation: none;
 }
 
 @media (max-width: 1200px) {
@@ -283,4 +290,4 @@ a {
     margin-right: 3px;
     height: 20px;
   }
-}
+}/*# sourceMappingURL=ProfilePage.css.map */

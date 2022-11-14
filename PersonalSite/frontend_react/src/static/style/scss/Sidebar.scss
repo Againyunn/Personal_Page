@@ -1,17 +1,22 @@
 .sidebar-wrap {
   position: fixed;
-  top: 90px;
-  left: 0px;
+  top: 91px;
+  left: 1px;
   min-width: 200px;
   width: 200px;
-  height: calc(100vh - 90px - 50px);
+  height: calc(100vh - 91px - 51px);
 
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--secondary-color);
 }
 
 .sidebar-container {
   display: flex;
   align-items: center;
   padding: 20px;
+}
+
+.in-active {
+  display: none;
 }

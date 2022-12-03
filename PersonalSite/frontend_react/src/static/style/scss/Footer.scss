@@ -1,8 +1,10 @@
 .footer-wrap {
-  position: absolute;
+  // position: sticky; //absolute;
+  left: 0px;
   bottom: 0px;
   width: 100vw;
   height: 50px;
+  // margin: 50px 0 0 0;
   background-color: var(--primary-color);
 
   display: flex;

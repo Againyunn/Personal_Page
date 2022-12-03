@@ -1,0 +1,34 @@
+.item-accordian-wrap {
+  display: flex;
+  width: 100vw;
+
+  justify-content: space-between;
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .title-img {
+    height: 200px;
+  }
+
+  .description {
+    flex-grow: 1 !important;
+    width: 50vw;
+  }
+}
+
+// bootstrap에 덮어씌우기
+.accordian-item {
+  border: 0px solid #fff !important;
+  width: 100%;
+  .accordion-button {
+    width: calc(80vw);
+    &:after {
+      width: 0px !important;
+      height: 0px !important;
+      content: none !important;
+    }
+  }
+}

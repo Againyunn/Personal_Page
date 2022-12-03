@@ -1,0 +1,29 @@
+.item-accordian-wrap {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+}
+.item-accordian-wrap .title {
+  font-size: 20px;
+  font-weight: 600;
+}
+.item-accordian-wrap .title-img {
+  height: 200px;
+}
+.item-accordian-wrap .description {
+  flex-grow: 1 !important;
+  width: 50vw;
+}
+
+.accordian-item {
+  border: 0px solid #fff !important;
+  width: 100%;
+}
+.accordian-item .accordion-button {
+  width: 80vw;
+}
+.accordian-item .accordion-button:after {
+  width: 0px !important;
+  height: 0px !important;
+  content: none !important;
+}/*# sourceMappingURL=ItemAccordion.css.map */

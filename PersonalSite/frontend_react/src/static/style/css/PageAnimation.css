@@ -29,7 +29,6 @@
 }
 
 .slide-up-focus-in {
-  position: absolute;
   -webkit-animation: up-slide-in 0.3s ease-in-out;
           animation: up-slide-in 0.3s ease-in-out;
 }

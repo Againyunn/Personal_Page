@@ -3,6 +3,9 @@ import React from "react";
 // blog data
 import { javascriptStudyContent } from "assets/blogData/study/javascript";
 
+// key 자동 생성
+import { v4 as uuidv4 } from "uuid";
+
 // css
 import "static/style/css/ContentPage.css";
 import "static/style/css/Sidebar.css";
@@ -14,6 +17,7 @@ function JSStudy(props) {
     return (
       <div
         className={`content-container ${!props.isFull ? "" : "is-full"}`}
+        key={() => uuidv4()}
         // ref={(e) => (contentRef.current[0] = e)}
       >
         <div className="content-block">
@@ -28,7 +32,10 @@ function JSStudy(props) {
             // text 형태
             if (el.type === "text") {
               return (
-                <span className={`text ${el.color} ${el.bold}`}>
+                <span
+                  className={`text ${el.color} ${el.bold}`}
+                  key={() => uuidv4()}
+                >
                   {el.content}
                 </span>
               );
@@ -42,6 +49,7 @@ function JSStudy(props) {
                   language={"javascript"}
                   showLineNumbers={true}
                   // theme={dracula}
+                  key={() => uuidv4()}
                 />
               );
             }

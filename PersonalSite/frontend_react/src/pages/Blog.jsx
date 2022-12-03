@@ -17,6 +17,10 @@ function Blog(props) {
     if (sidebarController) {
       const handleClickOutside = (e) => {
         console.log(e.target);
+        console.log(
+          "e.target.className.split(): ",
+          e.target.className.split(" ")[0]
+        );
         // console.log(sideRef.current[0]);
         if (e.target.className !== "sidebar-wrap") {
           setSidebarController(!sidebarController);

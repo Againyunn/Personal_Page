@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="50" viewBox="0 0 52 50">
+    <g transform="translate(0 -.638)">
+        <circle data-name="타원 41" cx="4" cy="4" r="4" transform="translate(21 42.638)" style="fill:#b82e5a"/>
+        <circle data-name="타원 42" cx="4" cy="4" r="4" transform="translate(33 38.638)" style="fill:#c4416b"/>
+        <circle data-name="타원 43" cx="4" cy="4" r="4" transform="translate(41 30.917)" style="fill:#ca4c74"/>
+        <circle data-name="타원 44" cx="3.5" cy="3.5" r="3.5" transform="translate(45 20.184)" style="fill:#d36085"/>
+        <ellipse data-name="타원 45" cx="3" cy="3.5" rx="3" ry="3.5" transform="translate(42 9.434)" style="fill:#d96d8f"/>
+        <circle data-name="타원 46" cx="3" cy="3" r="3" transform="translate(33 2.638)" style="fill:#db7c9a"/>
+        <ellipse data-name="타원 47" cx="3" cy="2.5" rx="3" ry="2.5" transform="translate(22 .638)" style="fill:#e396af"/>
+        <ellipse data-name="타원 48" cx="2.5" cy="3" rx="2.5" ry="3" transform="translate(11 3.638)" style="fill:#eca3ba"/>
+        <ellipse data-name="타원 49" cx="2.5" cy="2" rx="2.5" ry="2" transform="translate(3 12.383)" style="fill:#e8c1ce"/>
+        <circle data-name="타원 50" cx="2" cy="2" r="2" transform="translate(0 22.17)" style="fill:#f1d1dc"/>
+        <ellipse data-name="타원 51" cx="1.5" cy="2" rx="1.5" ry="2" transform="translate(4 32.936)" style="fill:#f7dce5"/>
+        <circle data-name="타원 52" cx="1.5" cy="1.5" r="1.5" transform="translate(11 41.638)" style="fill:#f3dde4"/>
+    </g>
+</svg>

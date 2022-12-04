@@ -10,7 +10,6 @@ function LoadingSpinner(props) {
       <LoadingSpinnerDiv>
         <SpinLoader
           src={require("static/img/icon/spinner.svg").default}
-          //   src={require("static/img/icon/spinner.png")}
           className="loading-icon"
         />
         <LoadingText>{props.text}</LoadingText>

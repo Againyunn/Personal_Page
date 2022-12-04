@@ -10,7 +10,7 @@ import ErrorPage from "pages/ErrorPage";
 import MainPage from "pages/MainPage";
 import MenuActivated from "pages/MenuActivated";
 import ProfilePage from "pages/ProfilePage";
-import PortfolioPage from "pages/Portfolio";
+import PortfolioPage from "pages/portfolio/Portfolio";
 import Blog from "pages/Blog";
 
 function MainRoute(props) {

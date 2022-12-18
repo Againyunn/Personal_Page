@@ -8,6 +8,7 @@ import ItemAccordion from "components/itemAccordian/ItemAccordion";
 import { Accordion } from "react-bootstrap";
 import { useState } from "react";
 import { useEffect } from "react";
+import AccordionBlock from "components/accordion/AccordionBlock";
 
 function ItemAccordionContainer(props) {
   const [itemData, setItemData] = useState(
@@ -40,9 +41,10 @@ function ItemAccordionContainer(props) {
             src={require(`static/img/${itemData["title-content"].img}.png`)}
             alt=""
           />
-          <Accordion>
-            <ItemAccordion className="description" title={""} />
-          </Accordion>
+          <AccordionBlock />
+          {/* <Accordion>
+            <ItemAccordion className="description" title={"i"} />
+          </Accordion> */}
         </div>
       )}
     </React.Fragment>

@@ -46,4 +46,8 @@
   100% {
     transform: rotate(360deg);
   }
+}
+.mw-100px {
+  min-width: 100px;
+  width: 100px;
 }/*# sourceMappingURL=Common.css.map */

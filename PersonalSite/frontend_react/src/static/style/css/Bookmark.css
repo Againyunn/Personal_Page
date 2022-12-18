@@ -1,0 +1,42 @@
+.bookmark-title {
+  font-size: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 1.75em;
+  white-space: nowrap;
+}
+
+.bookmark-description {
+  color: rgba(55, 53, 47, 0.6);
+  font-size: 15px;
+  overflow: hidden;
+  max-height: 4.5em;
+  word-break: break-word;
+}
+
+.bookmark-text {
+  display: flex;
+  font-size: 20px;
+  flex-direction: column;
+}
+
+.custom-bookmark-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.custom-bookmark-wrap .bookmark-text {
+  display: flex;
+  flex-direction: column;
+  color: var(--secondary-color);
+}
+.custom-bookmark-wrap .custom-bookmark-content {
+  display: flex;
+  width: 100%;
+}
+.custom-bookmark-wrap .custom-bookmark-content .custom-bookmark-title {
+  color: var(--secondary-color);
+}
+.custom-bookmark-wrap .custom-bookmark-content .custom-bookmark-item {
+  font-size: 20px;
+}/*# sourceMappingURL=Bookmark.css.map */

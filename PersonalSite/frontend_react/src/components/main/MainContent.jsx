@@ -45,19 +45,19 @@ function MainContent(props) {
           <img
             src={require("../../static/img/github.png")}
             alt="github"
-            className="icon"
+            // className="icon"
             onClick={clickGithub}
           />
           <img
             src={require("../../static/img/instagram.png")}
             alt="instagram"
-            className="icon"
+            // className="icon"
             onClick={clickInstagram}
           />
           <img
             src={require("../../static/img/gmail.png")}
             alt="gmail"
-            className="icon"
+            // className="icon"
             onClick={clickGmail}
           />
           <textarea

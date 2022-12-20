@@ -20,6 +20,13 @@
   flex-direction: column;
 }
 
+.tech-stack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .custom-bookmark-wrap {
   display: flex;
   flex-direction: column;
@@ -32,11 +39,45 @@
 }
 .custom-bookmark-wrap .custom-bookmark-content {
   display: flex;
+  flex-direction: row;
+  font-size: 15px;
   width: 100%;
+  padding-bottom: 5px;
 }
 .custom-bookmark-wrap .custom-bookmark-content .custom-bookmark-title {
   color: var(--secondary-color);
+  min-width: 100px;
 }
 .custom-bookmark-wrap .custom-bookmark-content .custom-bookmark-item {
   font-size: 20px;
+}
+
+.image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 540px) {
+  .bookmark-title {
+    font-size: 1.5em;
+    height: 1.75em;
+  }
+  .bookmark-description {
+    font-size: 0.7em;
+  }
+  .bookmark-text {
+    font-size: 12px;
+  }
+  .custom-bookmark-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .custom-bookmark-content .custom-bookmark-title {
+    font-size: 0.8em;
+    min-width: 50px;
+  }
+  .custom-bookmark-content .custom-bookmark-title .custom-bookmark-item {
+    font-size: 0.4em;
+  }
 }/*# sourceMappingURL=Bookmark.css.map */

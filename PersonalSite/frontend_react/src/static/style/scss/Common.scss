@@ -43,7 +43,32 @@
 }
 
 // 크기 조정
+.mw-200px {
+  min-width: 200px;
+}
+
 .mw-100px {
   min-width: 100px;
   width: 100px;
+}
+.mw-80px {
+  min-width: 80px;
+  width: 80px;
+}
+
+// 콘텐츠 패딩 여백 부여
+.p-15px {
+  padding: 15px;
+}
+
+.top-15px {
+  padding: 15px;
+}
+
+.right-15px {
+  padding-right: 15px;
+}
+
+.buttom-15px {
+  margin-bottom: 15px;
 }

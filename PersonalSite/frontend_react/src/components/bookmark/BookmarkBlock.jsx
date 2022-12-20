@@ -11,6 +11,9 @@ import "static/style/css/NotionStyle.css";
 import "static/style/css/Bookmark.css";
 import "static/style/css/Common.css";
 
+// bootstrap
+import { Carousel } from "react-bootstrap";
+
 /**
  * 북마크 블록 생성 컴포넌트
  * @param {*string} sourceUrl
@@ -26,6 +29,7 @@ import "static/style/css/Common.css";
 
 function BookmarkBlock({
   sourceUrl,
+  icon,
   title,
   desrciption,
   role,
@@ -34,35 +38,46 @@ function BookmarkBlock({
   imageSrc,
   tagObject,
 }) {
-  console.log("tagObject: ", tagObject);
+  // console.log("imageSrc: ", imageSrc);
+  // const image = new Image();
+
+  // image.src = imageSrc;
+
+  // let imgSrc = "../../static/img/gmail.png"; //imageSrc.toString();
+
   return (
-    <div className="indented">
-      <figure>
-        <a href={sourceUrl} className="bookmark source">
-          <div className="bookmark-info">
-            {/* 커스터마이징 wrap */}
-            <div className="custom-bookmark-wrap">
-              <div className="custom-bookmark-content">
-                <div className="bookmark-text">
-                  <div className="bookmark-title">{title}</div>
-                  <div className="bookmark-description">{desrciption}</div>
+    // <React.Fragment>
+
+    <div className="col-sm-12 col-md-12  col-xl-6  top-15px buttom-15px">
+      <a href={sourceUrl} className="bookmark source ">
+        <div className="bookmark-info">
+          {/* 커스터마이징 wrap */}
+          <div className="custom-bookmark-wrap col-sm-11 col-md-11  col-xl-5">
+            <div className="custom-bookmark-content buttom-15px">
+              <div className="bookmark-text">
+                <div className="bookmark-title mw-200px">
+                  <img className="icon" src={icon} alt={icon} />
+                  {title}
                 </div>
+                <div className="bookmark-description">{desrciption}</div>
               </div>
+            </div>
 
-              <div className="custom-bookmark-content">
-                <span className="custom-bookmark-title mw-100px">개발기간</span>
-                <span className="bookmark-description">
-                  {startDate} - {endDate}
-                </span>
-              </div>
+            <div className="custom-bookmark-content bookmark-text">
+              <span className="custom-bookmark-title mw-80px">개발기간</span>
+              <span className="bookmark-description">
+                {startDate} - {endDate}
+              </span>
+            </div>
 
-              <div className="custom-bookmark-content">
-                <span className="custom-bookmark-title mw-100px">담당역할</span>
-                <span className="bookmark-description">{role}</span>
-              </div>
+            <div className="custom-bookmark-content bookmark-text">
+              <span className="custom-bookmark-title mw-80px">담당역할</span>
+              <span className="bookmark-description">{role}</span>
+            </div>
 
-              <div className="custom-bookmark-content">
-                <span className="custom-bookmark-title mw-100px">기술스택</span>
+            <div className="custom-bookmark-content ">
+              <span className="custom-bookmark-title mw-80px">기술스택</span>
+              <div className="tech-stack">
                 {!tagObject
                   ? null
                   : tagObject.map((el, idx) => {
@@ -75,14 +90,38 @@ function BookmarkBlock({
                       );
                     })}
               </div>
-
-              <div className="bookmark-href">{sourceUrl}</div>
             </div>
+
+            <div className="bookmark-href">{sourceUrl}</div>
           </div>
-          {!imageSrc ? null : <img src={imageSrc} className="bookmark-image" />}
-        </a>
-      </figure>
+        </div>
+        {!imageSrc ? null : (
+          <div className="image-wrap p-15px">
+            <Carousel
+              interval={3000}
+              nextIcon={null}
+              prevIcon={null}
+              indicators={false}
+              slide={false}
+            >
+              {imageSrc.map((imgEl) => {
+                return (
+                  <Carousel.Item>
+                    <img
+                      src={require(`../../static/img/${imgEl}`)}
+                      alt={imgEl}
+                      className="d-block"
+                    />
+                  </Carousel.Item>
+                );
+              })}
+            </Carousel>
+          </div>
+        )}
+      </a>
     </div>
+
+    // </React.Fragment>
   );
 }
 

@@ -13,6 +13,8 @@ import ProfilePage from "pages/ProfilePage";
 import PortfolioPage from "pages/portfolio/Portfolio";
 import Blog from "pages/Blog";
 
+import Valto from "pages/portfolio/portfolioPage/Valto";
+
 function MainRoute(props) {
   return (
     <BrowserRouter>
@@ -25,11 +27,12 @@ function MainRoute(props) {
           <Route path="/" exact={true} element={<MainPage />} />
           <Route path="menu-activated/" element={<MenuActivated />} />
           <Route path="profile/" element={<ProfilePage />} />
+          <Route path="portfolio" element={<PortfolioPage />} />
+          <Route path="blog/" element={<Blog />} />
 
           {/* footer 사용 */}
           <Route element={<LayoutFooter />}>
-            <Route path="portfolio" element={<PortfolioPage />} />
-            <Route path="blog/" element={<Blog />} />
+            <Route path="portfolio/valto" element={<Valto />} />
           </Route>
         </Route>
       </Routes>

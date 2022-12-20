@@ -36,7 +36,13 @@ function Portfolio(props) {
               return (
                 <BookmarkBlock
                   key={() => uuidv4()}
+                  githubUrl={el["title-content"].githubUrl}
                   sourceUrl={el["title-content"].sourceUrl}
+                  serviceUrl={
+                    !el["title-content"].serviceUrl
+                      ? false
+                      : el["title-content"].serviceUrl
+                  }
                   icon={el["title-content"].icon}
                   title={el["title-content"].title}
                   desrciption={el["title-content"]["brief-discription"]}

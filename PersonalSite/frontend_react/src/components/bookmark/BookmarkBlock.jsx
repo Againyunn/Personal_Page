@@ -29,6 +29,8 @@ import { Carousel } from "react-bootstrap";
 
 function BookmarkBlock({
   sourceUrl,
+  githubUrl,
+  serviceUrl,
   icon,
   title,
   desrciption,
@@ -49,7 +51,7 @@ function BookmarkBlock({
     // <React.Fragment>
 
     <div className="col-sm-12 col-md-12  col-xl-6  top-15px buttom-15px">
-      <a href={sourceUrl} className="bookmark source ">
+      <a href={sourceUrl} target="_blank" className="bookmark source ">
         <div className="bookmark-info">
           {/* 커스터마이징 wrap */}
           <div className="custom-bookmark-wrap col-sm-11 col-md-11  col-xl-5">
@@ -92,7 +94,33 @@ function BookmarkBlock({
               </div>
             </div>
 
-            <div className="bookmark-href">{sourceUrl}</div>
+            <div className="custom-bookmark-content ">
+              <span className="custom-bookmark-title mw-80px">Github</span>
+              <a
+                className="bookmark-href"
+                href={githubUrl}
+                target="_blank"
+                title={githubUrl}
+              >
+                {githubUrl}
+              </a>
+            </div>
+
+            {!serviceUrl ? null : (
+              <div className="custom-bookmark-content ">
+                <span className="custom-bookmark-title mw-80px">
+                  서비스 URL
+                </span>
+                <a
+                  className="bookmark-href"
+                  href={serviceUrl}
+                  target="_blank"
+                  title={serviceUrl}
+                >
+                  {serviceUrl}
+                </a>
+              </div>
+            )}
           </div>
         </div>
         {!imageSrc ? null : (

@@ -397,8 +397,6 @@ blockquote {
 
 .bookmark-title {
   font-size: 0.85em;
-  overflow: hidden;
-  text-overflow: ellipsis;
   height: 1.75em;
   white-space: nowrap;
   min-width: 250px;
@@ -446,6 +444,9 @@ blockquote {
 .bookmark-href {
   font-size: 0.75em;
   margin-top: 0.25em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .sans {

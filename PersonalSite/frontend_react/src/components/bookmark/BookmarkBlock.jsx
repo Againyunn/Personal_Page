@@ -54,20 +54,22 @@ function BookmarkBlock({
       <a href={sourceUrl} target="_blank" className="bookmark source ">
         <div className="bookmark-info">
           {/* 커스터마이징 wrap */}
-          <div className="custom-bookmark-wrap col-sm-11 col-md-11  col-xl-5">
+          <div className="custom-bookmark-wrap col-sm-11 col-md-11 ">
             <div className="custom-bookmark-content buttom-15px">
               <div className="bookmark-text">
                 <div className="bookmark-title mw-200px">
                   <img className="icon" src={icon} alt={icon} />
                   {title}
                 </div>
-                <div className="bookmark-description">{desrciption}</div>
+                <div className="bookmark-description col-sm-12 col-md-11  col-xl-12 ">
+                  {desrciption}
+                </div>
               </div>
             </div>
 
             <div className="custom-bookmark-content bookmark-text">
               <span className="custom-bookmark-title mw-80px">개발기간</span>
-              <span className="bookmark-description">
+              <span className="bookmark-description col-sm-12 col-md-12  col-xl-12">
                 {startDate} - {endDate}
               </span>
             </div>
@@ -79,7 +81,7 @@ function BookmarkBlock({
 
             <div className="custom-bookmark-content ">
               <span className="custom-bookmark-title mw-80px">기술스택</span>
-              <div className="tech-stack">
+              <div className="tech-stack mw-120px">
                 {!tagObject
                   ? null
                   : tagObject.map((el, idx) => {
@@ -97,7 +99,7 @@ function BookmarkBlock({
             <div className="custom-bookmark-content ">
               <span className="custom-bookmark-title mw-80px">Github</span>
               <a
-                className="bookmark-href"
+                className="bookmark-href mw-120px"
                 href={githubUrl}
                 target="_blank"
                 title={githubUrl}
@@ -112,7 +114,7 @@ function BookmarkBlock({
                   서비스 URL
                 </span>
                 <a
-                  className="bookmark-href"
+                  className="bookmark-href mw-120px"
                   href={serviceUrl}
                   target="_blank"
                   title={serviceUrl}

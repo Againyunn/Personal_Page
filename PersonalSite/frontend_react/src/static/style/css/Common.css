@@ -58,7 +58,11 @@
 
 .mw-80px {
   min-width: 80px;
-  width: 80px;
+}
+
+.mw-120px {
+  min-width: 120px;
+  width: 100%;
 }
 
 .p-15px {

@@ -53,7 +53,12 @@
 }
 .mw-80px {
   min-width: 80px;
-  width: 80px;
+  // width: 80px;
+}
+.mw-120px {
+  min-width: 120px;
+  width: 100%;
+  // width: 120px;
 }
 
 // 콘텐츠 패딩 여백 부여

@@ -3,7 +3,6 @@
   bottom: 0px;
   width: 100vw;
   height: 50px;
-  min-width: 550px;
   background-color: var(--primary-color);
   display: flex;
   justify-content: center;

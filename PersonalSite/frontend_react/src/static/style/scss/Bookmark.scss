@@ -34,6 +34,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
+  height: 270px;
 
   .bookmark-text {
     color: var(--secondary-color);
@@ -63,6 +64,10 @@
   justify-content: center;
   align-items: center;
   min-width: 20vw;
+}
+
+.image-max-height {
+  max-height: 250px !important;
 }
 
 @media (max-width: 540px) {

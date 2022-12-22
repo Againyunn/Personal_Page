@@ -46,6 +46,7 @@ function Portfolio(props) {
                   icon={el["title-content"].icon}
                   title={el["title-content"].title}
                   desrciption={el["title-content"]["brief-discription"]}
+                  belong={el["title-content"].belong}
                   role={el["body-content"]["my-role"]}
                   startDate={el["title-content"].period.start}
                   endDate={el["title-content"].period.end}

@@ -34,24 +34,20 @@ function BookmarkBlock({
   icon,
   title,
   desrciption,
+  belong,
   role,
   startDate,
   endDate,
   imageSrc,
   tagObject,
 }) {
-  // console.log("imageSrc: ", imageSrc);
-  // const image = new Image();
-
-  // image.src = imageSrc;
-
-  // let imgSrc = "../../static/img/gmail.png"; //imageSrc.toString();
+  const moveToLink = (targetUrl) => {
+    window.open(targetUrl);
+  };
 
   return (
-    // <React.Fragment>
-
-    <div className="col-sm-12 col-md-12  col-xl-6  top-15px buttom-15px">
-      <a href={sourceUrl} target="_blank" className="bookmark source ">
+    <div className="col-sm-12 col-md-12 col-xl-6 top-15px buttom-15px hover-effect">
+      <a href={sourceUrl} target="_blank" className="bookmark source">
         <div className="bookmark-info">
           {/* 커스터마이징 wrap */}
           <div className="custom-bookmark-wrap col-sm-11 col-md-11 ">
@@ -73,6 +69,12 @@ function BookmarkBlock({
                 {startDate} - {endDate}
               </span>
             </div>
+            {!belong ? null : (
+              <div className="custom-bookmark-content bookmark-text">
+                <span className="custom-bookmark-title mw-80px">소속</span>
+                <span className="bookmark-description">{belong}</span>
+              </div>
+            )}
 
             <div className="custom-bookmark-content bookmark-text">
               <span className="custom-bookmark-title mw-80px">담당역할</span>
@@ -95,21 +97,38 @@ function BookmarkBlock({
                     })}
               </div>
             </div>
-
-            <div className="custom-bookmark-content ">
-              <span className="custom-bookmark-title mw-80px">Github</span>
-              <a
-                className="bookmark-href mw-120px"
-                href={githubUrl}
-                target="_blank"
-                title={githubUrl}
-              >
-                {githubUrl}
-              </a>
-            </div>
-
+            {!githubUrl
+              ? null
+              : githubUrl.map((el, idx) => {
+                  return (
+                    <div
+                      className="custom-bookmark-content"
+                      onClick={() => moveToLink(el)}
+                    >
+                      <span className="custom-bookmark-title mw-80px">
+                        Github
+                        {!githubUrl
+                          ? null
+                          : githubUrl.length > 1
+                          ? idx + 1
+                          : ""}
+                      </span>
+                      <a
+                        className="bookmark-href mw-120px"
+                        href={el}
+                        target="_blank"
+                        title={el}
+                      >
+                        {el}
+                      </a>
+                    </div>
+                  );
+                })}
             {!serviceUrl ? null : (
-              <div className="custom-bookmark-content ">
+              <div
+                className="custom-bookmark-content"
+                onClick={() => moveToLink(serviceUrl)}
+              >
                 <span className="custom-bookmark-title mw-80px">
                   서비스 URL
                 </span>
@@ -128,7 +147,7 @@ function BookmarkBlock({
         {!imageSrc ? null : (
           <div className="image-wrap p-15px">
             <Carousel
-              interval={3000}
+              interval={2500}
               nextIcon={null}
               prevIcon={null}
               indicators={false}
@@ -138,9 +157,9 @@ function BookmarkBlock({
                 return (
                   <Carousel.Item>
                     <img
-                      src={require(`../../static/img/${imgEl}`)}
+                      src={require(`../../static/portfolio/${imgEl}`)}
                       alt={imgEl}
-                      className="d-block"
+                      className="col-sm-12 col-md-12  col-xl-12 image-max-height"
                     />
                   </Carousel.Item>
                 );
@@ -150,8 +169,6 @@ function BookmarkBlock({
         )}
       </a>
     </div>
-
-    // </React.Fragment>
   );
 }
 

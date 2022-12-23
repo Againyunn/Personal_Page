@@ -1,67 +1,65 @@
 @charset "UTF-8";
-.profile-container {
-  width: 100vw;
+.profileContainer {
   position: relative;
 }
 
-.profile-wrap {
+.profileWrap {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 80px;
+  align-items: center;
   height: calc(100vh - 90px);
   margin-left: calc(5vw + 50px);
   margin-right: calc(5vw + 50px);
 }
-
-.profile-wrap > .profile-img {
+.profileWrap .profileImage {
   width: 300px;
   height: 380px;
 }
-
-.profile-wrap > .profile-content-wrap {
+.profileWrap .profileContentWrap {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: left;
   text-align: left;
 }
-
-.profile-wrap > .profile-content-wrap > .profile-content-title {
+.profileWrap .profileContentWrap .profileContentTitle {
   margin-bottom: 30px;
 }
-
-.profile-wrap > .profile-content-wrap > .profile-content-title > .profile-title-head {
+.profileWrap .profileContentWrap .profileContentTitle .profileTitleHead {
   font-size: 30px;
   font-weight: bold;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
 }
-
-.profile-wrap > .profile-content-wrap > .profile-content-title > profile-title-content {
+.profileWrap .profileContentWrap .profileContentTitle .profileTitleContent {
   font-size: 20px;
   font-weight: normal;
 }
-
-.profile-wrap > .profile-content-wrap > .profile-content-part {
+.profileWrap .profileContentWrap .profileContentPart {
   margin-bottom: 20px;
 }
-
-.profile-wrap > .profile-content-wrap > .profile-content-part > .profile-part-head {
+.profileWrap .profileContentWrap .profileContentPart .profilePartHead {
   font-size: 25px;
   font-weight: bold;
 }
-
-.profile-wrap > .profile-content-wrap > .profile-content-part > .profile-part-sub-head {
+.profileWrap .profileContentWrap .profileContentPart .profilePartSubHead {
   font-size: 18px;
   font-weight: bold;
 }
-
-.profile-wrap > .profile-content-wrap > .profile-content-part > .profile-part-content {
+.profileWrap .profileContentWrap .profileContentPart .profilePartContent {
   font-size: 15px;
   font-weight: normal;
 }
 
-.margin-right-style {
+.insideMarker {
+  list-style-position: inside;
+}
+
+.noMarker {
+  list-style: none;
+}
+
+.marginRightStyle {
   margin-left: 30px;
 }
 
@@ -72,18 +70,18 @@
   flex-wrap: wrap;
 }
 
-.icon-wrap {
+.iconWrap {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: calc((100vw - (10vw + 100px)) / 2 - 30px);
 }
-
-.icon-wrap > img {
-  margin-right: 2px;
+.iconWrap .iconImg {
+  margin-right: 3px;
 }
 
 /*페이지 아래 전환*/
-.slide-to-see-down {
+.slideToSeeDown {
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -93,126 +91,123 @@
   left: calc(50vw - 7.5px - 6em);
   cursor: pointer;
 }
-
-.slide-to-see-down > img {
+.slideToSeeDown .triangleImg {
   margin-top: 3px;
   width: 15px;
   height: 15px;
 }
-
-.slide-to-see-down > span {
+.slideToSeeDown span {
   color: #d9d9d9;
   font-size: 15px;
 }
-
-.slide-to-see-down:hover {
+.slideToSeeDown:hover {
   text-shadow: 0px 0px 3px #d9d9d9;
 }
 
+.marginUp {
+  margin-top: -100px;
+}
+
+.contentDown {
+  height: 100vh;
+}
+
 /*click 이후 scroll 안내 div*/
-.scroll-to-see-down {
+.scrollToSeeDown {
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
   left: calc(50vw - 7.5px - 6em);
 }
-
-.scroll-to-see-down > span {
+.scrollToSeeDown span {
   color: #d9d9d9;
   font-size: 15px;
 }
 
 /*위/아래 변경 시 효과 설정*/
-.content-up {
+.contentUp {
   transition: opacity 0.5s ease-in;
 }
 
-#slide-to-see-down-checkbox:checked .content-up {
+#slideToSeeDownCheckbox:checked .contentUp {
   opacity: 0;
 }
 
 /*화살표*/
-.arrow-left {
+.arrowLeft {
   position: fixed;
   top: calc(50vh - 25px + 45px);
   left: 2vw;
   width: 50px;
   border-radius: 100px;
 }
+.arrowLeft:hover {
+  box-shadow: 0px 0px 15px 3px #78c4fa;
+}
 
-.arrow-right {
+.arrowRight {
   position: fixed;
   top: calc(50vh - 25px + 45px);
   right: 2vw;
   width: 50px;
   border-radius: 100px;
 }
-
-.arrow-left:hover {
-  box-shadow: 0px 0px 15px 3px var(--primary-light-color);
-}
-
-.arrow-right:hover {
-  box-shadow: 0px 0px 15px 3px var(--primary-light-color);
-}
-
-a {
-  text-decoration: none;
+.arrowRight:hover {
+  box-shadow: 0px 0px 15px 3px #78c4fa;
 }
 
 /*반짝반짝 효과*/
-@-webkit-keyframes blink-effect-set {
+@-webkit-keyframes blinkEffectSet {
   50% {
     opacity: 0.4;
   }
 }
-@keyframes blink-effect-set {
+@keyframes blinkEffectSet {
   50% {
     opacity: 0.4;
   }
 }
-.blink-effect {
-  -webkit-animation: blink-effect-set 1.5s step-end infinite;
-          animation: blink-effect-set 1.5s step-end infinite;
+.blinkEffect {
+  -webkit-animation: blinkEffectSet 1.5s step-end infinite;
+          animation: blinkEffectSet 1.5s step-end infinite;
 }
-
-.blink-effect:hover {
+.blinkEffect:hover {
   -webkit-animation: none;
           animation: none;
 }
 
 @media (max-width: 1200px) {
-  .profile-title-head {
+  .profileTitleHead {
     font-size: 25px !important;
   }
-  .profile-title-content {
+  .profileTitleContent {
     font-size: 18px !important;
   }
-  .profile-part-head {
+  .profilePartHead {
     font-size: 20px !important;
     font-weight: bold !important;
   }
-  .profile-part-sub-head {
+  .profilePartSubHead {
     font-size: 15px !important;
   }
-  .profile-part-content {
+  .profilePartContent {
     font-size: 12px !important;
   }
 }
 @media (max-width: 960px) {
-  .profile-img {
+  .profileImage {
     width: 250px !important;
     height: 310px !important;
   }
-  .profile-wrap {
+  .profileWrap {
     flex-direction: column !important;
     flex-wrap: nowrap !important;
     align-items: center !important;
     padding-top: 0px !important;
     width: calc(90vw - 100px) !important;
   }
-  .profile-content-title {
+  .profileContentTitle {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -220,73 +215,73 @@ a {
     padding-top: 20px;
     margin-left: 10px;
   }
-  .profile-content-wrap {
+  .profileContentWrap {
     flex-direction: row !important;
     justify-content: center !important;
     align-items: left;
     width: calc(90vw - 100px) !important;
   }
-  .profile-content-wrap-bottom {
+  .profileContentWrapBottom {
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
   }
-  .profile-content-part {
+  .profileContentPart {
     display: flex;
     flex-direction: column;
     justify-content: left !important;
     align-items: left !important;
     padding-top: 20px;
   }
-  .profile-part-head {
+  .profilePartHead {
     font-size: 22px !important;
     font-weight: bold !important;
   }
-  .profile-part-sub-head {
+  .profilePartSubHead {
     font-size: 18px !important;
   }
-  .profile-part-content {
+  .profilePartContent {
     font-size: 15px !important;
   }
-  .icon-wrap {
+  .iconWrap {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 100% !important;
   }
-  .icon-wrap .icon-img {
+  .iconWrap .iconImg {
     margin-right: 3px;
   }
 }
 @media (max-width: 720px) {
-  .profile-img {
+  .profileImage {
     width: 180px !important;
     height: 230px !important;
   }
-  .profile-content-wrap {
+  .profileContentWrap {
     margin-left: 0px !important;
   }
-  .profile-content-part {
+  .profileContentPart {
     padding-left: 0px !important;
   }
-  .profile-title-head {
+  .profileTitleHead {
     font-size: 22px !important;
   }
-  .profile-title-content {
+  .profileTitleContent {
     font-size: 15px !important;
   }
-  .profile-part-head {
+  .profilePartHead {
     font-size: 15px !important;
     font-weight: bold !important;
   }
-  .profile-part-sub-head {
+  .profilePartSubHead {
     font-size: 13px !important;
   }
-  .profile-part-content {
+  .profilePartContent {
     font-size: 12px !important;
   }
-  .icon-img {
+  .iconImg {
     margin-right: 3px;
     height: 20px;
   }

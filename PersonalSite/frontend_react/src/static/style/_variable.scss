@@ -8,7 +8,8 @@
   --primary-light-color: #aaa; //#78c4fa;
 
   // button box shadow effect
-  --confirm-button-box-shadow-effect: 0px 0px 3px 3px var(--primary-light-color);
+  --confirm-button-box-shadow-effect: 0px 0px 15px 3px
+    var(--primary-light-color);
   --cancel-button-box-shadow-effect: 0px 0px 3px 3px rgba(240, 101, 72, 0.4);
 
   // text color

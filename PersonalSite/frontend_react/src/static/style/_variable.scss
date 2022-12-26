@@ -1,14 +1,14 @@
 // styled-component 전역 변수 선언
 :root {
   // main color 지정
-  --primary-color: #2b90d9;
+  --primary-color: #000; //#2b90d9;
   --secondary-color: #6e6e6e; //rgb(120, 120, 135);
   --third-color: #f06548;
 
-  --primary-light-color: #78c4fa;
+  --primary-light-color: #aaa; //#78c4fa;
 
   // button box shadow effect
-  --confirm-button-box-shadow-effect: 0px 0px 3px 3px #78c4fa;
+  --confirm-button-box-shadow-effect: 0px 0px 3px 3px var(--primary-light-color);
   --cancel-button-box-shadow-effect: 0px 0px 3px 3px rgba(240, 101, 72, 0.4);
 
   // text color
@@ -24,5 +24,5 @@ $third-color: #f06548;
 
 $primary-light-color: #78c4fa;
 
-$confirm-button-box-shadow-effect: 0px 0px 3px 3px #78c4fa;
+$confirm-button-box-shadow-effect: 0px 0px 3px 3px var(--primary-light-color);
 $cancel-button-box-shadow-effect: 0px 0px 3px 3px rgba(240, 101, 72, 0.4);

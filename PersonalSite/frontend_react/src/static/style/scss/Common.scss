@@ -26,6 +26,29 @@
   }
 }
 
+// notice-toast style
+.notice-toast {
+  background-color: var(--primary-color);
+  opacity: 0.7;
+  position: fixed;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.notice-toast-header {
+  background-color: var(--primary-color);
+  color: #fff;
+  button {
+    color: #fff;
+  }
+}
+
+.notice-toast-content {
+  color: #fff;
+}
+
 // load spinner style
 .loading-icon {
   width: 72px;

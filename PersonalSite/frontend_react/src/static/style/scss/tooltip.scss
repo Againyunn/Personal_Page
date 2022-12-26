@@ -1,0 +1,25 @@
+.tooltip-container {
+  line-height: 1.6;
+}
+
+.tooltip-title {
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.tooltip-content {
+  display: none; /*평소에 안보여야 하니까 none으로*/
+  position: absolute; /*공중에 띄어져있으니까 absolute*/
+  max-width: 200px;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 0.8em;
+  color: white;
+  background: var(--secondary-color);
+}
+
+.tooltip:hover .tooltip-text {
+  display: block; /*마우스 올렸을때 나타나도록*/
+}

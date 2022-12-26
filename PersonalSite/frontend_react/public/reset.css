@@ -26,6 +26,8 @@ button,
 form {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
+  /* font */
+  font-family: "Ubuntu", sans-serif;
 }
 
 /* a태그 초기화 */
@@ -47,6 +49,9 @@ span {
 body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+
+  /* font */
+  font-family: "Dongle", sans-serif;
 }
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera*/

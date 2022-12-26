@@ -1,0 +1,51 @@
+.text-bounce span {
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  animation: bounce 0.7s ease infinite alternate;
+  font-size: 30px;
+  color: var(--primary-color);
+  text-shadow: 0 0.5px 0 #ccc, 0 1px 0 #ccc, 0 1.5px 0 #ccc, 0 2px 0 #ccc,
+    0 2.5px 0 #ccc, 0 3px 0 transparent, 0 3.5px 0 transparent,
+    0 4px 0 transparent, 0 4.5px 0 transparent, 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+$idx: 50;
+$x: 0.04s;
+
+@while $idx > 1 {
+  .text-bounce span:nth-child(#{$idx}) {
+    $y: $idx - 1;
+    animation-delay: $x * $y;
+  }
+
+  $idx: $idx - 1;
+}
+
+// .text-bounce span:nth-child(3) {
+//   animation-delay: 0.2s;
+// }
+// .text-bounce span:nth-child(4) {
+//   animation-delay: 0.3s;
+// }
+// .text-bounce span:nth-child(5) {
+//   animation-delay: 0.4s;
+// }
+// .text-bounce span:nth-child(6) {
+//   animation-delay: 0.5s;
+// }
+// .text-bounce span:nth-child(7) {
+//   animation-delay: 0.6s;
+// }
+// .text-bounce span:nth-child(8) {
+//   animation-delay: 0.7s;
+// }
+
+@keyframes bounce {
+  100% {
+    top: -3px;
+    // text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    //   0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+    //   0 50px 25px rgba(0, 0, 0, 0.1);
+  }
+}

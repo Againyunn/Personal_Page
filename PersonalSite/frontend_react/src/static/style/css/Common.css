@@ -23,6 +23,28 @@
   box-shadow: var(--cancel-button-box-shadow-effect);
 }
 
+.notice-toast {
+  background-color: var(--primary-color);
+  opacity: 0.7;
+  position: fixed;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.notice-toast-header {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.notice-toast-header button {
+  color: #fff;
+}
+
+.notice-toast-content {
+  color: #fff;
+}
+
 .loading-icon {
   width: 72px;
   height: 72px;

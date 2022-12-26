@@ -1,0 +1,94 @@
+.swap-container {
+  width: 300px;
+  height: 380px;
+  perspective: 300px;
+}
+
+.swap-container .item {
+  width: 300px;
+  height: 380px;
+  backface-visibility: hidden;
+  transition: 1s;
+  animation: swapping 0.6s ease;
+}
+
+.swap-container .item.front {
+  position: absolute;
+  animation: swapping-front 1s ease forwards;
+  animation-delay: 2.2s;
+  transform: rotateY(0deg);
+}
+
+// .swap-container:hover .item.front {
+//   transform: rotateY(180deg);
+// }
+
+.swap-container .item.back {
+  position: absolute;
+  animation: swapping-back 1s ease forwards;
+  animation-delay: 2.2s;
+  transform: rotateY(-180deg);
+}
+
+// .swap-container:hover .item.back {
+//   transform: rotateY(0deg);
+// }
+
+@keyframes swapping-front {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes swapping-back {
+  0% {
+    transform: rotateY(-180deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+// Tablet ver: 720 ~ 960px
+@media (max-width: 960px) {
+  .swap-container {
+    width: 250px !important;
+    height: 310px !important;
+  }
+
+  .swap-container .item {
+    width: 250px !important;
+    height: 310px !important;
+  }
+}
+
+// Tablet ver: 480 ~ 720px   *******수정 필요!
+@media (max-width: 720px) {
+  .swap-container {
+    width: 180px !important;
+    height: 230px !important;
+  }
+
+  .swap-container .item {
+    width: 180px !important;
+    height: 230px !important;
+  }
+}
+
+// Tablet ver:  ~ 480px   *******수정 필요!
+@media (max-width: 480px) {
+  .swap-container {
+    width: 170px !important;
+    height: 220px !important;
+  }
+
+  .swap-container .item {
+    width: 170px !important;
+    height: 220px !important;
+  }
+}

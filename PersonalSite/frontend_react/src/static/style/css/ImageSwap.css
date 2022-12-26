@@ -1,0 +1,97 @@
+.swap-container {
+  width: 300px;
+  height: 380px;
+  perspective: 300px;
+}
+
+.swap-container .item {
+  width: 300px;
+  height: 380px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: 1s;
+  -webkit-animation: swapping 0.6s ease;
+          animation: swapping 0.6s ease;
+}
+
+.swap-container .item.front {
+  position: absolute;
+  -webkit-animation: swapping-front 1s ease forwards;
+          animation: swapping-front 1s ease forwards;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+  transform: rotateY(0deg);
+}
+
+.swap-container .item.back {
+  position: absolute;
+  -webkit-animation: swapping-back 1s ease forwards;
+          animation: swapping-back 1s ease forwards;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+  transform: rotateY(-180deg);
+}
+
+@-webkit-keyframes swapping-front {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes swapping-front {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+@-webkit-keyframes swapping-back {
+  0% {
+    transform: rotateY(-180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes swapping-back {
+  0% {
+    transform: rotateY(-180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@media (max-width: 960px) {
+  .swap-container {
+    width: 250px !important;
+    height: 310px !important;
+  }
+  .swap-container .item {
+    width: 250px !important;
+    height: 310px !important;
+  }
+}
+@media (max-width: 720px) {
+  .swap-container {
+    width: 180px !important;
+    height: 230px !important;
+  }
+  .swap-container .item {
+    width: 180px !important;
+    height: 230px !important;
+  }
+}
+@media (max-width: 480px) {
+  .swap-container {
+    width: 170px !important;
+    height: 220px !important;
+  }
+  .swap-container .item {
+    width: 170px !important;
+    height: 220px !important;
+  }
+}/*# sourceMappingURL=ImageSwap.css.map */

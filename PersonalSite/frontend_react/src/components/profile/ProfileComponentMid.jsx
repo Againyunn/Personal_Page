@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Image } from "react-bootstrap";
 
-// image
-import profileImg from "static/img/profile.jpg";
+// component
+import AutoImageSwap from "components/animation/imageSwap/AutoImageSwap";
 
 // css
 import "static/style/css/ProfilePage.css";
+import { Image } from "react-bootstrap";
 
 function ProfileComponentMid(props) {
   const [isSeeMore, setIsSeeMore] = useState(false);
@@ -25,7 +25,11 @@ function ProfileComponentMid(props) {
     <div className="profileContainer">
       <div className="profileWrap contentUp">
         <div className="profileContentWrap">
-          <Image className="profileImage" src={profileImg} alt="" />
+          <AutoImageSwap
+            frontImage={"picture_profile.jpg"}
+            backImage={"profile.jpg"}
+          />
+          {/* <Image className="profileImage" src={profileImg} alt="" /> */}
           <div className="profileContentTitle">
             <span className="profileTitleHead">정재윤(Jaeyun Jung)</span>
             <br />

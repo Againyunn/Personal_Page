@@ -77,7 +77,7 @@
   max-width: calc((100vw - (10vw + 100px)) / 2 - 30px);
 }
 .iconWrap .iconImg {
-  margin-right: 3px;
+  margin: 2px 3px 2px 0;
 }
 
 /*페이지 아래 전환*/

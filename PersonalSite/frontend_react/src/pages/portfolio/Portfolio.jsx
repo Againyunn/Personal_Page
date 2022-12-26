@@ -5,7 +5,6 @@ import { v4 as uuidv4 } from "uuid";
 
 // components
 import ItemAccordionContainer from "components/itemAccordian/ItemAccordionContainer";
-import LoadingSpinner from "components/loadSpinner/LoadSpinner";
 import { Toast } from "react-bootstrap";
 
 // data
@@ -19,8 +18,6 @@ import BookmarkBlock from "components/bookmark/BookmarkBlock";
 import "static/style/css/Common.css";
 
 function Portfolio(props) {
-  const [isDataLoaded, setIsDataLoaded] = useState(false);
-
   const [initialToast, setInitialToast] = useState(false);
 
   const [scroll, setScroll] = useState(0);
@@ -30,10 +27,6 @@ function Portfolio(props) {
 
   // spinner test
   useEffect(() => {
-    setTimeout(() => {
-      setIsDataLoaded(true);
-    }, 100);
-
     setTimeout(() => {
       setInitialToast(true);
     }, 300);
@@ -73,45 +66,39 @@ function Portfolio(props) {
         </Toast.Body>
       </Toast>
 
-      {!isDataLoaded ? (
-        <LoadingSpinner text={"Loading..."} />
-      ) : !portfolioData ? null : (
-        portfolioData.map((el, idx) => {
-          return (
-            <BookmarkBlock
-              key={() => uuidv4()}
-              activate={
-                scroll < (idx + 1) * thisBrowserHeight && textBounceEffect
-              }
-              rightLeft={idx / 2}
-              blockHeight={thisBrowserHeight}
-              githubUrl={el["title-content"].githubUrl}
-              sourceUrl={el["title-content"].sourceUrl}
-              serviceUrl={
-                !el["title-content"].serviceUrl
-                  ? false
-                  : el["title-content"].serviceUrl
-              }
-              icon={el["title-content"].icon}
-              title={el["title-content"].title}
-              desrciption={el["title-content"]["brief-discription"]}
-              belong={el["title-content"].belong}
-              role={el["body-content"]["my-role"]}
-              startDate={el["title-content"].period.start}
-              endDate={el["title-content"].period.end}
-              imageSrc={
-                !el["body-content"].img ? false : el["body-content"].img
-              }
-              tagObject={
-                !el["body-content"].techStack
-                  ? false
-                  : el["body-content"].techStack
-              }
-            />
-            // { idx !== portfolioData.length - 1 ? <hr /> : null }
-          );
-        })
-      )}
+      {portfolioData.map((el, idx) => {
+        return (
+          <BookmarkBlock
+            key={() => uuidv4()}
+            activate={
+              scroll < (idx + 1) * thisBrowserHeight && textBounceEffect
+            }
+            rightLeft={idx / 2}
+            blockHeight={thisBrowserHeight}
+            githubUrl={el["title-content"].githubUrl}
+            sourceUrl={el["title-content"].sourceUrl}
+            serviceUrl={
+              !el["title-content"].serviceUrl
+                ? false
+                : el["title-content"].serviceUrl
+            }
+            icon={el["title-content"].icon}
+            title={el["title-content"].title}
+            desrciption={el["title-content"]["brief-discription"]}
+            belong={el["title-content"].belong}
+            role={el["body-content"]["my-role"]}
+            startDate={el["title-content"].period.start}
+            endDate={el["title-content"].period.end}
+            imageSrc={!el["body-content"].img ? false : el["body-content"].img}
+            tagObject={
+              !el["body-content"].techStack
+                ? false
+                : el["body-content"].techStack
+            }
+          />
+          // { idx !== portfolioData.length - 1 ? <hr /> : null }
+        );
+      })}
     </React.Fragment>
   );
 }

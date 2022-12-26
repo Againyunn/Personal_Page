@@ -24,12 +24,17 @@ const LoadingSpinnerWrap = styled.div`
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  width: 100%;
 `;
 
 const LoadingSpinnerDiv = styled.div`
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
+  top: 50%;
+  let: 50%;
+  transition: -50% -50%;
 `;
 
 const SpinLoader = styled.img`

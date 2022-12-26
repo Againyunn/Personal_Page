@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 // component
 import SidebarBlog from "components/sidebar/SidebarBlog";
 import JSStudy from "assets/blogStructure/JSStudy";
+import LoadingSpinner from "components/loadSpinner/LoadSpinner";
 
 // css
 import "static/style/css/ContentPage.css";
@@ -11,7 +12,15 @@ import "static/style/css/Hamburger.css";
 function Blog(props) {
   const [sidebarController, setSidebarController] = useState(false);
 
+  const [isDataLoaded, setIsDataLoaded] = useState(false);
+
   const sideRef = useRef();
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsDataLoaded(true);
+    }, 1000);
+  }, []);
 
   useEffect(() => {
     if (sidebarController) {
@@ -76,7 +85,11 @@ function Blog(props) {
         isActive={sidebarController}
         // ref={(e) => (sideRef.current[0] = e.target.className)}
       />
-      <JSStudy isFull={!sidebarController} />
+      {!isDataLoaded ? (
+        <LoadingSpinner text={"Loading..."} />
+      ) : (
+        <JSStudy isFull={!sidebarController} />
+      )}
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // key 자동 생성
 import { v4 as uuidv4 } from "uuid";
 
 // components
 import ItemAccordionContainer from "components/itemAccordian/ItemAccordionContainer";
-import { Toast } from "react-bootstrap";
 
 // data
 import { portfolioData } from "pages/portfolio/portfolioData/portfolioData";
@@ -16,6 +16,10 @@ import BookmarkBlock from "components/bookmark/BookmarkBlock";
 
 // css
 import "static/style/css/Common.css";
+import { Toast, Image } from "react-bootstrap";
+
+// image
+import profileImg from "static/img/profile.jpg";
 
 function Portfolio(props) {
   const [initialToast, setInitialToast] = useState(false);
@@ -24,6 +28,10 @@ function Portfolio(props) {
   const [thisBrowserHeight, setThisBrowserHeight] = useState(0);
 
   const [textBounceEffect, setTextBounceEffect] = useState(true);
+
+  const [arrowActivate, setArrowActivate] = useState(true);
+
+  const navigate = useNavigate();
 
   // spinner test
   useEffect(() => {
@@ -50,6 +58,14 @@ function Portfolio(props) {
 
   const handleTextBounce = () => {
     setTextBounceEffect(!textBounceEffect);
+  };
+
+  const moveToPage = (target = "/") => {
+    navigate(target);
+  };
+
+  const detailActive = (type) => {
+    setArrowActivate(!type);
   };
 
   return (
@@ -95,10 +111,28 @@ function Portfolio(props) {
                 ? false
                 : el["body-content"].techStack
             }
+            isDetailActive={detailActive}
           />
           // { idx !== portfolioData.length - 1 ? <hr /> : null }
         );
       })}
+
+      {!arrowActivate ? null : (
+        <React.Fragment>
+          <Image
+            className="arrowLeft"
+            src={require("static/component/arrow-left.png")}
+            alt="화살표(왼)"
+            onClick={() => moveToPage("/profile")}
+          />
+          <Image
+            className="arrowRight"
+            src={require("static/component/arrow-right.png")}
+            alt="화살표(오)"
+            onClick={() => moveToPage("/blog")}
+          />
+        </React.Fragment>
+      )}
     </React.Fragment>
   );
 }

@@ -30,7 +30,7 @@ function Blog(props) {
           "e.target.className.split(): ",
           e.target.className.split(" ")[0]
         );
-        // console.log(sideRef.current[0]);
+
         if (e.target.className !== "sidebar-wrap") {
           setSidebarController(!sidebarController);
         }

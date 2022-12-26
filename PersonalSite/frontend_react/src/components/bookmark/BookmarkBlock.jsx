@@ -18,6 +18,7 @@ import { CSSTransition } from "react-transition-group";
 
 // bootstrap
 import { Carousel, Alert } from "react-bootstrap";
+import { useEffect } from "react";
 
 /**
  * 북마크 블록 생성 컴포넌트
@@ -47,6 +48,7 @@ function BookmarkBlock({
   imageSrc,
   tagObject,
   blockHeight,
+  isDetailActive,
 }) {
   const [showButton, setShowButton] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
@@ -56,6 +58,10 @@ function BookmarkBlock({
   const moveToLink = (targetUrl) => {
     window.open(targetUrl);
   };
+
+  useEffect(() => {
+    isDetailActive(showMessage);
+  }, [showMessage]);
 
   return (
     <React.Fragment>

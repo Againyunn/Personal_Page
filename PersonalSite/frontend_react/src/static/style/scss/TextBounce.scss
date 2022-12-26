@@ -22,6 +22,20 @@ $x: 0.04s;
   $idx: $idx - 1;
 }
 
+@media (max-width: 540px) {
+  .text-bounce span {
+    top: 15px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-bounce span {
+    top: 10px;
+    font-size: 17px;
+  }
+}
+
 // .text-bounce span:nth-child(3) {
 //   animation-delay: 0.2s;
 // }

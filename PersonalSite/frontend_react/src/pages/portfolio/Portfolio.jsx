@@ -45,7 +45,7 @@ function Portfolio(props) {
 
     window.addEventListener("scroll", handleScroll);
 
-    setThisBrowserHeight(window.innerHeight);
+    setThisBrowserHeight(Math.min(window.innerHeight, window.innerWidth));
 
     return () => {
       window.removeEventListener("scroll", handleScroll); //clean up
@@ -72,7 +72,6 @@ function Portfolio(props) {
     <React.Fragment>
       <Toast show={initialToast} className="notice-toast">
         <Toast.Header className="notice-toast-header">
-          {/* <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" /> */}
           <strong className="me-auto">Notice</strong>
         </Toast.Header>
         <Toast.Body>

@@ -254,12 +254,23 @@
           animation-delay: 0.04s;
 }
 
+@media (max-width: 540px) {
+  .text-bounce span {
+    top: 15px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .text-bounce span {
+    top: 10px;
+    font-size: 17px;
+  }
+}
 @-webkit-keyframes bounce {
   100% {
     top: -3px;
   }
 }
-
 @keyframes bounce {
   100% {
     top: -3px;

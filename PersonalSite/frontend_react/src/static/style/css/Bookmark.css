@@ -142,6 +142,12 @@
   }
 }
 @media (max-width: 540px) {
+  .bookmark-simple-title {
+    font-size: 20px;
+  }
+  .bookmark-simple-description {
+    font-size: 15px;
+  }
   .bookmark-title {
     font-size: 1.5em;
     height: 1.75em;
@@ -165,6 +171,12 @@
   }
 }
 @media (max-width: 480px) {
+  .bookmark-simple-title {
+    font-size: 17px;
+  }
+  .bookmark-simple-description {
+    font-size: 12px;
+  }
   .source {
     padding: 0.2em;
   }

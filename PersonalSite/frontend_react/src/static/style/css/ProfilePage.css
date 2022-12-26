@@ -45,11 +45,12 @@
 }
 .profileWrap .profileContentWrap .profileContentPart .profilePartSubHead {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 500;
 }
 .profileWrap .profileContentWrap .profileContentPart .profilePartContent {
   font-size: 15px;
-  font-weight: normal;
+  font-weight: 500;
+  margin: 5px 0 0 0;
 }
 
 .insideMarker {
@@ -76,6 +77,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   max-width: calc((100vw - (10vw + 100px)) / 2 - 30px);
+  margin: 0 0 5px 0;
 }
 .iconWrap .iconImg {
   margin: 2px 3px 2px 0;
@@ -191,9 +193,12 @@
   }
   .profilePartSubHead {
     font-size: 15px !important;
+    font-weight: 500;
   }
   .profilePartContent {
     font-size: 12px !important;
+    font-weight: 500;
+    margin: 5px 0 0 0;
   }
 }
 @media (max-width: 960px) {
@@ -242,9 +247,12 @@
   }
   .profilePartSubHead {
     font-size: 18px !important;
+    font-weight: 500;
   }
   .profilePartContent {
     font-size: 15px !important;
+    font-weight: 500;
+    margin: 5px 0 0 0;
   }
   .iconWrap {
     display: flex;
@@ -279,9 +287,12 @@
   }
   .profilePartSubHead {
     font-size: 13px !important;
+    font-weight: 500;
   }
   .profilePartContent {
     font-size: 12px !important;
+    font-weight: 500;
+    margin: 5px 0 0 0;
   }
   .iconImg {
     margin-right: 3px;
@@ -320,6 +331,7 @@
   }
   .profilePartContent {
     font-size: 11px !important;
+    font-weight: 500;
     margin: 3px 0 0px 0;
   }
   .iconImg {

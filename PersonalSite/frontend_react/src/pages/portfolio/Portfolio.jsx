@@ -12,14 +12,9 @@ import { portfolioData } from "pages/portfolio/portfolioData/portfolioData";
 import TagBlock from "components/tag/TagBlock";
 import BookmarkBlock from "components/bookmark/BookmarkBlock";
 
-// import ProjectBlock from "components/projectBlock/ProjectBlock";
-
 // css
 import "static/style/css/Common.css";
 import { Toast, Image } from "react-bootstrap";
-
-// image
-import profileImg from "static/img/profile.jpg";
 
 function Portfolio(props) {
   const [initialToast, setInitialToast] = useState(false);
@@ -29,7 +24,7 @@ function Portfolio(props) {
 
   const [textBounceEffect, setTextBounceEffect] = useState(true);
 
-  const [arrowActivate, setArrowActivate] = useState(true);
+  const [arrowActivate, setArrowActivate] = useState([]);
 
   const navigate = useNavigate();
 
@@ -65,7 +60,11 @@ function Portfolio(props) {
   };
 
   const detailActive = (type) => {
-    setArrowActivate(!type);
+    if (!type) {
+      let prevArrowActivate = [...arrowActivate];
+      prevArrowActivate.pop();
+      setArrowActivate(prevArrowActivate);
+    } else setArrowActivate([...arrowActivate, type]);
   };
 
   return (
@@ -116,7 +115,7 @@ function Portfolio(props) {
         );
       })}
 
-      {!arrowActivate ? null : (
+      {arrowActivate.length !== 0 ? null : (
         <React.Fragment>
           <Image
             className="arrowLeft"

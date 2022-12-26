@@ -1,10 +1,10 @@
-.swap-container {
+.auto-swap-container {
   width: 300px;
   height: 380px;
   perspective: 300px;
 }
 
-.swap-container .item {
+.auto-swap-container .auto-item {
   width: 300px;
   height: 380px;
   -webkit-backface-visibility: hidden;
@@ -14,7 +14,7 @@
           animation: swapping 0.6s ease;
 }
 
-.swap-container .item.front {
+.auto-swap-container .auto-item.front {
   position: absolute;
   -webkit-animation: swapping-front 1s ease forwards;
           animation: swapping-front 1s ease forwards;
@@ -23,7 +23,7 @@
   transform: rotateY(0deg);
 }
 
-.swap-container .item.back {
+.auto-swap-container .auto-item.back {
   position: absolute;
   -webkit-animation: swapping-back 1s ease forwards;
           animation: swapping-back 1s ease forwards;
@@ -65,32 +65,71 @@
     transform: rotateY(0deg);
   }
 }
+.container {
+  margin-right: 10px;
+  width: 300px;
+  margin-right: 80px;
+  perspective: 300px;
+}
+
+.container .item {
+  width: 300px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: 1s;
+}
+
+.container .item.front {
+  position: absolute;
+  transform: rotateY(0deg);
+}
+
+.container:hover .item.front {
+  transform: rotateY(180deg);
+}
+
+.container .item.back {
+  transform: rotateY(-180deg);
+}
+
+.container:hover .item.back {
+  transform: rotateY(0deg);
+}
+
 @media (max-width: 960px) {
-  .swap-container {
+  .auto-swap-container {
     width: 250px !important;
     height: 310px !important;
   }
-  .swap-container .item {
+  .auto-swap-container .auto-item {
     width: 250px !important;
     height: 310px !important;
+  }
+  .container .item {
+    margin-right: 20px;
+    width: 300px;
   }
 }
 @media (max-width: 720px) {
-  .swap-container {
+  .auto-swap-container {
     width: 180px !important;
     height: 230px !important;
   }
-  .swap-container .item {
+  .auto-swap-container .auto-item {
     width: 180px !important;
     height: 230px !important;
+  }
+  .container .item {
+    margin-right: 0px;
+    width: 260px;
   }
 }
 @media (max-width: 480px) {
-  .swap-container {
+  .auto-swap-container {
     width: 170px !important;
     height: 220px !important;
   }
-  .swap-container .item {
+  .auto-swap-container .auto-item {
     width: 170px !important;
     height: 220px !important;
   }

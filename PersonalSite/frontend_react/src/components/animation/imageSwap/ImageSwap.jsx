@@ -3,16 +3,16 @@ import React from "react";
 // css
 import "static/style/css/ImageSwap.css";
 
-function AutoImageSwap(props) {
+function ImageSwap(props) {
   return (
-    <div className="auto-swap-container">
-      <div className="auto-item front">
+    <div className="container">
+      <div className="item front">
         <img
           src={require(`static/img/${props.frontImage}`)}
           alt={props.frontImage}
         />
       </div>
-      <div className="auto-item back">
+      <div className="item back">
         <img
           src={require(`static/img/${props.backImage}`)}
           alt={props.backImage}
@@ -22,4 +22,4 @@ function AutoImageSwap(props) {
   );
 }
 
-export default AutoImageSwap;
+export default ImageSwap;

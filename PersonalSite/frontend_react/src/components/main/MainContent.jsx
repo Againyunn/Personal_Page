@@ -1,5 +1,8 @@
 import React from "react";
 
+// component
+import ImageSwap from "components/animation/imageSwap/ImageSwap";
+
 // css
 import "static/style/css/MainPage.css";
 import Swal from "sweetalert2";
@@ -33,11 +36,7 @@ function MainContent(props) {
 
   return (
     <div className="maincontent-wrap">
-      <img
-        id="picture-profile"
-        src={require("../../static/img/picture_profile.jpg")}
-        alt="이미지_정재윤"
-      />
+      <ImageSwap frontImage={"picture_profile.jpg"} backImage={"profile.jpg"} />
       <div className="slogun-wrap">
         <span className="slogun-word">성실함을 무기로,</span>
         <span className="slogun-word">개선과 창조를 만들어가는 개발자</span>

@@ -1,10 +1,11 @@
-.swap-container {
+// 자동 animation 변환
+.auto-swap-container {
   width: 300px;
   height: 380px;
   perspective: 300px;
 }
 
-.swap-container .item {
+.auto-swap-container .auto-item {
   width: 300px;
   height: 380px;
   backface-visibility: hidden;
@@ -12,27 +13,19 @@
   animation: swapping 0.6s ease;
 }
 
-.swap-container .item.front {
+.auto-swap-container .auto-item.front {
   position: absolute;
   animation: swapping-front 1s ease forwards;
   animation-delay: 2.2s;
   transform: rotateY(0deg);
 }
 
-// .swap-container:hover .item.front {
-//   transform: rotateY(180deg);
-// }
-
-.swap-container .item.back {
+.auto-swap-container .auto-item.back {
   position: absolute;
   animation: swapping-back 1s ease forwards;
   animation-delay: 2.2s;
   transform: rotateY(-180deg);
 }
-
-// .swap-container:hover .item.back {
-//   transform: rotateY(0deg);
-// }
 
 @keyframes swapping-front {
   0% {
@@ -54,40 +47,81 @@
   }
 }
 
+// 메인 페이지의 hover 시 animation 동작
+.container {
+  margin-right: 10px;
+  width: 300px;
+  margin-right: 80px;
+  perspective: 300px;
+}
+
+.container .item {
+  width: 300px;
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.container .item.front {
+  position: absolute;
+  transform: rotateY(0deg);
+}
+
+.container:hover .item.front {
+  transform: rotateY(180deg);
+}
+
+.container .item.back {
+  transform: rotateY(-180deg);
+}
+
+.container:hover .item.back {
+  transform: rotateY(0deg);
+}
+
 // Tablet ver: 720 ~ 960px
 @media (max-width: 960px) {
-  .swap-container {
+  .auto-swap-container {
     width: 250px !important;
     height: 310px !important;
   }
 
-  .swap-container .item {
+  .auto-swap-container .auto-item {
     width: 250px !important;
     height: 310px !important;
+  }
+
+  .container .item {
+    margin-right: 20px;
+    width: 300px;
   }
 }
 
 // Tablet ver: 480 ~ 720px   *******수정 필요!
 @media (max-width: 720px) {
-  .swap-container {
+  .auto-swap-container {
     width: 180px !important;
     height: 230px !important;
   }
 
-  .swap-container .item {
+  .auto-swap-container .auto-item {
     width: 180px !important;
     height: 230px !important;
+  }
+
+  .container .item {
+    margin-right: 0px;
+    width: 260px;
   }
 }
 
 // Tablet ver:  ~ 480px   *******수정 필요!
 @media (max-width: 480px) {
-  .swap-container {
+  .auto-swap-container {
     width: 170px !important;
     height: 220px !important;
   }
 
-  .swap-container .item {
+  .auto-swap-container .auto-item {
     width: 170px !important;
     height: 220px !important;
   }

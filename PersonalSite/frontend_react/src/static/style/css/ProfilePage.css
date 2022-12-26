@@ -1,6 +1,7 @@
 @charset "UTF-8";
 .profileContainer {
   position: relative;
+  width: 100%;
 }
 
 .profileWrap {
@@ -226,13 +227,14 @@
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
+    margin-top: 10vh;
   }
   .profileContentPart {
     display: flex;
     flex-direction: column;
     justify-content: left !important;
     align-items: left !important;
-    padding-top: 20px;
+    padding-top: 10px;
   }
   .profilePartHead {
     font-size: 22px !important;
@@ -280,6 +282,45 @@
   }
   .profilePartContent {
     font-size: 12px !important;
+  }
+  .iconImg {
+    margin-right: 3px;
+    height: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .profileImage {
+    width: 170px !important;
+    height: 220px !important;
+  }
+  .profileContentWrap {
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .profileContentPart {
+    padding-left: 0px !important;
+  }
+  .profileTitleHead {
+    font-size: 17px !important;
+  }
+  .profileTitleContent {
+    font-size: 12px !important;
+  }
+  .profilePartHead {
+    font-size: 13px !important;
+    font-weight: bold !important;
+  }
+  .profilePartSubHead {
+    font-size: 11px !important;
+    font-weight: 500;
+    margin: 10px 0 0px 0;
+  }
+  .profileContentTitle {
+    margin-bottom: 10px !important;
+  }
+  .profilePartContent {
+    font-size: 11px !important;
+    margin: 3px 0 0px 0;
   }
   .iconImg {
     margin-right: 3px;

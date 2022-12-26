@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import ProfileComponentMax from "components/profile/ProfileComponentMax";
 import ProfileComponentMid from "components/profile/ProfileComponentMid";
 import ProfileComponentSmall from "components/profile/ProfileComponentSmall";
+import ProfileComponentXSmall from "components/profile/ProfileComponentXSmall";
 
 // layout
 import Footer from "layout/footer/Footer";
@@ -71,7 +72,7 @@ function ProfilePage(props) {
       return <ProfileComponentMid />;
     } else if (480 <= displaySize && displaySize < 720) {
       return <ProfileComponentSmall />;
-    }
+    } else return <ProfileComponentXSmall />;
   };
 
   return <RederingProfileContent />;

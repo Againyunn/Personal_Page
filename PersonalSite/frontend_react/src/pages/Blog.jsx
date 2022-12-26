@@ -52,34 +52,44 @@ function Blog(props) {
         Blog Menu
       </button> */}
 
-      {/* 반응형 햄버거 버튼 및 사이드 바 노출 기능 */}
-      <div
-        className={`notice-word blink-effect ${
-          !sidebarController ? "" : "in-active"
-        }`}
-      >
-        menu
-      </div>
-      <div
-        className="burger-menu"
-        onClick={() => setSidebarController(!sidebarController)}
-      >
-        <div
-          className={
-            !sidebarController ? "burger-bar unclicked" : "burger-bar clicked"
-          }
-        ></div>
-        <div
-          className={
-            !sidebarController ? "burger-bar unclicked" : "burger-bar clicked"
-          }
-        ></div>
-        <div
-          className={
-            !sidebarController ? "burger-bar unclicked" : "burger-bar clicked"
-          }
-        ></div>
-      </div>
+      {!isDataLoaded ? null : (
+        <React.Fragment>
+          {/* 반응형 햄버거 버튼 및 사이드 바 노출 기능 */}
+          <div
+            className={`notice-word blink-effect ${
+              !sidebarController ? "" : "in-active"
+            }`}
+          >
+            menu
+          </div>
+          <div
+            className="burger-menu"
+            onClick={() => setSidebarController(!sidebarController)}
+          >
+            <div
+              className={
+                !sidebarController
+                  ? "burger-bar unclicked"
+                  : "burger-bar clicked"
+              }
+            ></div>
+            <div
+              className={
+                !sidebarController
+                  ? "burger-bar unclicked"
+                  : "burger-bar clicked"
+              }
+            ></div>
+            <div
+              className={
+                !sidebarController
+                  ? "burger-bar unclicked"
+                  : "burger-bar clicked"
+              }
+            ></div>
+          </div>
+        </React.Fragment>
+      )}
 
       <SidebarBlog
         isActive={sidebarController}

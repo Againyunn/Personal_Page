@@ -13,13 +13,6 @@ h3 {
   margin-top: 1.25rem;
 }
 
-.source {
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  padding: 1.5em;
-  word-break: break-all;
-}
-
 .callout {
   border-radius: 3px;
   padding: 1rem;
@@ -386,15 +379,6 @@ blockquote {
   margin: 1em 0;
   padding-left: 1em;
   border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-  text-decoration: none;
-  padding: 0;
-  display: flex;
-  align-items: stretch;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .bookmark-title {

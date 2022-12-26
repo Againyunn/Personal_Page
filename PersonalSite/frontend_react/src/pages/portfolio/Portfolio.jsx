@@ -21,7 +21,7 @@ import "static/style/css/Common.css";
 function Portfolio(props) {
   const [isDataLoaded, setIsDataLoaded] = useState(false);
 
-  const [initialToast, setInitialToast] = useState(true);
+  const [initialToast, setInitialToast] = useState(false);
 
   const [scroll, setScroll] = useState(0);
   const [thisBrowserHeight, setThisBrowserHeight] = useState(0);
@@ -32,7 +32,11 @@ function Portfolio(props) {
   useEffect(() => {
     setTimeout(() => {
       setIsDataLoaded(true);
-    }, 10);
+    }, 100);
+
+    setTimeout(() => {
+      setInitialToast(true);
+    }, 300);
 
     setTimeout(() => {
       setInitialToast(false);

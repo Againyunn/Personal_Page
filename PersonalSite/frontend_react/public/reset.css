@@ -34,10 +34,10 @@ form {
 a {
   color: #282c37;
   text-decoration: none;
-  text-decoration-line: none;
+  text-decoration-line: none !important;
 }
 a:hover {
-  color: #2b90d9;
+  color: var(--primary-color);
 }
 
 /* 기본 글자색 지정 */

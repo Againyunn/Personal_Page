@@ -34,10 +34,10 @@ export default function valtoNotion() {
       }
 
       a,
-      a.visited {
-        color: inherit;
-        text-decoration: underline;
-      }
+      // a.visited {
+      //   color: inherit;
+      //   text-decoration: underline;
+      // }
 
       .pdf-relative-link-path {
         font-size: 80%;

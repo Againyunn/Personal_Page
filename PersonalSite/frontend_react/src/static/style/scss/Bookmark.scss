@@ -42,6 +42,8 @@
   flex-wrap: wrap;
   justify-content: center;
   height: 100%;
+  margin-left: 0.5%;
+  width: 99%;
   min-height: 550px;
   // min-width: 500px;
 }
@@ -124,6 +126,23 @@
 
 .image-max-height {
   max-height: 230px;
+}
+
+.blink-effect {
+  animation: blink 0.9s ease infinite;
+}
+
+.arrow-font {
+  vertical-align: 10%;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 540px) {

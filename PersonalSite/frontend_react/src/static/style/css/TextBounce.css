@@ -1,6 +1,6 @@
 .text-bounce span {
   position: relative;
-  top: 20px;
+  top: 25px;
   display: inline-block;
   -webkit-animation: bounce 0.7s ease infinite alternate;
           animation: bounce 0.7s ease infinite alternate;

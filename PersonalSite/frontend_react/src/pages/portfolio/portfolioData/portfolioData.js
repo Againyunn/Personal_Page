@@ -114,7 +114,7 @@ export const portfolioData = [
   // React, Next.js 프로젝트 셋팅
   {
     "title-content": {
-      title: "React.js & Next.js Initial Project Structure",
+      title: "Initial Project Structure",
       icon: "https://www.notion.so/icons/science_blue.svg",
       img: "gmail",
       "brief-discription": "React/Next.js 기반의 초기 프로젝트 파일 구조 설계",

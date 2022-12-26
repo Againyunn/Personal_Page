@@ -38,6 +38,8 @@
   flex-wrap: wrap;
   justify-content: center;
   height: 100%;
+  margin-left: 0.5%;
+  width: 99%;
   min-height: 550px;
 }
 
@@ -113,6 +115,32 @@
   max-height: 230px;
 }
 
+.blink-effect {
+  -webkit-animation: blink 0.9s ease infinite;
+          animation: blink 0.9s ease infinite;
+}
+
+.arrow-font {
+  vertical-align: 10%;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (max-width: 540px) {
   .bookmark-title {
     font-size: 1.5em;

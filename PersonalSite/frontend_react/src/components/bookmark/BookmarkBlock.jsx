@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 
 // component
 import TagBlock from "components/tag/TagBlock";
+import TextBounce from "components/animation/textBounce/TextBounce";
 
 // key 자동 생성
 import { v4 as uuidv4 } from "uuid";
@@ -17,7 +18,6 @@ import { CSSTransition } from "react-transition-group";
 
 // bootstrap
 import { Carousel, Alert } from "react-bootstrap";
-import TextBounce from "components/animation/textBounce/TextBounce";
 
 /**
  * 북마크 블록 생성 컴포넌트
@@ -107,9 +107,10 @@ function BookmarkBlock({
           variant="light"
           dismissible
           onClose={() => setShowMessage(false)}
+          className="source bookmark"
         >
           <div className="col-sm-12 col-md-12 col-xl-6 top-15px buttom-15px hover-effect">
-            <a href={sourceUrl} target="_blank" className="source bookmark ">
+            <a href={sourceUrl} target="_blank" className=" ">
               {/* <div className="bookmark-info"> */}
               {/* 커스터마이징 wrap */}
               <div className="custom-bookmark-wrap col-sm-11 col-md-11 ">
@@ -119,9 +120,7 @@ function BookmarkBlock({
                       <img className="icon" src={icon} alt={icon} />
                       {title}
                     </div>
-                    <div className="bookmark-description col-sm-12 col-md-11  col-xl-12 ">
-                      {desrciption}
-                    </div>
+                    <div className="bookmark-description ">{desrciption}</div>
                   </div>
                 </div>
 
@@ -237,6 +236,10 @@ function BookmarkBlock({
               )}
               {/* </div> */}
             </a>
+            <div className="bookmark-description blink-effect">
+              <span className="bookmark-description arrow-font">↑</span>{" "}
+              클릭하시면 개발로그 페이지로 이동합니다.
+            </div>
           </div>
         </Alert>
       </CSSTransition>

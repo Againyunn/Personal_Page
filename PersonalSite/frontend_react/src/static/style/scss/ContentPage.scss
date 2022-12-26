@@ -1,10 +1,12 @@
 .content-wrap {
   display: flex;
+  flex-direction: column;
   position: relative;
 }
 
 .content-container {
-  width: 100%;
+  width: 90%;
+  word-break: keep-all;
 
   display: flex;
   flex-direction: column;

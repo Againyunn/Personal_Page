@@ -5,6 +5,11 @@ import SidebarBlog from "components/sidebar/SidebarBlog";
 import JSStudy from "assets/blogStructure/JSStudy";
 import LoadingSpinner from "components/loadSpinner/LoadSpinner";
 
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+
+// import markdown from "assets/blogData/study/test.md";
+
 // css
 import "static/style/css/ContentPage.css";
 import "static/style/css/Hamburger.css";
@@ -16,10 +21,18 @@ function Blog(props) {
 
   const sideRef = useRef();
 
+  // let markdown = require("assets/blogData/study/test.md");
+
+  const [content, setContent] = useState("");
+
   useEffect(() => {
     setTimeout(() => {
       setIsDataLoaded(true);
     }, 1000);
+
+    fetch(require("assets/blogData/study/test.md"))
+      .then((res) => res.text())
+      .then((text) => setContent(text));
   }, []);
 
   useEffect(() => {
@@ -51,7 +64,6 @@ function Blog(props) {
       >
         Blog Menu
       </button> */}
-
       {!isDataLoaded ? null : (
         <React.Fragment>
           {/* 반응형 햄버거 버튼 및 사이드 바 노출 기능 */}
@@ -90,7 +102,6 @@ function Blog(props) {
           </div>
         </React.Fragment>
       )}
-
       <SidebarBlog
         isActive={sidebarController}
         // ref={(e) => (sideRef.current[0] = e.target.className)}
@@ -100,6 +111,7 @@ function Blog(props) {
       ) : (
         <JSStudy isFull={!sidebarController} />
       )}
+      ,
     </div>
   );
 }

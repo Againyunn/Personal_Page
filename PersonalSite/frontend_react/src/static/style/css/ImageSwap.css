@@ -1,7 +1,6 @@
 .auto-swap-container {
   width: 300px;
   height: 380px;
-  perspective: 300px;
 }
 
 .auto-swap-container .auto-item {

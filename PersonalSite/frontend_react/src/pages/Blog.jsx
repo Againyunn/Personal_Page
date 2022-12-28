@@ -2,13 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 
 // component
 import SidebarBlog from "components/sidebar/SidebarBlog";
-import JSStudy from "assets/blogStructure/JSStudy";
+import BlogStudy from "assets/blogStructure/BlogStudy";
 import LoadingSpinner from "components/loadSpinner/LoadSpinner";
-
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-
-// import markdown from "assets/blogData/study/test.md";
 
 // css
 import "static/style/css/ContentPage.css";
@@ -21,18 +16,12 @@ function Blog(props) {
 
   const sideRef = useRef();
 
-  // let markdown = require("assets/blogData/study/test.md");
-
   const [content, setContent] = useState("");
 
   useEffect(() => {
     setTimeout(() => {
       setIsDataLoaded(true);
     }, 1000);
-
-    fetch(require("assets/blogData/study/test.md"))
-      .then((res) => res.text())
-      .then((text) => setContent(text));
   }, []);
 
   useEffect(() => {
@@ -57,13 +46,7 @@ function Blog(props) {
   }, [sideRef]);
 
   return (
-    <div className="content-wrap">
-      {/* <button
-        className={!sidebarController ? "" : "in-active"}
-        onClick={() => setSidebarController(!sidebarController)}
-      >
-        Blog Menu
-      </button> */}
+    <div className="content-wrap set-relative">
       {!isDataLoaded ? null : (
         <React.Fragment>
           {/* 반응형 햄버거 버튼 및 사이드 바 노출 기능 */}
@@ -104,12 +87,13 @@ function Blog(props) {
       )}
       <SidebarBlog
         isActive={sidebarController}
+        setIsActive={(e) => setSidebarController(e)}
         // ref={(e) => (sideRef.current[0] = e.target.className)}
       />
       {!isDataLoaded ? (
         <LoadingSpinner text={"Loading..."} />
       ) : (
-        <JSStudy isFull={!sidebarController} />
+        <BlogStudy isFull={!sidebarController} />
       )}
       ,
     </div>

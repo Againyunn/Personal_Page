@@ -4,23 +4,37 @@
   position: relative;
 }
 
+.set-relative {
+  position: relative;
+}
+
 .content-container {
-  width: 90%;
+  width: 100%;
   word-break: keep-all;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0 0 200px;
 
   .content-block {
-    width: calc(100% - 100px);
-    margin: 0 10px 0 10px;
-    padding: 10px;
+    width: 100%; //calc(100% - 100px);
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border-bottom: 1px solid var(--secondary-color);
+    // border-bottom: 1px solid var(--secondary-color);
+    word-break: keep-all;
+
+    pre {
+      width: 100%; //calc(100% - 20px);
+      // max-width: 100%;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+
+      code {
+        word-break: keep-all;
+      }
+    }
   }
 }
 
@@ -48,16 +62,16 @@
 }
 
 .text {
-  margin: 5px 5px 5px 15px;
+  // margin: 5px 5px 5px 15px;
   font-size: 15px;
 }
 
 .code-wrap {
-  margin: 0 0 0 15px;
-  min-width: calc(100% - 50px);
+  // margin: 0 0 0 15px;
+  // min-width: calc(100% - 50px);
   background-color: var(--secondary-color);
   border-radius: 5px;
-  padding: 10px;
+  // padding: 10px;
 }
 
 .code-content {

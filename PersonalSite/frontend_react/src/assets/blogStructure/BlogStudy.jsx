@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useSearchParams, useLocation } from "react-router-dom";
 
 // blog data
 import { javascriptStudyContent } from "assets/blogData/study/javascript";
@@ -14,14 +15,38 @@ import { CodeBlock, dracula } from "react-code-blocks";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-function JSStudy(props) {
+function BlogStudy(props) {
   const [content, setContent] = useState("");
 
+  // query-string 접근
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const location = useLocation();
+
+  const [selectedContent, setSelectedContent] = useState(
+    !searchParams.get("filter-id") ? "js" : searchParams.get("filter-id")
+  );
+
   useEffect(() => {
-    fetch(require("assets/blogData/study/test.md"))
+    getMarkdownData();
+  }, []);
+
+  // query-string의 변화 감지
+  useEffect(() => {
+    setSelectedContent(
+      !searchParams.get("filter-id") ? "js" : searchParams.get("filter-id")
+    );
+  }, [location]);
+
+  useEffect(() => {
+    getMarkdownData();
+  }, [selectedContent]);
+
+  const getMarkdownData = () => {
+    fetch(require(`assets/blogData/study/${selectedContent}.md`))
       .then((res) => res.text())
       .then((text) => setContent(text));
-  }, []);
+  };
 
   return (
     <div className={`content-container ${!props.isFull ? "" : "is-full"}`}>
@@ -32,7 +57,7 @@ function JSStudy(props) {
   );
 
   // return javascriptStudyContent.map((el, idx) => {
-  //   console.log("el:", el);
+
   //   return (
   //     <div
   //       className={`content-container ${!props.isFull ? "" : "is-full"}`}
@@ -79,4 +104,4 @@ function JSStudy(props) {
   // });
 }
 
-export default JSStudy;
+export default BlogStudy;

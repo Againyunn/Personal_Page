@@ -4,8 +4,10 @@ import React, { useState, useEffect, useRef } from "react";
 import SidebarBlog from "components/sidebar/SidebarBlog";
 import BlogStudy from "assets/blogStructure/BlogStudy";
 import LoadingSpinner from "components/loadSpinner/LoadSpinner";
+import LoadAnimation from "components/loadSpinner/LoadAnimation";
 
 // css
+import "static/style/css/Common.css";
 import "static/style/css/ContentPage.css";
 import "static/style/css/Hamburger.css";
 
@@ -89,8 +91,11 @@ function Blog(props) {
         // ref={(e) => (sideRef.current[0] = e.target.className)}
       />
       {!isDataLoaded ? (
-        <LoadingSpinner text={"Loading..."} />
+        <div className="set-center">
+          <LoadAnimation />
+        </div>
       ) : (
+        // <LoadingSpinner text={"Loading..."} />
         <BlogStudy isFull={!sidebarController} />
       )}
       ,

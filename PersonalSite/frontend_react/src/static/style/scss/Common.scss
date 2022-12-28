@@ -100,3 +100,12 @@
 .buttom-15px {
   margin-bottom: 15px;
 }
+
+// 정가운데 정렬
+.set-center {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

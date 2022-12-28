@@ -92,6 +92,7 @@ function ProjectBlock({
                         title={el.title}
                         color={el.color}
                         className="custom-bookmark-item"
+                        key={() => uuidv4()}
                       />
                     );
                   })}
@@ -104,6 +105,7 @@ function ProjectBlock({
                   <div
                     className="custom-bookmark-content"
                     onClick={() => moveToLink(el)}
+                    key={() => uuidv4()}
                   >
                     <span className="custom-bookmark-title mw-80px">
                       Github
@@ -154,6 +156,7 @@ function ProjectBlock({
                       src={require(`static/portfolio/${imgEl}`)}
                       alt={imgEl}
                       className="col-sm-12 col-md-12  col-xl-12 image-max-height"
+                      key={() => uuidv4()}
                     />
                   </Carousel.Item>
                 );

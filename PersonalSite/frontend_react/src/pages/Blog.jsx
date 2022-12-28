@@ -16,8 +16,6 @@ function Blog(props) {
 
   const sideRef = useRef();
 
-  const [content, setContent] = useState("");
-
   useEffect(() => {
     setTimeout(() => {
       setIsDataLoaded(true);

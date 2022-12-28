@@ -83,7 +83,7 @@ function Portfolio(props) {
       {portfolioData.map((el, idx) => {
         return (
           <BookmarkBlock
-            key={() => uuidv4()}
+            key={`${el} ${idx}`}
             activate={
               scroll < (idx + 1) * thisBrowserHeight && textBounceEffect
             }

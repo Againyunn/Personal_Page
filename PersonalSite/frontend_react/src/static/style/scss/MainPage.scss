@@ -91,6 +91,9 @@
   margin-top: 50px;
   margin-bottom: 50px;
 
+  // 스크롤 바 숨김
+  -ms-overflow-style: none;
+
   #picture-profile {
     margin-right: 10px;
     width: 300px;
@@ -128,13 +131,17 @@
   }
 }
 
+.maincontent-wrap::-webkit-scrollbar {
+  display: none;
+}
+
 /*태블릿 메인콘텐츠 스타일*/
 @media (max-width: 960px) {
   .maincontent-wrap {
     margin-top: 100px;
     margin-bottom: 100px;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
 
     #picture-profile {
       margin-right: 20px;

@@ -91,17 +91,19 @@
   justify-content: center;
   position: fixed;
   bottom: 30px;
-  left: calc(50vw - 7.5px - 6em);
+  left: calc(50% - 7.5px - 4em);
+  transition: -50% 0%;
   cursor: pointer;
 }
 .slideToSeeDown .triangleImg {
-  margin-top: 3px;
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
+  bottom: 20px;
 }
 .slideToSeeDown span {
   color: var(--third-color);
   font-size: 15px;
+  vertical-align: baseline;
 }
 .slideToSeeDown:hover {
   text-shadow: 0px 0px 3px var(--third-color);

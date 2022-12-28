@@ -2,14 +2,14 @@
 .notice-word {
   position: fixed;
   bottom: 95px;
-  right: 25px;
+  right: 30px;
   font-size: 15px;
 }
 
 .burger-menu {
   position: fixed;
   bottom: 50px;
-  right: 10px;
+  right: 15px;
   min-height: 3em;
   width: 4em;
   display: flex;
@@ -17,7 +17,6 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background-color: #fff;
 }
 
 .burger-bar {

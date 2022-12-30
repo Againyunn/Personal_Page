@@ -55,7 +55,8 @@ function Blog(props) {
               !sidebarController ? "" : "in-active"
             }`}
           >
-            menu
+            <div>&nbsp;Blog</div>
+            <div>menu</div>
           </div>
           <div
             className="burger-menu"

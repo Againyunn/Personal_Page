@@ -37,33 +37,38 @@ function MainContent(props) {
   return (
     <div className="maincontent-wrap">
       <ImageSwap frontImage={"picture_profile.jpg"} backImage={"profile.jpg"} />
-      <div className="slogun-wrap">
-        <span className="slogun-word">성실함을 무기로,</span>
-        <span className="slogun-word">개선과 창조를 만들어가는 개발자</span>
-        <div className="icon-wrap">
-          <img
-            src={require("../../static/img/github.png")}
-            alt="github"
-            // className="icon"
-            onClick={clickGithub}
-          />
-          <img
-            src={require("../../static/img/instagram.png")}
-            alt="instagram"
-            // className="icon"
-            onClick={clickInstagram}
-          />
-          <img
-            src={require("../../static/img/gmail.png")}
-            alt="gmail"
-            // className="icon"
-            onClick={clickGmail}
-          />
-          <textarea
-            id="gmailAddress"
-            defaultValue={"rangyun36@gmail.com"}
-            hidden
-          />
+      <div className="container">
+        <div className="slogun-wrap">
+          <span className="slogun-word">
+            I like to convert ideas that I imagined into reality and keep
+            pushing forward
+          </span>
+          {/* <span className="slogun-word">개선과 창조를 만들어가는 개발자</span> */}
+          <div className="icon-wrap">
+            <img
+              src={require("../../static/img/github.png")}
+              alt="github"
+              // className="icon"
+              onClick={clickGithub}
+            />
+            <img
+              src={require("../../static/img/instagram.png")}
+              alt="instagram"
+              // className="icon"
+              onClick={clickInstagram}
+            />
+            <img
+              src={require("../../static/img/gmail.png")}
+              alt="gmail"
+              // className="icon"
+              onClick={clickGmail}
+            />
+            <textarea
+              id="gmailAddress"
+              defaultValue={"rangyun36@gmail.com"}
+              hidden
+            />
+          </div>
         </div>
       </div>
     </div>

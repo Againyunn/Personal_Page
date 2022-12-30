@@ -57,7 +57,7 @@ function MenuActivated({ activate, menuToggle }) {
       <div
         ref={(el) => (pageFrame.current[1] = el)}
         className="menu-index"
-        onClick={() => moveToPage("/profile")}
+        onClick={() => moveToPage("/profile#showMore")}
       >
         <span className="menu-content">개인 프로필</span>
       </div>

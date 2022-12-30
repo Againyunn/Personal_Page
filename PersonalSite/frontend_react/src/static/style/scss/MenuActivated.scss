@@ -17,12 +17,25 @@
       font-weight: bold;
       opacity: 1;
       animation: fade-in-text 1.2s 0.1s ease-out forwards;
-
-      &:hover {
-        border-bottom: 2px solid #fff;
-        cursor: pointer;
-      }
+      cursor: pointer;
     }
+
+    .menu-content:hover {
+      text-shadow: 0px 0px 7px #fff;
+    }
+  }
+
+  .go-to-main {
+    font-size: 25px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .go-to-main:hover {
+    text-shadow: 0px 0px 7px #fff;
   }
 }
 
@@ -32,5 +45,71 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+// 반응형 적용
+// PC ver: 960 ~ 1200px
+@media (max-width: 1200px) {
+  .menu-content {
+    font-size: 27px !important;
+  }
+  .menu-content:hover {
+    text-shadow: 0px 0px 7px #fff;
+  }
+  .go-to-main {
+    font-size: 24px;
+  }
+  .go-to-main:hover {
+    text-shadow: 0px 0px 7px #fff;
+  }
+}
+
+// Tablet ver: 720 ~ 960px
+@media (max-width: 960px) {
+  .menu-content {
+    font-size: 25px !important;
+  }
+  .menu-content:hover {
+    text-shadow: 0px 0px 7px #fff;
+  }
+  .go-to-main {
+    font-size: 23px;
+  }
+
+  .go-to-main:hover {
+    text-shadow: 0px 0px 7px #fff;
+  }
+}
+
+// Tablet ver: 480 ~ 720px
+@media (max-width: 720px) {
+  .menu-content {
+    font-size: 22px !important;
+  }
+  .menu-content:hover {
+    text-shadow: 0px 0px 7px #fff;
+  }
+  .go-to-main {
+    font-size: 21px;
+  }
+  .go-to-main:hover {
+    text-shadow: 0px 0px 7px #fff;
+  }
+}
+
+// Tablet ver:  ~ 480px   *******수정 필요!
+@media (max-width: 480px) {
+  .menu-content {
+    font-size: 20px !important;
+  }
+  .menu-content:hover {
+    text-shadow: 0px 0px 7px #fff;
+  }
+  .go-to-main {
+    font-size: 19px;
+  }
+  .go-to-main:hover {
+    text-shadow: 0px 0px 7px #fff;
   }
 }

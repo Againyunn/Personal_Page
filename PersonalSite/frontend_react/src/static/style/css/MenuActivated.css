@@ -18,10 +18,21 @@
   opacity: 1;
   -webkit-animation: fade-in-text 1.2s 0.1s ease-out forwards;
           animation: fade-in-text 1.2s 0.1s ease-out forwards;
+  cursor: pointer;
 }
 .menu-wrap .menu-index .menu-content:hover {
-  border-bottom: 2px solid #fff;
+  text-shadow: 0px 0px 7px #fff;
+}
+.menu-wrap .go-to-main {
+  font-size: 25px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
   cursor: pointer;
+}
+.menu-wrap .go-to-main:hover {
+  text-shadow: 0px 0px 7px #fff;
 }
 
 @-webkit-keyframes fade-in-text {
@@ -39,5 +50,61 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@media (max-width: 1200px) {
+  .menu-content {
+    font-size: 27px !important;
+  }
+  .menu-content:hover {
+    text-shadow: 0px 0px 7px #fff;
+  }
+  .go-to-main {
+    font-size: 24px;
+  }
+  .go-to-main:hover {
+    text-shadow: 0px 0px 7px #fff;
+  }
+}
+@media (max-width: 960px) {
+  .menu-content {
+    font-size: 25px !important;
+  }
+  .menu-content:hover {
+    text-shadow: 0px 0px 7px #fff;
+  }
+  .go-to-main {
+    font-size: 23px;
+  }
+  .go-to-main:hover {
+    text-shadow: 0px 0px 7px #fff;
+  }
+}
+@media (max-width: 720px) {
+  .menu-content {
+    font-size: 22px !important;
+  }
+  .menu-content:hover {
+    text-shadow: 0px 0px 7px #fff;
+  }
+  .go-to-main {
+    font-size: 21px;
+  }
+  .go-to-main:hover {
+    text-shadow: 0px 0px 7px #fff;
+  }
+}
+@media (max-width: 480px) {
+  .menu-content {
+    font-size: 20px !important;
+  }
+  .menu-content:hover {
+    text-shadow: 0px 0px 7px #fff;
+  }
+  .go-to-main {
+    font-size: 19px;
+  }
+  .go-to-main:hover {
+    text-shadow: 0px 0px 7px #fff;
   }
 }/*# sourceMappingURL=MenuActivated.css.map */

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import "static/style/css/MenuActivated.css";
 
 // redux
-import { connect, useSelector } from "react-redux";
+import { connect } from "react-redux";
 import * as action from "../redux/action";
 
 const mapStateToProps = (state) => {
@@ -82,6 +82,10 @@ function MenuActivated({ activate, menuToggle }) {
       >
         <span className="menu-content">관심사.비전</span>
       </div>
+
+      <span className="go-to-main" onClick={() => moveToPage("/")}>
+        go to main
+      </span>
     </div>
   );
 }

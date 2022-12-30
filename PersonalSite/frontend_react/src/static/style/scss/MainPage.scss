@@ -94,21 +94,33 @@
   // 스크롤 바 숨김
   -ms-overflow-style: none;
 
+  .container {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+  }
+
   #picture-profile {
-    margin-right: 10px;
+    // margin-right: 10px;
     width: 300px;
-    margin-right: 80px;
+    // margin-right: 80px;
   }
   .slogun-wrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex-wrap: nowrap;
-    width: 600px;
+    // width: 500px;
     text-align: left;
+    // padding: 0 50px 0 0;
 
     .slogun-word {
       font-size: 35px;
+      text-align: justify;
+
+      // text-align-last: right;
+      text-justify: distribute;
     }
     .icon-wrap {
       display: flex;
@@ -143,14 +155,19 @@
     margin-top: 2vw;
     margin-bottom: 2vw;
 
+    .container {
+      width: 100vw;
+    }
+
     #picture-profile {
-      margin-right: 20px;
+      // margin-right: 20px;
       width: 300px;
     }
 
     .slogun-wrap {
+      // padding: 0 30px 0 0;
       .slogun-word {
-        font-size: 26px;
+        font-size: 24px;
 
         .icon-wrap {
           display: flex;
@@ -164,7 +181,7 @@
 }
 
 /*모바일1 & 모바일2 메인콘텐츠 스타일*/
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .maincontent-wrap {
     flex-direction: column;
     justify-content: center;
@@ -173,7 +190,7 @@
     margin-bottom: 20px;
 
     #picture-profile {
-      margin-right: 0px;
+      // margin-right: 0px;
       width: 250px;
     }
 
@@ -185,12 +202,14 @@
       width: auto;
       text-align: left;
       margin-top: 20px;
+      // padding: 0 20px 0 0;
 
       .slogun-word {
         font-size: 20px;
       }
 
       .icon-wrap {
+        width: 250px;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -210,6 +229,9 @@
 
 /*모바일3 헤더 스타일*/
 @media (max-width: 480px) {
+  .slogun-wrap {
+    padding: 0 20px 0 0;
+  }
   .maincontent-wrap > .slogun-wrap > .icon-wrap {
     margin-bottom: 20px;
   }

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 // component
 import AutoImageSwap from "components/animation/imageSwap/AutoImageSwap";
+import FingerAnimation from "components/animation/effect/FingerAnimation";
 
 // css
 import "static/style/css/ProfilePage.css";
@@ -80,7 +81,7 @@ function ProfileComponentMid(props) {
               <span className="profilePartHead">Skills</span>
               <br />
               <span className="profilePartSubHead">Part1. Use & Studying</span>
-
+              <br />
               <span className="profilePartContent">🛠Web/App Development</span>
               <br />
               <div className="iconWrap">
@@ -270,18 +271,19 @@ function ProfileComponentMid(props) {
 
       {/* 프로필 콘텐츠 더 보기 + 반짝반짝 효과 */}
       {!isSeeMore ? (
-        <a
-          href="#showMore"
-          className="slideToSeeDown blinkEffect"
-          onClick={() => clickToSeeMore()}
-        >
-          <Image
+        <div onClick={() => clickToSeeMore()}>
+          <a href="#showMore" className="slideToSeeDown blinkEffect">
+            {/* <Image
             className="triangleImg"
             src={require("static/component/triangleDown.png")}
             alt="삼각형(하)"
-          />
-          <span>click to see more</span>
-        </a>
+          /> */}
+            <div className="triangleImg">
+              <FingerAnimation />
+            </div>
+            <span>click to see more</span>
+          </a>
+        </div>
       ) : (
         <div></div>
       )}

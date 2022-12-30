@@ -234,7 +234,7 @@ function ProfileComponentMid(props) {
               <span className="profilePartContent">
                 Maker in HUFS 웹 개발 멘토
               </span>
-
+              <br />
               <span className="profilePartContent">
                 HUFS X 설악고등학교 SW진로체험교육 강사
               </span>

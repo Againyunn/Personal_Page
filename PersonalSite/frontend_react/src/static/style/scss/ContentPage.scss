@@ -18,7 +18,6 @@
 
   .content-block {
     width: 100%; //calc(100% - 100px);
-    padding: 0 0 0 10px;
 
     display: flex;
     flex-direction: column;
@@ -27,16 +26,13 @@
     word-break: keep-all;
 
     pre {
-      width: 95%; //calc(100% - 20px);
+      width: 100%; //calc(100% - 20px);
       // max-width: 100%;
       white-space: pre-wrap;
       word-wrap: break-word;
-      overflow-y: hidden;
-      color: var(--third-color);
-      background-color: var(--code-background-color);
+
       code {
         word-break: keep-all;
-        background: none;
       }
     }
   }

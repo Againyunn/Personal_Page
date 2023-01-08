@@ -29,6 +29,7 @@ function BlogStudy(props) {
 
   useEffect(() => {
     getMarkdownData();
+    window.scrollTo(0, 0);
   }, []);
 
   // query-string의 변화 감지
@@ -36,6 +37,7 @@ function BlogStudy(props) {
     setSelectedContent(
       !searchParams.get("filter-id") ? "js" : searchParams.get("filter-id")
     );
+    window.scrollTo(0, 0);
   }, [location]);
 
   useEffect(() => {

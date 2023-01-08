@@ -75,10 +75,13 @@ function ProfileComponentSmall(props) {
             긱스로프트 개발팀 FE 개발파트(22.09.01 ~ 현재)
           </span>
           <span className="profilePartContent">
-            클루커스 MSP 헬프데스크(22.02.13 ~ 09.17)
+            클루커스 MSP 헬프데스크(22.02.19 ~ 09.17)
           </span>
           <span className="profilePartContent">
             위메프 O2O실 지원팀 사원(19.12.01 ~ 20.08.29/21.06.21 ~ 08.20)
+          </span>
+          <span className="profilePartContent">
+            디지털 유목민 기획.지원(21.04.08 ~ 06.18)
           </span>
         </div>
       </div>

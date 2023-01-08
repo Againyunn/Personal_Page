@@ -42,6 +42,8 @@ function Portfolio(props) {
 
     setThisBrowserHeight(Math.min(window.innerHeight, window.innerWidth));
 
+    window.scrollTo(0, 0);
+
     return () => {
       window.removeEventListener("scroll", handleScroll); //clean up
     };

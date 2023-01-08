@@ -52,7 +52,7 @@
   margin-right: 10px;
   width: 300px;
   margin-right: 80px;
-  perspective: 300px;
+  perspective: 600px;
 }
 
 .container .item {
@@ -99,13 +99,13 @@
 // Tablet ver: 480 ~ 720px   *******수정 필요!
 @media (max-width: 720px) {
   .auto-swap-container {
-    width: 180px !important;
-    height: 230px !important;
+    width: 130px !important;
+    height: 190px !important;
   }
 
   .auto-swap-container .auto-item {
-    width: 180px !important;
-    height: 230px !important;
+    width: 130px !important;
+    height: 190px !important;
   }
 
   .container .item {
@@ -117,12 +117,16 @@
 // Tablet ver:  ~ 480px   *******수정 필요!
 @media (max-width: 480px) {
   .auto-swap-container {
-    width: 170px !important;
-    height: 220px !important;
+    width: 100px !important;
+    height: 165px !important;
   }
 
   .auto-swap-container .auto-item {
-    width: 170px !important;
-    height: 220px !important;
+    width: 100px !important;
+    height: 165px !important;
+  }
+  .container .item {
+    margin-right: 0px;
+    width: 150px;
   }
 }

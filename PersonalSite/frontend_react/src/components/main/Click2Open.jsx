@@ -10,7 +10,7 @@ function Click2Open(props) {
   const isSlideClicked = () => {
     props.isClicked(true);
     setTimeout(() => {
-      navigate("/profile#showMore");
+      navigate("/profile");
     }, 500);
   };
 

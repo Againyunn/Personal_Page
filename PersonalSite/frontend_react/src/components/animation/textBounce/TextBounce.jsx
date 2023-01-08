@@ -11,7 +11,8 @@ function TextBounce(props) {
     <React.Fragment>
       <div className={`${!props.active ? "" : "text-bounce"}`}>
         {props.content.split("").map((el, idx) => {
-          return <span key={`${el} ${idx}`}>{!el ? "1" : el}</span>;
+          if (el === " ") return <span key={`${el} ${idx}`}>&nbsp;</span>;
+          else return <span key={`${el} ${idx}`}>{el}</span>;
         })}
       </div>
     </React.Fragment>

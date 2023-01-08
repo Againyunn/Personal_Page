@@ -8,4 +8,5 @@
   --cancel-button-box-shadow-effect: 0px 0px 3px 3px rgba(240, 101, 72, 0.4);
   --text-color-blue: rgba(51, 126, 169, 1);
   --text-color-red: $third-color;
-}/*# sourceMappingURL=app.css.map */
+  --code-background-color: rgba(135, 131, 120, 0.15);
+} /*# sourceMappingURL=app.css.map */

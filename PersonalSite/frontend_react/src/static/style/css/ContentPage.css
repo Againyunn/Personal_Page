@@ -4,12 +4,9 @@
   position: relative;
 }
 
-.set-relative {
-  position: relative;
-}
-
 .content-container {
   width: 100%;
+  max-width: 100%;
   word-break: keep-all;
   display: flex;
   flex-direction: column;
@@ -17,7 +14,8 @@
 }
 .content-container .content-block {
   width: 100%;
-  padding: 0 0 0 10px;
+  max-width: 100%;
+  padding: 0 10px 0 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -28,11 +26,12 @@
   white-space: pre-wrap;
   word-wrap: break-word;
   overflow-y: hidden;
-  color: var(--third-color);
+  word-break: break-all;
   background-color: var(--code-background-color);
 }
 .content-container .content-block pre code {
   word-break: keep-all;
+  color: var(--third-color);
   background: none;
 }
 

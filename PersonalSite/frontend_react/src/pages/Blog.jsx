@@ -46,7 +46,7 @@ function Blog(props) {
   }, [sideRef]);
 
   return (
-    <div className="content-wrap set-relative">
+    <div className="content-wrap">
       {!isDataLoaded ? null : (
         <React.Fragment>
           {/* 반응형 햄버거 버튼 및 사이드 바 노출 기능 */}

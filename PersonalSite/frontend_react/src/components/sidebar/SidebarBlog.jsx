@@ -42,7 +42,7 @@ function SidebarBlog(props) {
       onHide={handleClose}
       responsive={"sm" | "md" | "lg" | "xl" | "xxl"}
     >
-      <Offcanvas.Header closeButton>
+      <Offcanvas.Header className="offcanvas-header" closeButton>
         <Offcanvas.Title>기록.공부</Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>

@@ -17,15 +17,27 @@
   padding: 20px;
 
   span {
-    font-size: 15px;
+    font-size: 20px;
+    cursor: pointer;
   }
 
-  &:hover {
+  span:hover {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 500;
+    color: var(--primary-color);
   }
 }
 
 .in-active {
   display: none;
+}
+
+// Bootsrtap style
+.offcanvas-header {
+  .btn-close:hover {
+    border: 0px solid #fff !important;
+  }
+  .btn-close:focus {
+    border: 0px solid #fff !important;
+  }
 }

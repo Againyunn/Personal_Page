@@ -22,20 +22,11 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 function MenuActivated({ activate, menuToggle }) {
-  // useEffect(() => {
-  //   // mount 시 작업
-  //   document.body.style.backgroundColor = "#2B90D9";
-
-  //   // unmount 시 작업
-  //   return () => {
-  //     document.body.style.backgroundColor = "#FFF";
-  //   };
-  // }, []);
   const navigate = useNavigate();
   const pageFrame = useRef([]);
 
   useEffect(() => {
-    console.log("menuToggle: ", activate);
+    // console.log("menuToggle: ", activate);
     if (!activate) {
       pageFrame.current[0].classList.remove("slide-down-focus-in");
       pageFrame.current[0].classList.add("slide-up-focus-out");
@@ -52,12 +43,22 @@ function MenuActivated({ activate, menuToggle }) {
     navigate(target);
   }
 
+  useEffect(() => {
+    // 메뉴 버튼 활성화 없이 url로 접근하는 경우
+    if (!activate) {
+      navigate("/");
+      pageFrame.current[0].classList.add("slide-down-focus-in");
+      pageFrame.current[1].classList.add("fade-in");
+      return;
+    }
+  }, []);
+
   return (
     <div ref={(el) => (pageFrame.current[0] = el)} className="menu-wrap">
       <div
         ref={(el) => (pageFrame.current[1] = el)}
         className="menu-index"
-        onClick={() => moveToPage("/profile#showMore")}
+        onClick={() => moveToPage("/profile")}
       >
         <span className="menu-content">개인 프로필</span>
       </div>

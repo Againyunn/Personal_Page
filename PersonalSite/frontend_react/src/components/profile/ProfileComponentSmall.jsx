@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 // component
@@ -13,6 +13,18 @@ function ProfileComponentSmall(props) {
   const [isSeeMore, setIsSeeMore] = useState(false);
 
   const navigate = useNavigate();
+  const anchorRef = useRef(null);
+
+  useEffect(() => {
+    if (!!isSeeMore) {
+      setTimeout(() => {
+        anchorRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 200);
+    }
+  }, [isSeeMore]);
 
   const clickToSeeMore = () => {
     setIsSeeMore(true);
@@ -59,7 +71,7 @@ function ProfileComponentSmall(props) {
           <span className="profilePartHead">🖥Work Experience</span>
           <br />
           <span className="profilePartContent">
-            긱스로프트 Web/App 개발 인턴(22.09.01 ~ 현재)
+            긱스로프트 개발팀 FE 개발파트(22.09.01 ~ 현재)
           </span>
           <span className="profilePartContent">
             클루커스 MSP 헬프데스크(22.02.13 ~ 09.17)
@@ -73,8 +85,8 @@ function ProfileComponentSmall(props) {
         <></>
       ) : (
         <div className="profileWrap contentDown">
-          <div className="profileContentWrapBottom">
-            <div className="profileContentPart" id="showMore">
+          <div className="profileContentWrap">
+            <div className="profileContentPart" ref={anchorRef}>
               <span className="profilePartHead">Skills</span>
               <br />
               <span className="profilePartSubHead">Part1. Use & Studying</span>
@@ -148,6 +160,34 @@ function ProfileComponentSmall(props) {
                       }
                       alt=""
                     />
+                    <Image
+                      className="iconImg"
+                      src={
+                        "https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white"
+                      }
+                      alt=""
+                    />
+                    <Image
+                      className="iconImg"
+                      src={
+                        "https://img.shields.io/badge/postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"
+                      }
+                      alt=""
+                    />
+                    <Image
+                      className="iconImg"
+                      src={
+                        "https://img.shields.io/badge/vultr-007BFC?style=for-the-badge&logo=Vultr&logoColor=white"
+                      }
+                      alt=""
+                    />
+                    <Image
+                      className="iconImg"
+                      src={
+                        "https://img.shields.io/badge/aws-FF9900?style=for-the-badge&logo=AmazonEC2&logoColor=white"
+                      }
+                      alt=""
+                    />
                   </div>
                 </li>
                 <br />
@@ -214,6 +254,13 @@ function ProfileComponentSmall(props) {
                       className="iconImg"
                       src={
                         "https://img.shields.io/badge/cloud-3693F3?style=for-the-badge&logo=iCloud&logoColor=white"
+                      }
+                      alt=""
+                    />
+                    <Image
+                      className="iconImg"
+                      src={
+                        "https://img.shields.io/badge/metaverse-D9272E?style=for-the-badge&logo=MEGA&logoColor=white"
                       }
                       alt=""
                     />
@@ -292,18 +339,19 @@ function ProfileComponentSmall(props) {
 
       {/* 프로필 콘텐츠 더 보기 + 반짝반짝 효과 */}
       {!isSeeMore ? (
-        <div onClick={() => clickToSeeMore()}>
-          <a href="#showMore" className="slideToSeeDown blinkEffect">
-            {/* <Image
+        <div
+          className="slideToSeeDown blinkEffect"
+          onClick={() => clickToSeeMore()}
+        >
+          {/* <Image
             className="triangleImg"
             src={require("static/component/triangleDown.png")}
             alt="삼각형(하)"
           /> */}
-            <div className="triangleImg">
-              <FingerAnimation />
-            </div>
-            <span>click to see more</span>
-          </a>
+          <div className="triangleImg">
+            <FingerAnimation />
+          </div>
+          <span>click to see more</span>
         </div>
       ) : (
         <div></div>

@@ -68,7 +68,7 @@ function BookmarkBlock({
       {showButton && (
         <div
           className="bookmark-simple-wrap"
-          style={{ height: `${blockHeight * 0.9}px` }}
+          style={{ height: `${blockHeight}px` }}
           onClick={() => setShowMessage(true)}
         >
           <div className="bookmark-simple-title">
@@ -81,7 +81,7 @@ function BookmarkBlock({
               nextIcon={null}
               prevIcon={null}
               indicators={false}
-              slide={false}
+              // slide={false}
               className=""
             >
               {imageSrc.map((imgEl) => {
@@ -90,7 +90,7 @@ function BookmarkBlock({
                     <img
                       src={require(`static/portfolio/${imgEl}`)}
                       alt={imgEl}
-                      className="d-block bookmark-simple-image-carousel"
+                      className="d-block " //bookmark-simple-image-carousel"
                       key={() => uuidv4()}
                     />
                   </Carousel.Item>

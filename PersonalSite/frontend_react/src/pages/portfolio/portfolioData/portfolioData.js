@@ -5,14 +5,15 @@ export const portfolioData = [
       title: "Shopping Mall Back Office(ADMIN)",
       icon: "https://www.notion.so/icons/shopping-cart_yellow.svg",
       img: "gmail",
-      "brief-discription": "유아 쇼핑몰 Zaezae의 입점사 admin 웹 서비스",
+      "brief-discription": "유아 글로벌 쇼핑몰의 입점사 admin 웹 서비스",
 
       belong: "Geeksloft FE 인턴",
       period: {
-        start: "22.10.24",
-        end: "22.11.03",
+        start: "22.09.13",
+        end: "현재",
       },
-      sourceUrl: "",
+      sourceUrl:
+        "https://againyunn.notion.site/Shopping-Mall-Back-Office-768673732b3e43d0b3f1660f116d0ee9",
     },
     "body-content": {
       "my-role": "프론트엔드 개발",
@@ -25,11 +26,22 @@ export const portfolioData = [
         { title: "env-cmd", color: "gray" },
         { title: "react-datepicker", color: "gray" },
         { title: "react-js-pagination", color: "gray" },
+        { title: "lottieFile", color: "gray" },
         { title: "styled-component", color: "orange" },
         { title: "sass", color: "orange" },
         { title: "bootstrap", color: "orange" },
       ],
-      img: [],
+      img: [
+        "shoppingMallAdmin1.png",
+        "shoppingMallAdmin2.png",
+        "shoppingMallAdmin3.png",
+        "shoppingMallAdmin4.png",
+        "shoppingMallAdmin5.png",
+        "shoppingMallAdmin6.png",
+        "shoppingMallAdmin7.png",
+        "shoppingMallAdmin8.png",
+        "shoppingMallAdmin9.png",
+      ],
       discription: [],
     },
   },
@@ -37,7 +49,7 @@ export const portfolioData = [
   // Geeksloft homepage
   {
     "title-content": {
-      title: "Geeksloft homepage",
+      title: "Homepage Renewal",
       icon: "https://www.notion.so/icons/sliders-vertical_purple.svg",
       img: "gmail",
       "brief-discription": "Geeksloft 자사 공식 홈페이지 리뉴얼",
@@ -58,7 +70,7 @@ export const portfolioData = [
         { title: "css", color: "orange" },
         { title: "html", color: "gray" },
       ],
-      img: ["GeeksloftHomepage1.png"],
+      img: ["homepageRenewal.gif"],
       discription: [],
     },
   },
@@ -66,7 +78,7 @@ export const portfolioData = [
   // LG Electronics Digital Pharm
   {
     "title-content": {
-      title: "Digital Pharm",
+      title: "Disease Analysis Prediction Service",
       icon: "https://www.notion.so/icons/first-aid-kit_red.svg",
       img: "gmail",
       "brief-discription": "AI 기반 개인별 주요 만성질환 예측 및 진단 서비스",
@@ -105,7 +117,6 @@ export const portfolioData = [
         "DigitalPharm10.png",
         "DigitalPharm11.png",
         "DigitalPharm12.png",
-        "DigitalPharm13.png",
       ],
       discription: [],
     },
@@ -114,7 +125,7 @@ export const portfolioData = [
   // React, Next.js 프로젝트 셋팅
   {
     "title-content": {
-      title: "Initial Project Structure",
+      title: "Project Base",
       icon: "https://www.notion.so/icons/science_blue.svg",
       img: "gmail",
       "brief-discription": "React/Next.js 기반의 초기 프로젝트 파일 구조 설계",
@@ -143,7 +154,7 @@ export const portfolioData = [
         { title: "styled-component", color: "orange" },
         { title: "sass", color: "orange" },
       ],
-      img: [],
+      img: ["ProjectBase.png"],
       discription: [],
     },
   },
@@ -238,7 +249,7 @@ export const portfolioData = [
   // GBT 캡스톤디자인
   {
     "title-content": {
-      title: "VALTO(Value Together)",
+      title: "VALTO(ValueTogether)",
       icon: "https://www.notion.so/icons/donkey_yellow.svg",
       img: "gmail",
       "brief-discription":
@@ -250,7 +261,7 @@ export const portfolioData = [
       },
       githubUrl: ["https://github.com/Againyunn/valto"],
       sourceUrl:
-        "https://againyunn.notion.site/VALTO-Value-Together-b369a6565be040d69fa488df0587ce8c",
+        "https://www.notion.so/againyunn/VALTO-Value-Together-b369a6565be040d69fa488df0587ce8c",
     },
     "body-content": {
       "my-role": "백엔드 개발, 기획",
@@ -262,23 +273,6 @@ export const portfolioData = [
         { title: "vultr", color: "purple" },
       ],
       img: ["valto1.png", "valto2.png", "valto3.png", "valto4.png"],
-      discription: [],
-    },
-  },
-  {
-    "title-content": {
-      title: "너의 이중전공은?",
-      img: "gmail",
-      "brief-discription": "",
-      period: {
-        start: "22.03.02",
-        end: "22.06.20",
-      },
-    },
-    "body-content": {
-      "my-role": "",
-      contributors: [],
-      img: [],
       discription: [],
     },
   },

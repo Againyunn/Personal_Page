@@ -18,7 +18,6 @@ import "static/style/css/PageAnimation.css";
 import "static/style/css/ProfilePage.css";
 
 function ProfilePage(props) {
-  const [isSeeMore, setIsSeeMore] = useState(false);
   const [displaySize, setDisplaySize] = useState(false);
 
   useEffect(() => {
@@ -50,10 +49,6 @@ function ProfilePage(props) {
 
   const navigate = useNavigate();
 
-  const clickToSeeMore = () => {
-    setIsSeeMore(true);
-  };
-
   const moveToPage = (target = "/") => {
     pageFrame.current.classList.remove("slide-left-focus-in");
     pageFrame.current.classList.add("slide-right-focus-out");
@@ -64,7 +59,7 @@ function ProfilePage(props) {
   // 화면 크기 별로 다른 컴포넌트 랜더링
   const RederingProfileContent = () => {
     // 테스트용
-    console.log(displaySize);
+    // console.log(displaySize);
 
     if (960 <= displaySize) {
       return <ProfileComponentMax />;

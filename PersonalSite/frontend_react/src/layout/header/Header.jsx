@@ -27,9 +27,9 @@ function Header({ activate, menuToggle }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("change1:", activate);
+    // console.log("change1:", activate);
     clickedMenu();
-    console.log("change2:", activate);
+    // console.log("change2:", activate);
   }, [activate]);
 
   const moveToMain = () => {
@@ -51,7 +51,7 @@ function Header({ activate, menuToggle }) {
   const changeMenuToggle = (type = false) => {
     if (activate) {
       menuToggle(false);
-      console.log("clicked,", activate);
+      // console.log("clicked,", activate);
       if (type === true) {
         setHeaderChange(false);
         //과거 페이지로 복귀
@@ -62,7 +62,7 @@ function Header({ activate, menuToggle }) {
       }
     } else {
       menuToggle(true);
-      console.log("clicked,", activate);
+      // console.log("clicked,", activate);
     }
   };
 

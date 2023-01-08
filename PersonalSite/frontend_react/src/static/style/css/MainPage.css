@@ -124,6 +124,7 @@
 .maincontent-wrap .slogun-wrap .slogun-word {
   font-size: 35px;
   text-align: justify;
+  word-break: break-all;
   text-justify: distribute;
 }
 .maincontent-wrap .slogun-wrap .icon-wrap {

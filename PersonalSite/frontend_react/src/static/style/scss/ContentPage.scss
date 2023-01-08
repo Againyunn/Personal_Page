@@ -4,12 +4,13 @@
   position: relative;
 }
 
-.set-relative {
-  position: relative;
-}
+// .set-relative {
+//   position: relative;
+// }
 
 .content-container {
   width: 100%;
+  max-width: 100%;
   word-break: keep-all;
 
   display: flex;
@@ -17,8 +18,9 @@
   align-items: center;
 
   .content-block {
-    width: 100%; //calc(100% - 100px);
-
+    width: 100%;
+    max-width: 100%;
+    padding: 0 10px 0 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -26,13 +28,18 @@
     word-break: keep-all;
 
     pre {
-      width: 100%; //calc(100% - 20px);
+      width: 95%; //calc(100% - 20px);
       // max-width: 100%;
       white-space: pre-wrap;
       word-wrap: break-word;
+      overflow-y: hidden;
+      word-break: break-all;
+      background-color: var(--code-background-color);
 
       code {
         word-break: keep-all;
+        color: var(--third-color);
+        background: none;
       }
     }
   }

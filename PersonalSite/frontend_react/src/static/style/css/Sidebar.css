@@ -17,13 +17,22 @@
   padding: 20px;
 }
 .sidebar-container span {
-  font-size: 15px;
-}
-.sidebar-container:hover {
   font-size: 20px;
-  font-weight: 700;
+  cursor: pointer;
+}
+.sidebar-container span:hover {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--primary-color);
 }
 
 .in-active {
   display: none;
+}
+
+.offcanvas-header .btn-close:hover {
+  border: 0px solid #fff !important;
+}
+.offcanvas-header .btn-close:focus {
+  border: 0px solid #fff !important;
 }/*# sourceMappingURL=Sidebar.css.map */

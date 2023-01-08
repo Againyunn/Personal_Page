@@ -109,3 +109,48 @@
   justify-content: center;
   align-items: center;
 }
+
+// load 애니메이션
+.load-animation {
+  height: 100px;
+  width: 100px;
+}
+
+@media (max-width: 1200px) {
+  // load 애니메이션
+  .load-animation {
+    height: 95px;
+    width: 95px;
+  }
+}
+@media (max-width: 960px) {
+  // load 애니메이션
+  .load-animation {
+    height: 90px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 720px) {
+  // load 애니메이션
+  .load-animation {
+    height: 85px;
+    width: 85px;
+  }
+}
+
+@media (max-width: 600px) {
+  // load 애니메이션
+  .load-animation {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  // load 애니메이션
+  .load-animation {
+    height: 75px;
+    width: 75px;
+  }
+}

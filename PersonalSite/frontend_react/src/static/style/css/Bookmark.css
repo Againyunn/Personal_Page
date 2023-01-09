@@ -123,10 +123,6 @@
           animation: blink 0.9s ease infinite;
 }
 
-.arrow-font {
-  vertical-align: 10%;
-}
-
 @-webkit-keyframes blink {
   0% {
     opacity: 0;

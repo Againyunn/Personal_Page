@@ -12,6 +12,7 @@
   height: calc(100vh - 90px);
   margin-left: 10vw;
   margin-right: 10vw;
+  padding-bottom: 10px;
 }
 .profileWrap .profileImage {
   display: flex;
@@ -220,7 +221,7 @@
     flex-direction: column !important;
     flex-wrap: nowrap !important;
     align-items: center !important;
-    padding-top: 0px !important;
+    padding-top: 10px !important;
     margin-left: 5vw;
     margin-right: 5vw;
   }
@@ -229,7 +230,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    padding-top: 20px;
     margin-left: 10px;
   }
   .profileContentWrap {
@@ -242,8 +242,9 @@
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
-    margin-top: 10vh;
+    margin-top: 3vh;
     padding: 0 4vw;
+    margin-bottom: 1vh !important;
   }
   .profileContentPart {
     display: flex;
@@ -258,7 +259,7 @@
   }
   .profilePartSubHead {
     font-size: 18px !important;
-    font-weight: 500;
+    font-weight: 700;
   }
   .profilePartContent {
     font-size: 15px !important;
@@ -347,7 +348,7 @@
   .profilePartSubHead {
     font-size: 11px !important;
     font-weight: 500;
-    margin: 10px 0 0px 0;
+    margin: 0px;
   }
   .profileContentTitle {
     margin-bottom: 10px !important;

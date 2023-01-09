@@ -246,9 +246,9 @@ function BookmarkBlock({
               )}
               {/* </div> */}
             </a>
-            <div className="bookmark-description blink-effect">
-              <span className="bookmark-description arrow-font">↑</span>{" "}
-              클릭하시면 개발로그 페이지로 이동합니다.
+            <div className="bookmark-description blink-effect red-text">
+              <span className="bookmark-description red-text ">↑</span>
+              &nbsp; 클릭하면 개발로그&상세페이지로 이동합니다.
             </div>
           </div>
         </Alert>

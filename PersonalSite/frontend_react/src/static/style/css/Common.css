@@ -69,6 +69,10 @@
     transform: rotate(360deg);
   }
 }
+.red-text {
+  color: var(--third-color) !important;
+}
+
 .mw-200px {
   min-width: 200px;
 }

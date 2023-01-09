@@ -65,6 +65,11 @@
   }
 }
 
+// 글씨 강조
+.red-text {
+  color: var(--third-color) !important;
+}
+
 // 크기 조정
 .mw-200px {
   min-width: 200px;

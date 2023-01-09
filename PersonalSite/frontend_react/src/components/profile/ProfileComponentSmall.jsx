@@ -45,7 +45,7 @@ function ProfileComponentSmall(props) {
           {/* <Image className="profileImage" src={profileImg} alt="" /> */}
           <div className="profileContentTitle">
             <span className="profileTitleHead">정재윤(Jaeyun Jung)</span>
-            <br />
+            {/* <br /> */}
             <span className="profileTitleContent">한국외국어대학교</span>
             <span className="profileTitleContent">GBT학부</span>
             <span className="profileTitleContent">컴퓨터.전자시스템공학부</span>
@@ -55,7 +55,7 @@ function ProfileComponentSmall(props) {
 
         <div className="profileContentPart">
           <span className="profilePartHead">🏆Awards</span>
-          <br />
+          {/* <br /> */}
           <span className="profilePartContent">
             2022 SW공동해커톤 우수상(SW중심대학협회장상)수상
           </span>
@@ -69,7 +69,7 @@ function ProfileComponentSmall(props) {
           <br />
 
           <span className="profilePartHead">🖥Work Experience</span>
-          <br />
+          {/* <br /> */}
           <span className="profilePartContent">
             긱스로프트 개발팀 FE 개발파트(22.09.01 ~ 현재)
           </span>
@@ -90,15 +90,15 @@ function ProfileComponentSmall(props) {
         <div className="profileWrap contentDown">
           <div className="profileContentWrap">
             <div className="profileContentPart" ref={anchorRef}>
-              <span className="profilePartHead">Skills</span>
               <br />
+              <span className="profilePartHead">Skills</span>
               <span className="profilePartSubHead">Part1. Use & Studying</span>
               <ul className="insideMarker ProfilePageStyle.noMarker">
                 <li>
                   <span className="profilePartContent">
                     🛠Web/App Development
                   </span>
-                  <br />
+                  {/* <br /> */}
                   <div className="iconWrap">
                     <Image
                       className="iconImg"
@@ -198,7 +198,7 @@ function ProfileComponentSmall(props) {
                   <span className="profilePartContent">
                     ⚒Programming Languages
                   </span>
-                  <br />
+                  {/* <br /> */}
                   <div className="iconWrap">
                     <Image
                       className="iconImg"
@@ -238,13 +238,12 @@ function ProfileComponentSmall(props) {
                   </div>
                 </li>
               </ul>
-
               <br />
               <span className="profilePartSubHead">Part2. Tech</span>
               <ul className="insideMarker noMarker">
                 <li>
                   <span className="profilePartContent">🔍Intersted Tech</span>
-                  <br />
+                  {/* <br /> */}
                   <div className="iconWrap">
                     <Image
                       className="iconImg"
@@ -337,6 +336,7 @@ function ProfileComponentSmall(props) {
               </span>
             </div>
           </div>
+          <br />
         </div>
       )}
 

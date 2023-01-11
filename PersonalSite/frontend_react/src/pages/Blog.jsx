@@ -21,7 +21,7 @@ function Blog(props) {
   useEffect(() => {
     setTimeout(() => {
       setIsDataLoaded(true);
-    }, 1000);
+    }, 1200);
   }, []);
 
   useEffect(() => {
@@ -91,19 +91,16 @@ function Blog(props) {
         setIsActive={(e) => setSidebarController(e)}
         // ref={(e) => (sideRef.current[0] = e.target.className)}
       />
-      <div className="set-center">
-        <div className="load-animation">
-          <LoadAnimation />
-        </div>
-      </div>
-      {/* {!isDataLoaded ? (
+
+      {!isDataLoaded ? (
         <div className="set-center">
-          <LoadAnimation />
+          <div className="load-animation">
+            <LoadAnimation />
+          </div>
         </div>
       ) : (
-     
         <BlogStudy isFull={!sidebarController} />
-      )} */}
+      )}
     </div>
   );
 }

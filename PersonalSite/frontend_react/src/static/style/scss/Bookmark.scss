@@ -7,7 +7,7 @@
 }
 
 .bookmark-simple-image-wrap {
-  width: 80%;
+  width: 60%;
 
   .bookmark-simple-image-carousel {
     border-radius: 35px 0;
@@ -49,6 +49,7 @@
   margin-left: 5%;
   width: 90%;
   min-height: 550px;
+  margin-top: 1vh;
   // min-width: 500px;
 }
 
@@ -93,7 +94,7 @@
   justify-content: space-between;
   align-items: stretch;
   min-height: 250px;
-  max-height: 300px;
+  max-height: 320px;
 
   .bookmark-text {
     color: var(--secondary-color);
@@ -110,10 +111,27 @@
     .custom-bookmark-title {
       color: var(--secondary-color);
       min-width: 80px;
+
       //   font-size: 15px;
     }
     .custom-bookmark-item {
       font-size: 20px;
+    }
+
+    .notion-link-button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .notion-link-button-img {
+        height: 30px;
+        width: 30px;
+        filter: opacity(0.3) drop-shadow(0 0 0 var(--third-color));
+
+        &:hover {
+          filter: opacity(1);
+        }
+      }
     }
   }
 }
@@ -157,6 +175,11 @@
 
   .bookmark-simple-description {
     font-size: 15px;
+    margin: 0 10vw 10px 10vw;
+  }
+
+  .bookmark-simple-image-wrap {
+    width: 70%;
   }
 
   // 상세 블록
@@ -217,6 +240,10 @@
     font-size: 12px;
   }
 
+  .bookmark-simple-image-wrap {
+    width: 75%;
+  }
+
   .custom-bookmark-content {
     .custom-bookmark-title {
       font-size: 0.8em;
@@ -225,6 +252,12 @@
 
       .custom-bookmark-item {
         font-size: 0.3em;
+      }
+    }
+    .notion-link-button {
+      .notion-link-button-img {
+        height: 20px !important;
+        width: 20px !important;
       }
     }
   }

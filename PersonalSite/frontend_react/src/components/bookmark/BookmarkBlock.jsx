@@ -117,7 +117,7 @@ function BookmarkBlock({
           className="source bookmark"
         >
           <div className="col-sm-12 col-md-12 col-xl-6 top-15px buttom-15px hover-effect">
-            <a href={sourceUrl} target="_blank" className=" ">
+            <div>
               {/* <div className="bookmark-info"> */}
               {/* 커스터마이징 wrap */}
               <div className="custom-bookmark-wrap col-sm-11 col-md-11 ">
@@ -205,11 +205,15 @@ function BookmarkBlock({
                     className="custom-bookmark-content"
                     onClick={() => moveToLink(serviceUrl)}
                   >
-                    <span className="custom-bookmark-title mw-80px">
+                    <label
+                      className="custom-bookmark-title mw-80px"
+                      htmlFor="service-url"
+                    >
                       서비스 URL
-                    </span>
+                    </label>
                     <a
                       className="bookmark-href mw-120px"
+                      id="service-url"
                       href={serviceUrl}
                       target="_blank"
                       title={serviceUrl}
@@ -218,9 +222,35 @@ function BookmarkBlock({
                     </a>
                   </div>
                 )}
+
+                <div className="custom-bookmark-content bookmark-text">
+                  <label
+                    className="custom-bookmark-title mw-80px"
+                    htmlFor="detail-log"
+                  >
+                    상세 로그
+                  </label>
+                  {/* <span className="bookmark-description">{role}</span> */}
+                  <div
+                    className="notion-link-button"
+                    id="detail-log"
+                    onClick={() => moveToLink(sourceUrl)}
+                  >
+                    <img
+                      className="notion-link-button-img"
+                      src={require("static/img/notion.png")}
+                      alt="노션링크"
+                    />
+                    <div className="bookmark-description blink-effect red-text">
+                      <span className="bookmark-description red-text ">←</span>
+                      &nbsp; click to see detail log
+                    </div>
+                  </div>
+                </div>
               </div>
+
               {!imageSrc ? null : (
-                <div className="image-wrap ">
+                <div className="image-wrap">
                   <Carousel
                     interval={2500}
                     nextIcon={null}
@@ -235,7 +265,7 @@ function BookmarkBlock({
                           <img
                             src={require(`static/portfolio/${imgEl}`)}
                             alt={imgEl}
-                            className="col-sm-12 col-md-12  col-xl-12 image-max-height"
+                            className="col-sm-11 col-md-11  col-xl-11 image-max-height"
                             key={() => uuidv4()}
                           />
                         </Carousel.Item>
@@ -245,10 +275,6 @@ function BookmarkBlock({
                 </div>
               )}
               {/* </div> */}
-            </a>
-            <div className="bookmark-description blink-effect red-text">
-              <span className="bookmark-description red-text ">↑</span>
-              &nbsp; 클릭하면 개발로그&상세페이지로 이동합니다.
             </div>
           </div>
         </Alert>

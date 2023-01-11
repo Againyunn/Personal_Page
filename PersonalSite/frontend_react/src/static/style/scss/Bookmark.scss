@@ -130,6 +130,7 @@
 
         &:hover {
           filter: opacity(1);
+          cursor: pointer;
         }
       }
     }
@@ -152,6 +153,10 @@
 
 .blink-effect {
   animation: blink 0.9s ease infinite;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 // .arrow-font {

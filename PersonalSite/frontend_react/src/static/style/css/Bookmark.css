@@ -118,6 +118,7 @@
 }
 .custom-bookmark-wrap .custom-bookmark-content .notion-link-button .notion-link-button-img:hover {
   filter: opacity(1);
+  cursor: pointer;
 }
 
 .image-wrap {
@@ -135,6 +136,9 @@
 .blink-effect {
   -webkit-animation: blink 0.9s ease infinite;
           animation: blink 0.9s ease infinite;
+}
+.blink-effect:hover {
+  cursor: pointer;
 }
 
 @-webkit-keyframes blink {

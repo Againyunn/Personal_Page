@@ -103,7 +103,7 @@
   display: flex;
   flex-direction: row;
   align-content: center;
-  justify-content: center;
+  justify-content: end;
 
   position: fixed;
   bottom: 30px;
@@ -111,16 +111,21 @@
   transition: -50% 0%;
   cursor: pointer;
 
-  .triangleImg {
+  .fingerImg {
     width: 25px;
     height: 25px;
-    bottom: 20px;
+    // bottom: 20px;
   }
 
-  span {
-    color: var(--third-color);
-    font-size: 15px;
-    vertical-align: baseline;
+  .notice-text {
+    display: flex;
+    align-items: flex-end;
+
+    span {
+      color: var(--third-color);
+      font-size: 15px;
+    }
+    // vertical-align: 0%; //baseline;
   }
 
   &:hover {
@@ -306,6 +311,12 @@
     }
   }
 
+  .fingerImg {
+    width: 20px;
+    height: 20px;
+    bottom: 18px;
+  }
+
   // 화살표
   .arrowLeft {
     width: 40px;
@@ -357,6 +368,11 @@
   .iconImg {
     margin-right: 3px;
     height: 20px;
+  }
+  .fingerImg {
+    width: 20px;
+    height: 20px;
+    bottom: 16px;
   }
 
   // 화살표
@@ -416,6 +432,12 @@
   .iconImg {
     margin-right: 3px;
     height: 20px;
+  }
+
+  .fingerImg {
+    width: 20px;
+    height: 20px;
+    bottom: 20px;
   }
 
   // 화살표

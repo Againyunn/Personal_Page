@@ -339,10 +339,12 @@ function ProfileComponentMax(props) {
             src={require("static/component/triangleDown.png")}
             alt="삼각형(하)"
           /> */}
-          <div className="triangleImg">
+          <div className="fingerImg">
             <FingerAnimation />
           </div>
-          <span>click to see more</span>
+          <div className="notice-text">
+            <span>click to see more</span>
+          </div>
         </div>
       ) : (
         <div></div>

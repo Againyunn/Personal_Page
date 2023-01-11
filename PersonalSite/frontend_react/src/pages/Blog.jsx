@@ -91,15 +91,19 @@ function Blog(props) {
         setIsActive={(e) => setSidebarController(e)}
         // ref={(e) => (sideRef.current[0] = e.target.className)}
       />
-      {!isDataLoaded ? (
+      <div className="set-center">
+        <div className="load-animation">
+          <LoadAnimation />
+        </div>
+      </div>
+      {/* {!isDataLoaded ? (
         <div className="set-center">
           <LoadAnimation />
         </div>
       ) : (
-        // <LoadingSpinner text={"Loading..."} />
+     
         <BlogStudy isFull={!sidebarController} />
-      )}
-      ,
+      )} */}
     </div>
   );
 }

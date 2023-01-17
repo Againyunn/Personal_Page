@@ -6,6 +6,8 @@ import { Button } from "react-bootstrap";
 import "static/style/css/ErrorPage.css";
 import "static/style/css/Common.css";
 
+import warningImg from "static/img/warning.png";
+
 function ErrorPage(props) {
   const navigate = useNavigate();
   return (
@@ -13,7 +15,10 @@ function ErrorPage(props) {
       <div className="error-container">
         <div className="row align-items-center d-flex flex-row">
           <div className="col-lg-5 text-lg-right pr-lg-3">
-            <h1 className="display-1 mb-0 warning-color">404</h1>
+            <img className="warning-image" src={warningImg} alt="경고" />
+            {/* <h1 className="display-1 mb-0 warning-color">
+              
+            </h1> */}
           </div>
           <div className="col-lg-7 error-page-divider text-lg-left pl-lg-5 warning-color">
             <h2>죄송합니다.</h2>

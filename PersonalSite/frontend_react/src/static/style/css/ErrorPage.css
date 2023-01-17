@@ -10,6 +10,10 @@
   flex-direction: column;
   justify-content: space-around;
 }
+.error-wrap .error-container .warning-image {
+  width: 150px;
+  margin-top: 20px;
+}
 .error-wrap .error-container .warning-color {
   color: var(--third-color);
 }/*# sourceMappingURL=ErrorPage.css.map */

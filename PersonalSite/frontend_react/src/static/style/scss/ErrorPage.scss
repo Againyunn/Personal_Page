@@ -11,6 +11,12 @@
     flex-direction: column;
     justify-content: space-around;
 
+    .warning-image {
+      // filter: opacity(0.5) drop-shadow(0 0 0 var(--third-color));
+      width: 150px;
+      margin-top: 20px;
+    }
+
     .warning-color {
       color: var(--third-color);
     }

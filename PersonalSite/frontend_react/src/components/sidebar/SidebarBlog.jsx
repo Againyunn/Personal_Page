@@ -51,7 +51,10 @@ function SidebarBlog(props) {
             <div className="sidebar-container" key={() => uuidv4()}>
               <span
                 className="blue bold"
-                onClick={() => moveToLink(el.contentLink, el.contentKey)}
+                onClick={() => {
+                  moveToLink(el.contentLink, el.contentKey);
+                  props.setIsActive(!props.isActive);
+                }}
               >
                 {el.name}
               </span>

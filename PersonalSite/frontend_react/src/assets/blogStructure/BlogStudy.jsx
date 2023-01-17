@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSearchParams, useLocation } from "react-router-dom";
 
-// blog data
-import { javascriptStudyContent } from "assets/blogData/study/javascript";
-
 // key 자동 생성
 import { v4 as uuidv4 } from "uuid";
 
@@ -24,7 +21,7 @@ function BlogStudy(props) {
   const location = useLocation();
 
   const [selectedContent, setSelectedContent] = useState(
-    !searchParams.get("filter-id") ? "js" : searchParams.get("filter-id")
+    !searchParams.get("filter-id") ? "cs" : searchParams.get("filter-id")
   );
 
   useEffect(() => {
@@ -35,7 +32,7 @@ function BlogStudy(props) {
   // query-string의 변화 감지
   useEffect(() => {
     setSelectedContent(
-      !searchParams.get("filter-id") ? "js" : searchParams.get("filter-id")
+      !searchParams.get("filter-id") ? "cs" : searchParams.get("filter-id")
     );
     window.scrollTo(0, 0);
   }, [location]);

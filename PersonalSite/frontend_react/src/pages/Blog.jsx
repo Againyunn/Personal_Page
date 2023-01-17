@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useSearchParams } from "react-router-dom";
 
 // component
 import SidebarBlog from "components/sidebar/SidebarBlog";
@@ -15,6 +16,12 @@ function Blog(props) {
   const [sidebarController, setSidebarController] = useState(false);
 
   const [isDataLoaded, setIsDataLoaded] = useState(false);
+
+  // query-string 접근
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [selectedContent, setSelectedContent] = useState(
+    !searchParams.get("filter-id") ? "cs" : searchParams.get("filter-id")
+  );
 
   const sideRef = useRef();
 
@@ -44,6 +51,10 @@ function Blog(props) {
       };
     }
   }, [sideRef]);
+
+  useEffect(() => {
+    setSidebarController(false);
+  }, [selectedContent]);
 
   return (
     <div className="content-wrap">

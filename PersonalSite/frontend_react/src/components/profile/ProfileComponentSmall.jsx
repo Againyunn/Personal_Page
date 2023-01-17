@@ -88,7 +88,7 @@ function ProfileComponentSmall(props) {
         <></>
       ) : (
         <div className="profileWrap contentDown">
-          <div className="profileContentWrap">
+          <div className="profileContentWrap ">
             <div className="profileContentPart" ref={anchorRef}>
               <br />
               <span className="profilePartHead">Skills</span>
@@ -135,13 +135,7 @@ function ProfileComponentSmall(props) {
                       }
                       alt=""
                     />
-                    <Image
-                      className="iconImg"
-                      src={
-                        "https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=Vue.js&logoColor=white"
-                      }
-                      alt=""
-                    />
+
                     <Image
                       className="iconImg"
                       src={
@@ -156,13 +150,7 @@ function ProfileComponentSmall(props) {
                       }
                       alt=""
                     />
-                    <Image
-                      className="iconImg"
-                      src={
-                        "https://img.shields.io/badge/flutter-02569B?style=for-the-badge&logo=Flutter&logoColor=white"
-                      }
-                      alt=""
-                    />
+
                     <Image
                       className="iconImg"
                       src={
@@ -203,14 +191,20 @@ function ProfileComponentSmall(props) {
                     <Image
                       className="iconImg"
                       src={
-                        "https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=Python&logoColor=white"
+                        "https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=black"
                       }
                       alt=""
                     />
                     <Image
                       className="iconImg"
                       src={
-                        "https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=black"
+                        "https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=Typescript&logoColor=white"
+                      }
+                    />
+                    <Image
+                      className="iconImg"
+                      src={
+                        "https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=Python&logoColor=white"
                       }
                       alt=""
                     />
@@ -225,13 +219,6 @@ function ProfileComponentSmall(props) {
                       className="iconImg"
                       src={
                         "https://img.shields.io/badge/c-A8B9CC?style=for-the-badge&logo=C&logoColor=white"
-                      }
-                      alt=""
-                    />
-                    <Image
-                      className="iconImg"
-                      src={
-                        "https://img.shields.io/badge/dart-0175C2?style=for-the-badge&logo=Dart&logoColor=white"
                       }
                       alt=""
                     />

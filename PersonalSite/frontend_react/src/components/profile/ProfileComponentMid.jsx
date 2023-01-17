@@ -54,7 +54,7 @@ function ProfileComponentMid(props) {
         </div>
         <br />
 
-        <div className="profileContentPart">
+        <div className="profileContentPart set-content-width">
           <span className="profilePartHead">🏆Awards</span>
           {/* <br /> */}
           <span className="profilePartContent">
@@ -90,10 +90,13 @@ function ProfileComponentMid(props) {
       ) : (
         <div
           className="profileWrap contentDown"
-          style={{ height: "100vh; !important" }}
+          // style={{ height: "100vh; !important" }}
         >
           <div className="profileContentWrapBottom marginUp">
-            <div className="profileContentPart" ref={anchorRef}>
+            <div
+              className="profileContentPart set-content-width"
+              ref={anchorRef}
+            >
               <span className="profilePartHead">Skills</span>
               {/* <br /> */}
               <span className="profilePartSubHead">Part1. Use & Studying</span>
@@ -136,13 +139,7 @@ function ProfileComponentMid(props) {
                   }
                   alt=""
                 />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=Vue.js&logoColor=white"
-                  }
-                  alt=""
-                />
+
                 <Image
                   className="iconImg"
                   src={
@@ -157,13 +154,7 @@ function ProfileComponentMid(props) {
                   }
                   alt=""
                 />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/flutter-02569B?style=for-the-badge&logo=Flutter&logoColor=white"
-                  }
-                  alt=""
-                />
+
                 <Image
                   className="iconImg"
                   src={
@@ -202,14 +193,20 @@ function ProfileComponentMid(props) {
                 <Image
                   className="iconImg"
                   src={
-                    "https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=Python&logoColor=white"
+                    "https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=black"
                   }
                   alt=""
                 />
                 <Image
                   className="iconImg"
                   src={
-                    "https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=black"
+                    "https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=Typescript&logoColor=white"
+                  }
+                />
+                <Image
+                  className="iconImg"
+                  src={
+                    "https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=Python&logoColor=white"
                   }
                   alt=""
                 />
@@ -224,13 +221,6 @@ function ProfileComponentMid(props) {
                   className="iconImg"
                   src={
                     "https://img.shields.io/badge/c-A8B9CC?style=for-the-badge&logo=C&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/dart-0175C2?style=for-the-badge&logo=Dart&logoColor=white"
                   }
                   alt=""
                 />
@@ -274,12 +264,11 @@ function ProfileComponentMid(props) {
             </div>
           </div>
           <div className="profileContentWrapBottom">
-            <div className="profileContentPart">
+            <div className="profileContentPart set-content-width">
               <span className="profilePartHead">
                 Extra Curricular Activities
               </span>
-            </div>
-            <div className="profileContentPart">
+
               <span className="profilePartSubHead">2022 HUFS SW Volunteer</span>
 
               <span className="profilePartContent">
@@ -289,20 +278,17 @@ function ProfileComponentMid(props) {
               <span className="profilePartContent">
                 HUFS X 설악고등학교 SW진로체험교육 강사
               </span>
-            </div>
-            <div className="profileContentPart">
+
               <span className="profilePartSubHead">COMENTO 직무부트캠프</span>
 
               <span className="profilePartContent">
                 스타트업에서 프론트엔드 개발자로 일하기
               </span>
-            </div>
-            <div className="profileContentPart">
+
               <span className="profilePartSubHead">
                 2022 컴퓨터 사고와 코딩 수업 학부생 조교
               </span>
-            </div>
-            <div className="profileContentPart">
+
               <span className="profilePartSubHead">
                 2021 HUFS Gnuvil 프로그래밍 중앙 동아리 부원
               </span>
@@ -310,13 +296,13 @@ function ProfileComponentMid(props) {
               <span className="profilePartContent">
                 알고리즘, 인공지능 스터디
               </span>
-            </div>
-            <div className="profileContentPart">
+
               <span className="profilePartSubHead">
                 2020 이커머스특화대학 전자상거래 실습 장학생
               </span>
             </div>
           </div>
+
           <br />
         </div>
       )}

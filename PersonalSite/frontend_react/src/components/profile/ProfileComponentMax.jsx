@@ -7,6 +7,7 @@ import FingerAnimation from "components/animation/effect/FingerAnimation";
 
 // css
 import "static/style/css/ProfilePage.css";
+import "static/style/css/ContentPage.css";
 import { Image } from "react-bootstrap";
 
 function ProfileComponentMax(props) {
@@ -95,234 +96,229 @@ function ProfileComponentMax(props) {
       {!isSeeMore ? (
         <></>
       ) : (
-        <div className="profileWrap contentDown">
-          <div className="profileContentWrap">
-            <div className="profileContentPart" ref={anchorRef}>
-              <span className="profilePartHead">Skills</span>
-              <br />
-              <span className="profilePartSubHead">Part1. Use & Studying</span>
-              <br />
-              <span className="profilePartContent">🛠Web/App Development</span>
-              <br />
-              <div className="iconWrap">
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=Html5&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=Css3&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=Sass&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/react.js-61DAFB?style=for-the-badge&logo=React&logoColor=black"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=Vue.js&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=MySql&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=Django&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/flutter-02569B?style=for-the-badge&logo=Flutter&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/vultr-007BFC?style=for-the-badge&logo=Vultr&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/aws-FF9900?style=for-the-badge&logo=AmazonEC2&logoColor=white"
-                  }
-                  alt=""
-                />
-              </div>
+        <div>
+          <div className="profileWrap contentDown">
+            <div className="profileContentWrap">
+              <div className="profileContentPart" ref={anchorRef}>
+                <span className="profilePartHead">Skills</span>
+                <br />
+                <span className="profilePartSubHead">
+                  Part1. Use & Studying
+                </span>
+                <br />
+                <span className="profilePartContent">🛠Web/App Development</span>
+                <br />
+                <div className="iconWrap">
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=Html5&logoColor=white"
+                    }
+                    alt=""
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=Css3&logoColor=white"
+                    }
+                    alt=""
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=Sass&logoColor=white"
+                    }
+                    alt=""
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/react.js-61DAFB?style=for-the-badge&logo=React&logoColor=black"
+                    }
+                    alt=""
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white"
+                    }
+                    alt=""
+                  />
 
-              <br />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=MySql&logoColor=white"
+                    }
+                    alt=""
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=Django&logoColor=white"
+                    }
+                    alt=""
+                  />
 
-              <span className="profilePartContent">⚒Programming Languages</span>
-              <br />
-              <div className="iconWrap">
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=Python&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=black"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/c-A8B9CC?style=for-the-badge&logo=C&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/dart-0175C2?style=for-the-badge&logo=Dart&logoColor=white"
-                  }
-                  alt=""
-                />
-              </div>
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white"
+                    }
+                    alt=""
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"
+                    }
+                    alt=""
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/vultr-007BFC?style=for-the-badge&logo=Vultr&logoColor=white"
+                    }
+                    alt=""
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/aws-FF9900?style=for-the-badge&logo=AmazonEC2&logoColor=white"
+                    }
+                    alt=""
+                  />
+                </div>
 
-              <br />
-              <span className="profilePartSubHead">Part2. Tech</span>
-              <br />
+                <br />
 
-              <span className="profilePartContent">🔍Intersted Tech</span>
-              <br />
-              <div className="iconWrap">
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/web-000000?style=for-the-badge&logo=Mozilla&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/cloud-3693F3?style=for-the-badge&logo=iCloud&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/metaverse-D9272E?style=for-the-badge&logo=MEGA&logoColor=white"
-                  }
-                  alt=""
-                />
-                <Image
-                  className="iconImg"
-                  src={
-                    "https://img.shields.io/badge/crypto-F7931A?style=for-the-badge&logo=Bitcoin&logoColor=white"
-                  }
-                  alt=""
-                />
+                <span className="profilePartContent">
+                  ⚒Programming Languages
+                </span>
+                <br />
+                <div className="iconWrap">
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=black"
+                    }
+                    alt=""
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=Typescript&logoColor=white"
+                    }
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=Python&logoColor=white"
+                    }
+                    alt=""
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"
+                    }
+                    alt=""
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/c-A8B9CC?style=for-the-badge&logo=C&logoColor=white"
+                    }
+                    alt=""
+                  />
+                </div>
+
+                <br />
+                <span className="profilePartSubHead">Part2. Tech</span>
+                <br />
+
+                <span className="profilePartContent">🔍Intersted Tech</span>
+                <br />
+                <div className="iconWrap">
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/web-000000?style=for-the-badge&logo=Mozilla&logoColor=white"
+                    }
+                    alt=""
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/cloud-3693F3?style=for-the-badge&logo=iCloud&logoColor=white"
+                    }
+                    alt=""
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/metaverse-D9272E?style=for-the-badge&logo=MEGA&logoColor=white"
+                    }
+                    alt=""
+                  />
+                  <Image
+                    className="iconImg"
+                    src={
+                      "https://img.shields.io/badge/crypto-F7931A?style=for-the-badge&logo=Bitcoin&logoColor=white"
+                    }
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="profileContentWrap marginRightStyle">
-            <div className="profileContentPart">
-              <span className="profilePartHead">
-                Extra Curricular Activities
-              </span>
-            </div>
-            <div className="profileContentPart">
-              <span className="profilePartSubHead">2022 HUFS SW Volunteer</span>
-              <br />
+            <div className="profileContentWrap marginRightStyle">
+              <div className="profileContentPart">
+                <span className="profilePartHead">
+                  Extra Curricular Activities
+                </span>
+              </div>
+              <div className="profileContentPart">
+                <span className="profilePartSubHead">
+                  2022 HUFS SW Volunteer
+                </span>
+                <br />
 
-              <span className="profilePartContent">
-                Maker in HUFS 웹 개발 멘토
-              </span>
-              <br />
-              <span className="profilePartContent">
-                HUFS X 설악고등학교 SW진로체험교육 강사
-              </span>
-            </div>
-            <div className="profileContentPart">
-              <span className="profilePartSubHead">COMENTO 직무부트캠프</span>
-              <br />
+                <span className="profilePartContent">
+                  Maker in HUFS 웹 개발 멘토
+                </span>
+                <br />
+                <span className="profilePartContent">
+                  HUFS X 설악고등학교 SW진로체험교육 강사
+                </span>
+              </div>
+              <div className="profileContentPart">
+                <span className="profilePartSubHead">COMENTO 직무부트캠프</span>
+                <br />
 
-              <span className="profilePartContent">
-                스타트업에서 프론트엔드 개발자로 일하기
-              </span>
-            </div>
-            <div className="profileContentPart">
-              <span className="profilePartSubHead">
-                2022 컴퓨터 사고와 코딩 수업 학부생 조교
-              </span>
-            </div>
-            <div className="profileContentPart">
-              <span className="profilePartSubHead">
-                2021 HUFS Gnuvil 프로그래밍 중앙 동아리 부원
-              </span>
-              <br />
+                <span className="profilePartContent">
+                  스타트업에서 프론트엔드 개발자로 일하기
+                </span>
+              </div>
+              <div className="profileContentPart">
+                <span className="profilePartSubHead">
+                  2022 컴퓨터 사고와 코딩 수업 학부생 조교
+                </span>
+              </div>
+              <div className="profileContentPart">
+                <span className="profilePartSubHead">
+                  2021 HUFS Gnuvil 프로그래밍 중앙 동아리 부원
+                </span>
+                <br />
 
-              <span className="profilePartContent">
-                알고리즘, 인공지능 스터디
-              </span>
-            </div>
-            <div className="profileContentPart">
-              <span className="profilePartSubHead">
-                2020 이커머스특화대학 전자상거래 실습 장학생
-              </span>
+                <span className="profilePartContent">
+                  알고리즘, 인공지능 스터디
+                </span>
+              </div>
+              <div className="profileContentPart">
+                <span className="profilePartSubHead">
+                  2020 이커머스특화대학 전자상거래 실습 장학생
+                </span>
+              </div>
             </div>
           </div>
         </div>

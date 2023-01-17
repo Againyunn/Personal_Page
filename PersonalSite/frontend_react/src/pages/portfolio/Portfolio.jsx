@@ -14,7 +14,14 @@ import BookmarkBlock from "components/bookmark/BookmarkBlock";
 
 // css
 import "static/style/css/Common.css";
-import { Toast, Image } from "react-bootstrap";
+import "static/style/css/ContentPage.css";
+import {
+  Toast,
+  Image,
+  Accordion,
+  Card,
+  useAccordionButton,
+} from "react-bootstrap";
 
 function Portfolio(props) {
   const [initialToast, setInitialToast] = useState(false);
@@ -69,6 +76,22 @@ function Portfolio(props) {
     } else setArrowActivate([...arrowActivate, type]);
   };
 
+  function CustomToggle({ children, eventKey }) {
+    const decoratedOnClick = useAccordionButton(eventKey, () =>
+      console.log("totally custom!")
+    );
+
+    return (
+      <button
+        type="button"
+        // style={{ backgroundColor: "pink" }}
+        onClick={decoratedOnClick}
+      >
+        {children}
+      </button>
+    );
+  }
+
   return (
     <React.Fragment>
       <Toast show={initialToast} className="notice-toast">
@@ -81,6 +104,39 @@ function Portfolio(props) {
           </span>
         </Toast.Body>
       </Toast>
+
+      {/* 개발 스타일 및 지향점 소개 */}
+      {/* <Accordion defaultActiveKey="0">
+        <Card>
+          <CustomToggle eventKey="0">Click me!</CustomToggle>
+
+          <Accordion.Collapse eventKey="0">
+            <div className="brief-notice-wrap">
+              <span className="notice-title">Brief Introduce</span>
+              <span className="notice-text">안녕하세요.</span>
+              <span className="notice-text">
+                상상하고 기획한 것을 프로그래밍을 통해 현실로 가져오는 일을
+                좋아하는 주니어 개발자입니다.
+              </span>
+              <span className="notice-text">
+                불편함을 직접 바꿀 수 있는 일을 하고 싶어 프로그래밍을
+                시작했기에, 개발의 목적으로 ‘사용자 친화적인 서비스’를
+                지향합니다.
+              </span>
+              <span className="notice-text">
+                나아가 개발자와 운영자 역시도 사용자에 포함된다는 생각으로
+                재사용성과 확장성을 고려한 구조와 코드를 개발을 위해 노력합니다.
+              </span>
+              <span className="notice-text">
+                주어진 기획안/업무는 시일 내에 반드시 해내며, 꾸준한 학습을 통해
+                최선의 방법을 찾아 적용하며 성장하고 있습니다.
+              </span>
+              <br />
+              <div className="horizental-line"></div>
+            </div>
+          </Accordion.Collapse>
+        </Card>
+      </Accordion> */}
 
       {portfolioData.map((el, idx) => {
         return (
@@ -116,7 +172,6 @@ function Portfolio(props) {
           // { idx !== portfolioData.length - 1 ? <hr /> : null }
         );
       })}
-
       {arrowActivate.length !== 0 ? null : (
         <React.Fragment>
           <Image

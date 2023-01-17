@@ -76,13 +76,13 @@ function MenuActivated({ activate, menuToggle }) {
       >
         <span className="menu-content">기록.공부</span>
       </div>
-      <div
+      {/* <div
         ref={(el) => (pageFrame.current[1] = el)}
         className="menu-index"
         onClick={() => moveToPage("/interest-vision")}
       >
         <span className="menu-content">관심사.비전</span>
-      </div>
+      </div> */}
 
       <span className="go-to-main" onClick={() => moveToPage("/")}>
         go to main

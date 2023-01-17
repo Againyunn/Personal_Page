@@ -16,8 +16,11 @@ function ErrorPage(props) {
             <h1 className="display-1 mb-0 warning-color">404</h1>
           </div>
           <div className="col-lg-7 error-page-divider text-lg-left pl-lg-5 warning-color">
-            <h2>SORRY!</h2>
-            <h6 className="font-weight-light">페이지를 찾을 수 없습니다..</h6>
+            <h2>죄송합니다.</h2>
+            <h6 className="font-weight-light">
+              페이지를 찾을 수 없습니다.
+              <br />웹 주소를 확인해주세요 :D
+            </h6>
           </div>
         </div>
         <div className="row mt-5">

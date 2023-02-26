@@ -180,17 +180,20 @@
   left: 2vw;
   width: 50px;
   border-radius: 100px;
+  cursor: pointer;
 
   &:hover {
     box-shadow: var(--confirm-button-box-shadow-effect);
   }
 }
+
 .arrowRight {
   position: fixed;
   top: calc(50vh - 25px + 45px);
   right: 2vw;
   width: 50px;
   border-radius: 100px;
+  cursor: pointer;
 
   &:hover {
     box-shadow: var(--confirm-button-box-shadow-effect);

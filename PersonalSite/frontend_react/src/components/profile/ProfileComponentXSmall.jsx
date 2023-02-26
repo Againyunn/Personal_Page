@@ -56,7 +56,6 @@ function ProfileComponentSmall(props) {
 
         <div className="profileContentPart set-content-width">
           <span className="profilePartHead">🏆Awards</span>
-          {/* <br /> */}
           <span className="profilePartContent">
             2022 SW공동해커톤 우수상(SW중심대학협회장상)수상
           </span>
@@ -70,18 +69,14 @@ function ProfileComponentSmall(props) {
           <br />
 
           <span className="profilePartHead">🖥Work Experience</span>
-          {/* <br /> */}
           <span className="profilePartContent">
-            긱스로프트 개발팀 FE 개발파트(22.09.01 ~ 현재)
+            긱스로프트 개발팀 FE 개발파트(22.09.01 ~ 23.02.27)
           </span>
           <span className="profilePartContent">
             클루커스 MSP 헬프데스크(22.02.19 ~ 09.17)
           </span>
           <span className="profilePartContent">
             위메프 O2O실 지원팀 사원(19.12.01 ~ 20.08.29/21.06.21 ~ 08.20)
-          </span>
-          <span className="profilePartContent">
-            디지털 유목민 기획.지원(21.04.08 ~ 06.18)
           </span>
         </div>
       </div>

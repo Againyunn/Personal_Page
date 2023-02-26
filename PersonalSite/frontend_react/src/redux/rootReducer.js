@@ -40,7 +40,6 @@ const rootReducer = (state = initialState, action) => {
       };
 
     case types.MENU_TOGGLE:
-      console.log("redux controler:", action.activate);
       return {
         ...state,
         activate: action.activate,

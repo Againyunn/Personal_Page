@@ -20,7 +20,7 @@ function ErrorPage(props) {
               
             </h1> */}
           </div>
-          <div className="col-lg-7 error-page-divider text-lg-left pl-lg-5 warning-color">
+          <div className="col-lg-7 error-page-divider text-lg-left pl-lg-5 warning-color warning-text-box">
             <h2>죄송합니다.</h2>
             <h6 className="font-weight-light">
               페이지를 찾을 수 없습니다.

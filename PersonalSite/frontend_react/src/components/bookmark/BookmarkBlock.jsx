@@ -112,10 +112,15 @@ function BookmarkBlock({
         <Alert
           ref={nodeRef}
           variant="light"
-          dismissible
-          onClose={() => setShowMessage(false)}
-          className="source bookmark"
+          // dismissible
+          className="source bookmark portfolio-modal-wrap"
         >
+          <div
+            className="close-portfolio-modal"
+            onClick={() => setShowMessage(false)}
+          >
+            X
+          </div>
           <div className="col-sm-12 col-md-12 col-xl-6 top-15px buttom-15px hover-effect">
             <div>
               {/* <div className="bookmark-info"> */}
@@ -124,7 +129,11 @@ function BookmarkBlock({
                 <div className="custom-bookmark-content buttom-15px">
                   <div className="bookmark-text">
                     <div className="bookmark-title mw-200px">
-                      <img className="icon" src={icon} alt={icon} />
+                      <img
+                        className="icon"
+                        src={require(`static/portfolio/${icon}.png`)}
+                        alt={icon}
+                      />
                       {title}
                     </div>
                     <div className="bookmark-description ">{desrciption}</div>
@@ -243,7 +252,7 @@ function BookmarkBlock({
                     />
                     <div className="bookmark-description blink-effect red-text">
                       <span className="bookmark-description red-text ">←</span>
-                      &nbsp; click to see detail log
+                      &nbsp; 상세 설명 및 개발 로그
                     </div>
                   </div>
                 </div>

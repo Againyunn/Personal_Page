@@ -16,14 +16,6 @@ function SidebarBlog(props) {
   // query-string 접근
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // useEffect(() => {
-  //   if (!props.isActive) {
-  //     sidebarRef.current[0].classList.add("in-active");
-  //   } else {
-  //     sidebarRef.current[0].classList.remove("in-active");
-  //   }
-  // }, [props.isActive]);
-
   const navigate = useNavigate();
 
   const handleClose = () => {
@@ -42,9 +34,13 @@ function SidebarBlog(props) {
       onHide={handleClose}
       responsive={"sm" | "md" | "lg" | "xl" | "xxl"}
     >
-      <Offcanvas.Header className="offcanvas-header" closeButton>
+      <Offcanvas.Header className="offcanvas-header portfolio-modal-wrap">
         <Offcanvas.Title>기록.공부</Offcanvas.Title>
+        <div className="close-portfolio-modal" onClick={() => handleClose()}>
+          X
+        </div>
       </Offcanvas.Header>
+
       <Offcanvas.Body>
         {sidebar.map((el, idx) => {
           return (

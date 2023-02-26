@@ -149,6 +149,7 @@
   left: 2vw;
   width: 50px;
   border-radius: 100px;
+  cursor: pointer;
 }
 .arrowLeft:hover {
   box-shadow: var(--confirm-button-box-shadow-effect);
@@ -160,6 +161,7 @@
   right: 2vw;
   width: 50px;
   border-radius: 100px;
+  cursor: pointer;
 }
 .arrowRight:hover {
   box-shadow: var(--confirm-button-box-shadow-effect);

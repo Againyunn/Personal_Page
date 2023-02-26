@@ -16,6 +16,12 @@ function MainContent(props) {
     window.open("https://www.instagram.com/again_yunn/");
   };
 
+  const clickNotion = () => {
+    window.open(
+      "https://againyunn.notion.site/e0c69a8235d341648f6288e083896c71?v=fb9160995c994dfdbd0d9b9966920745"
+    );
+  };
+
   const clickGmail = () => {
     var content = document.getElementById("gmailAddress").innerHTML;
 
@@ -26,7 +32,7 @@ function MainContent(props) {
           text: "이메일이 복사되었습니다.",
           showCancelButton: false,
           confirmButtonText: `확인`,
-          confirmButtonColor: "#2B90D9",
+          confirmButtonColor: "#000",
         });
       })
       .catch((e) => {
@@ -63,6 +69,12 @@ function MainContent(props) {
               // className="icon"
               onClick={clickGmail}
             />
+            <img
+              src={require("../../static/img/notion_main.png")}
+              alt="notion"
+              onClick={clickNotion}
+            />
+
             <textarea
               id="gmailAddress"
               defaultValue={"rangyun36@gmail.com"}

@@ -4,7 +4,6 @@ import { useSearchParams } from "react-router-dom";
 // component
 import SidebarBlog from "components/sidebar/SidebarBlog";
 import BlogStudy from "assets/blogStructure/BlogStudy";
-import LoadingSpinner from "components/loadSpinner/LoadSpinner";
 import LoadAnimation from "components/loadSpinner/LoadAnimation";
 
 // css
@@ -28,7 +27,7 @@ function Blog(props) {
   useEffect(() => {
     setTimeout(() => {
       setIsDataLoaded(true);
-    }, 1200);
+    }, 1000);
   }, []);
 
   useEffect(() => {

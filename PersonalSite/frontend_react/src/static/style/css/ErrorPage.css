@@ -9,10 +9,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  min-width: 350px;
 }
 .error-wrap .error-container .warning-image {
-  width: 150px;
+  width: 100px;
   margin-top: 20px;
+}
+.error-wrap .error-container .warning-text-box {
+  min-width: 200px;
 }
 .error-wrap .error-container .warning-color {
   color: var(--third-color);

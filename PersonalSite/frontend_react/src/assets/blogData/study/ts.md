@@ -715,3 +715,301 @@ TS파일 내에 에러가 존재하더라도 JS로 우선 컴파일되도록 기
 ```jsx
 "noEmitOnError": true,                            /* Disable emitting files if any type checking errors are reported. */
 ```
+
+`strict` 
+
+코드에서 작업하고 있는 매개변수와 값을 명확히 하도록 설정
+
+```jsx
+"strict": true, /* Enable all strict type-checking options. */,
+```
+
+하지만 strict mode로 개발을 한다해도, TS가 함수의 매개변수로 전달한 값에 대한 변수 체크는 하지만, 해당 변수가 함수 내에서 어떻게 변화하는 지까지 모든 과정을 추적하지는 않는다.
+
+```jsx
+let logged; // 변수 선언 시 자료형이 any로 설정(미할당 시)
+
+function sendAnalytics(data: string){
+	console.log(data);
+	logged = true;
+}
+
+sendAnalytics('The data');
+```
+
+`strictNullCheck`
+
+null 값을 잠재적으로 가질 수 있는 값에 접근하고 작업하는 방식을 TS에게 엄격하게 전달 및 통제
+
+```jsx
+"strictNullChecks": false,  /* When type checking, take into account 'null' and 'undefined'. */
+```
+
+특히 TS에서 직접 DOM에 접근하고 DOM 요소를 통제할 때 null point로 인식하여 컴파일 시 에러가 발생할 수 있다. DOM 요소 접근 시 error로 인식하는 이유는, TS가 html 파일 내부의 코드 구성을 알지 못하기 때문에 해당 코드의 성공여부를 알 수가 없어 런타임 시 발생할 수 있는 잠재적 에러를 컴파일러가 방지
+
+```jsx
+// app.ts
+const button = document.querySelector("button");
+
+button.addEventListener("click", () => {
+  console.log("clicked!");
+});
+```
+
+* strict한 syntax검사를 수행하면서 정상적으로 코드를 컴파일 하는 방법
+
+방법1. `!`을 사용
+
+```jsx
+// app.ts
+const button = document.querySelector("button")!; // null이 아니라는 점을 ts에게 전달
+
+button.addEventListener("click", () => {
+  console.log("clicked!");
+});
+```
+
+방법2. if 조건문 활용
+
+```jsx
+// app.ts
+const button = document.querySelector("button");
+
+if(button){
+	button.addEventListener("click", () => {
+	  console.log("clicked!");
+	})
+}
+```
+
+**참고 소스**
+
+tsconfig.json
+
+[Documentation - What is a tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
+
+컴파일러 구성 문서
+
+[Documentation - tsc CLI Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+
+VS code TS debugger
+
+[TypeScript debugging with Visual Studio Code](https://code.visualstudio.com/docs/typescript/typescript-debugging)
+
+---
+
+## TS & Modorn Javascript
+
+---
+
+## Classes & Interface
+
+### Class
+
+- 정의
+    
+    객체의 생성 속도를 높여주며, 객체 리터럴 표기법 사용에 대한 대안
+    
+    클래스를 활용하여 각 코드에서 실질적으로동작하는 인스턴스들을 생성하고 정의
+    
+    이를 통해, 동일한 구조와 메소드를 포함한 여러 객체를 쉽게 생성 가능
+    
+    객체(인스턴스)에 저장된 개별 데이터와 정보만 별개로 다르다.
+    
+
+**기본적인 class와 constructor**
+
+```jsx
+// ts
+
+class Department {
+  name: string;
+
+  constructor(n: string) {
+    this.name = n;
+  }
+}
+
+const accunting = new Department("Accounting");
+console.log(accunting);
+console.log(accunting.name);
+```
+
+컴파일 후, 일반적인 JS의 class를 활용한 클래스, 생성자 선언이 아닌, 변수 내의 callback 함수의 형태로 class에 정의된 로직이 선언되었음을 확인할 수 있다. 
+
+```jsx
+// js
+var Department = (function () {
+	function Department(n) {
+		this.name = n;
+	}
+	return Department;
+}());
+
+var accounting = new Department('Accountint');
+console.log(accountint);
+```
+
+**메소드 선언**
+
+```jsx
+class Department {
+  name: string;
+
+  constructor(n: string) {
+    this.name = n;
+  }
+
+  describe() {
+    console.log("Department: " + this.name); // this를 선언함으로서 본 class 내에 선언된 name변수를 참조한다.
+  }
+}
+
+const accounting = new Department("Accounting");
+console.log(accounting);
+console.log(accounting.name);
+console.log(accounting.describe());
+```
+
+`**this` 키워드**
+
+TS에서 this 관련 에러를 방지하기 위해 사용하는 방법
+
+```jsx
+class Department {
+  name: string;
+
+  constructor(n: string) {
+    this.name = n;
+  }
+
+  describe(this: Department) { //메소드의 매개변수로 this의 타입(범위)를 제한하여 Department 내의 변수(name)을 참조하도록 this의 범위가 제한된다.
+    console.log("Department: " + this.name); // this를 선언함으로서 본 class 내에 선언된 name변수를 참조한다.
+  }
+}
+
+const accounting = new Department("Accounting");
+console.log(accounting);
+console.log(accounting.name);
+console.log(accounting.describe());
+```
+
+메소드의 매개변수로 this의 타입(범위)를 제한하여 Department 내의 변수(name)을 참조하도록 this의 범위가 제한된다.
+
+```jsx
+const accounting = new Department("Accounting");
+console.log(accounting);
+console.log(accounting.name);
+console.log(accounting.describe());
+
+const accountingCopy = { name: "Dummy", describe: accounting.describe }
+
+accountingCopy.describe()const accounting = new Department("Accounting");
+console.log(accounting);
+console.log(accounting.name);
+console.log(accounting.describe());
+```
+
+**Private, Public access**
+
+Public access EX
+
+```jsx
+class Department {
+  name: string;
+  employees: string[] = [];
+
+  constructor(n: string) {
+    this.name = n;
+  }
+
+  describe(this: Department) {
+    console.log("Department: " + this.name); // this를 선언함으로서 본 class 내에 선언된 name변수를 참조한다.
+  }
+
+  addEmployee(employee: string) {
+    this.employees.push(employee);
+  }
+
+  printEmployeeInformation() {
+    console.log(this.employees.length);
+    console.log(this.employees);
+  }
+}
+
+const accounting = new Department("Accounting");
+accounting.addEmployee("Max");
+accounting.addEmployee("Lucas");
+accounting.printEmployeeInformation();
+
+```
+
+BUT, 위와 같은 코드를 작성할 경우 문제 발생 가능
+
+`accounting.addEmployee[2] = 'Anna';` 로 클래스 외부에서 클래스 내의 변수에 직접 관여 가능 
+
+따라서 클래스 외부에서 클래스 내부의 변수에 직접 접근하는 코드를 방지 해야 한다.
+
+Private access EX
+
+```jsx
+class Department {
+  private name: string;
+  private employees: string[] = []; // private 식별자를 추가하여 함수 외부에서 직접 변수를 제어할 수 없게 설정
+
+  constructor(n: string) {
+    this.name = n;
+  }
+
+  describe(this: Department) {
+    console.log("Department: " + this.name); // this를 선언함으로서 본 class 내에 선언된 name변수를 참조한다.
+  }
+
+  addEmployee(employee: string) {
+    this.employees.push(employee);
+  }
+
+  printEmployeeInformation() {
+    console.log(this.employees.length);
+    console.log(this.employees);
+  }
+}
+
+const accounting = new Department("Accounting");
+accounting.addEmployee("Max");
+accounting.addEmployee("Lucas");
+accounting.printEmployeeInformation();
+```
+
+* private을 선언하지 않으면 기본적으로 public 상태의 변수가 된다.
+
+> JS는 private 식별자가 존재하지 않지만, TS는 private 식별자를 지원한다.
+> 
+
+그러나 run-time 시에는 js로 브라우저에서 동작하므로 private은 존재하지 않는다. 그렇지만 적어도 컴파일 단계에서 개발자가 의도하지 않은 방식으로 변수가 변형되는 상황을 방지할 수 있다.
+
+위와 같이 매번 지정하는 것이 불편하다면, 생성자 내부에 접근제어자를 추가하여 간소화할 수 있다.
+
+```jsx
+class Department {
+  // private name: string;
+  private employees: string[] = [];
+
+  constructor(private id: string, public name: string) {
+    // this.name = n;
+  }
+
+  describe(this: Department) {
+    console.log("Department: " + this.name); // this를 선언함으로서 본 class 내에 선언된 name변수를 참조한다.
+  }
+
+  addEmployee(employee: string) {
+    this.employees.push(employee);
+  }
+
+  printEmployeeInformation() {
+    console.log(this.employees.length);
+    console.log(this.employees);
+  }
+}
+```

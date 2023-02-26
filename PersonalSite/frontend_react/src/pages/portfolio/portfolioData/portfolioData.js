@@ -1,16 +1,16 @@
 export const portfolioData = [
-  // Zaezae store Back office
+  // shoppingmall Back office(ADMIN)
   {
     "title-content": {
       title: "Shopping Mall Back Office(ADMIN)",
-      icon: "https://www.notion.so/icons/shopping-cart_yellow.svg",
+      icon: "shoppingMallAdmin_icon",
       img: "gmail",
       "brief-discription": "유아 글로벌 쇼핑몰의 입점사 admin 웹 서비스",
 
       belong: "Geeksloft FE 인턴",
       period: {
         start: "22.09.13",
-        end: "현재",
+        end: "23.02.27",
       },
       sourceUrl:
         "https://againyunn.notion.site/Shopping-Mall-Back-Office-768673732b3e43d0b3f1660f116d0ee9",
@@ -27,6 +27,8 @@ export const portfolioData = [
         { title: "react-datepicker", color: "gray" },
         { title: "react-js-pagination", color: "gray" },
         { title: "lottieFile", color: "gray" },
+        { title: "tagify", color: "gray" },
+        { title: "react-chart", color: "gray" },
         { title: "styled-component", color: "orange" },
         { title: "sass", color: "orange" },
         { title: "bootstrap", color: "orange" },
@@ -50,7 +52,7 @@ export const portfolioData = [
   {
     "title-content": {
       title: "Homepage Renewal",
-      icon: "https://www.notion.so/icons/sliders-vertical_purple.svg",
+      icon: "GeeksloftHomepage_icon",
       img: "gmail",
       "brief-discription": "Geeksloft 자사 공식 홈페이지 리뉴얼",
       belong: "Geeksloft FE 인턴",
@@ -75,11 +77,11 @@ export const portfolioData = [
     },
   },
 
-  // LG Electronics Digital Pharm
+  // Disease Analysis Prediction Service
   {
     "title-content": {
       title: "Disease Analysis Prediction Service",
-      icon: "https://www.notion.so/icons/first-aid-kit_red.svg",
+      icon: "DigitalPharm_icon",
       img: "gmail",
       "brief-discription": "AI 기반 개인별 주요 만성질환 예측 및 진단 서비스",
       belong: "Geeksloft FE 인턴",
@@ -96,6 +98,7 @@ export const portfolioData = [
       techStack: [
         { title: "react.js", color: "blue" },
         { title: "redux", color: "gray" },
+        { title: "redux-toolkit", color: "gray" },
         { title: "axios", color: "gray" },
         { title: "env-cmd", color: "gray" },
         { title: "react-dropzone", color: "gray" },
@@ -126,7 +129,7 @@ export const portfolioData = [
   {
     "title-content": {
       title: "Project Base",
-      icon: "https://www.notion.so/icons/science_blue.svg",
+      icon: "ProjectBase_icon",
       img: "gmail",
       "brief-discription": "React/Next.js 기반의 초기 프로젝트 파일 구조 설계",
       belong: "Geeksloft FE 인턴",
@@ -163,7 +166,7 @@ export const portfolioData = [
   {
     "title-content": {
       title: "CAMIN(카페의 민족)",
-      icon: "https://www.notion.so/icons/cafe_orange.svg",
+      icon: "camin_icon",
       img: "gmail",
       "brief-discription":
         "카페 혼잡도를 바탕으로 좌석을 예약하고 나에게 맞는 최적의 카페을 찾아주는 서비스",
@@ -200,7 +203,7 @@ export const portfolioData = [
   {
     "title-content": {
       title: "What's your double major?",
-      icon: "https://www.notion.so/icons/school_gray.svg",
+      icon: "WYDM_icon",
       img: "gmail",
       "brief-discription":
         "한국외국어대학교 학생 대상 개인 성향 및 진로 맞춤 이중전공 추천 서비스",
@@ -250,7 +253,7 @@ export const portfolioData = [
   {
     "title-content": {
       title: "VALTO(ValueTogether)",
-      icon: "https://www.notion.so/icons/donkey_yellow.svg",
+      icon: "valto_icon",
       img: "gmail",
       "brief-discription":
         "가치에 같이를 더하다, 유기동물 후원 캠페인 프로젝트",
@@ -261,7 +264,7 @@ export const portfolioData = [
       },
       githubUrl: ["https://github.com/Againyunn/valto"],
       sourceUrl:
-        "https://www.notion.so/againyunn/VALTO-Value-Together-b369a6565be040d69fa488df0587ce8c",
+        "https://againyunn.notion.site/VALTO-Value-Together-b369a6565be040d69fa488df0587ce8c",
     },
     "body-content": {
       "my-role": "백엔드 개발, 기획",

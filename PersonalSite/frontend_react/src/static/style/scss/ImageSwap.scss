@@ -2,28 +2,27 @@
 .auto-swap-container {
   width: 300px;
   height: 380px;
-  // perspective: 300px;
 }
 
 .auto-swap-container .auto-item {
   width: 300px;
   height: 380px;
   backface-visibility: hidden;
-  transition: 1s;
+  transition: 0.7s;
   animation: swapping 0.6s ease;
 }
 
 .auto-swap-container .auto-item.front {
   position: absolute;
   animation: swapping-front 1s ease forwards;
-  animation-delay: 2.2s;
+  animation-delay: 0.7s;
   transform: rotateY(0deg);
 }
 
 .auto-swap-container .auto-item.back {
   position: absolute;
   animation: swapping-back 1s ease forwards;
-  animation-delay: 2.2s;
+  animation-delay: 1s;
   transform: rotateY(-180deg);
 }
 

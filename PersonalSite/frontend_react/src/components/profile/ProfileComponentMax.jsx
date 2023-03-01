@@ -76,7 +76,7 @@ function ProfileComponentMax(props) {
             <span className="profilePartHead">Work Experience</span>
             <br />
             <span className="profilePartContent">
-              긱스로프트 개발팀 FE 개발파트(22.09.01 ~ 23.02.27)
+              긱스로프트 개발팀 FE 개발파트(22.09.01 ~ 23.02.28)
             </span>
             <br />
             <span className="profilePartContent">
@@ -84,7 +84,7 @@ function ProfileComponentMax(props) {
             </span>
             <br />
             <span className="profilePartContent">
-              위메프 O2O실 지원팀 사원(19.12.01 ~ 20.08.29/21.06.21 ~ 08.20)
+              위메프 O2O실 지원팀(19.12.01 ~ 20.08.29/21.06.21 ~ 08.20)
             </span>
           </div>
         </div>

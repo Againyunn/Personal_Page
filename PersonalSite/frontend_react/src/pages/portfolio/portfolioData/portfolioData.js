@@ -10,7 +10,7 @@ export const portfolioData = [
       belong: "Geeksloft FE 인턴",
       period: {
         start: "22.09.13",
-        end: "23.02.27",
+        end: "23.02.28",
       },
       sourceUrl:
         "https://againyunn.notion.site/Shopping-Mall-Back-Office-768673732b3e43d0b3f1660f116d0ee9",
@@ -271,6 +271,7 @@ export const portfolioData = [
       contributors: [],
       techStack: [
         { title: "vanilla javascript", color: "blue" },
+        { title: "python", color: "blue" },
         { title: "css", color: "orange" },
         { title: "django", color: "pink" },
         { title: "vultr", color: "purple" },
